@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[var evPendenteDialog;
+var evPendenteRecordId = '';
+var evPendenteSaving = false;
+
+function evPendenteMostrarErro(message) {
+    var element = gel('ev_pending_error');
+
+    element.textContent = message || '';
+    element.style.display = message ? 'block' : 'none';
+}
+
+function evPendenteLerResposta(answer) {
+    var response;
+
+    try {
+        response = JSON.parse(answer || '{}');
+    } catch (error) {
+        evPendenteMostrarErro('Resposta inválida do servidor.');
+        return null;
+    }
+
+    if (!response || response.success !== true) {
+        evPendenteMostrarErro(
+            response && response.error ||
+            'Não foi possível executar a ação.'
+        );
+        return null;
+    }
+
+    return response;
+}
+
+function evPendenteBloquear(blocked) {
+    gel('ev_pending_reason').disabled = blocked;
+    gel('ev_pending_confirm').disabled = blocked;
+    gel('ev_pending_cancel').disabled = blocked;
+}
+
+function evPendenteCarregarOpcoes() {
+    evPendenteDialog = GlideDialogWindow.get();
+
+    if (!evPendenteDialog) {
+        evPendenteMostrarErro(
+            'Abra este modal pelo botão Pendente do atendimento.'
+        );
+        return;
+    }
+
+    evPendenteRecordId = String(
+        evPendenteDialog.getPreference('sysparm_record_id') || ''
+    );
+
+    if (!evPendenteRecordId) {
+        evPendenteMostrarErro('Atendimento não identificado.');
+        return;
+    }
+
+    var ga = new GlideAjax(
+        'x_fub_fundbrad_ev.EvPendenteAjax'
+    );
+
+    ga.addParam('sysparm_name', 'opcoes');
+    ga.addParam('sysparm_record_id', evPendenteRecordId);
+
+    ga.getXMLAnswer(function(answer) {
+        var response = evPendenteLerResposta(answer);
+
+        if (!response) {
+            return;
+        }
+
+        var options = response.choices || [];
+        var select = gel('ev_pending_reason');
+
+        if (!options.length) {
+            evPendenteMostrarErro(
+                'Nenhum motivo de pendência disponível.'
+            );
+            return;
+        }
+
+        select.options.length = 0;
+        select.add(new Option('-- Selecione --', ''));
+
+        options.forEach(function(option) {
+            select.add(new Option(
+                option.displayValue,
+                option.value
+            ));
+        });
+
+        evPendenteBloquear(false);
+        select.focus();
+    });
+}
+
+function evPendenteConfirmar() {
+    if (evPendenteSaving) {
+        return false;
+    }
+
+    evPendenteMostrarErro('');
+
+    var reason = String(
+        gel('ev_pending_reason').value || ''
+    ).trim();
+
+    if (!reason) {
+        evPendenteMostrarErro(
+            'Selecione o motivo da pendência.'
+        );
+        gel('ev_pending_reason').focus();
+        return false;
+    }
+
+    evPendenteSaving = true;
+    evPendenteBloquear(true);
+
+    var ga = new GlideAjax(
+        'x_fub_fundbrad_ev.EvPendenteAjax'
+    );
+
+    ga.addParam('sysparm_name', 'pendenciar');
+    ga.addParam('sysparm_record_id', evPendenteRecordId);
+    ga.addParam('sysparm_reason', reason);
+
+    ga.getXMLAnswer(function(answer) {
+        var response = evPendenteLerResposta(answer);
+
+        if (!response) {
+            evPendenteSaving = false;
+            evPendenteBloquear(false);
+            return;
+        }
+
+        evPendenteDialog.destroy();
+        window.top.location.reload();
+    });
+
+    return false;
+}
+
+function evPendenteCancelar() {
+    if (evPendenteSaving) {
+        return false;
+    }
+
+    if (evPendenteDialog) {
+        evPendenteDialog.destroy();
+    }
+
+    return false;
+}
+
+addLoadEvent(evPendenteCarregarOpcoes);]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_fub_fundbrad_ev_ev_pendente_modal.do</endpoint>
+        <html><![CDATA[<j:ui xmlns:j="jelly:core" xmlns:g="glide">
+    <div style="padding:20px;">
+
+        <div id="ev_pending_error"
+             role="alert"
+             class="alert alert-danger"
+             style="display:none;">
+        </div>
+
+        <div class="form-group">
+            <label for="ev_pending_reason">
+                Motivo da pendência *
+            </label>
+
+            <select id="ev_pending_reason"
+                    class="form-control"
+                    required="required"
+                    disabled="disabled">
+                <option value="">Carregando...</option>
+            </select>
+        </div>
+
+        <div style="text-align:right;margin-top:20px;">
+            <button id="ev_pending_cancel"
+                    type="button"
+                    class="btn btn-default"
+                    onclick="return evPendenteCancelar();">
+                Cancelar
+            </button>
+
+            <button id="ev_pending_confirm"
+                    type="button"
+                    class="btn btn-primary"
+                    style="margin-left:8px;"
+                    disabled="disabled"
+                    onclick="return evPendenteConfirmar();">
+                Confirmar pendência
+            </button>
+        </div>
+    </div>
+</j:ui>]]></html>
+        <name>ev_pendente_modal</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-28 17:51:10</sys_created_on>
+        <sys_id>5a7f2854799c9358c34eb56e1a47c5e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ev_pendente_modal</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_ui_page_5a7f2854799c9358c34eb56e1a47c5e2</sys_update_name>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-28 17:51:10</sys_updated_on>
+    </sys_ui_page>
+</record_update>

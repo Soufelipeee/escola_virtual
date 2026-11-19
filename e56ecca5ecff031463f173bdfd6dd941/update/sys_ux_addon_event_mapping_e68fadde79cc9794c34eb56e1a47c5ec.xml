@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_addon_event_mapping">
+    <sys_ux_addon_event_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <controller/>
+        <description>CSM</description>
+        <name>Open create collab chat</name>
+        <parent_macroponent display_value="teste CSM">268fe9de79cc9794c34eb56e1a47c58a</parent_macroponent>
+        <source_component/>
+        <source_da display_value="Open create collab chat modal">040b41b5c31130100f24c87af040dd66</source_da>
+        <source_element_id>ui_action_bar</source_element_id>
+        <sys_class_name>sys_ux_addon_event_mapping</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-22 17:17:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e68fadde79cc9794c34eb56e1a47c5ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Open create collab chat</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_ux_addon_event_mapping_e68fadde79cc9794c34eb56e1a47c5ec</sys_update_name>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-22 17:17:06</sys_updated_on>
+        <target_event display_value="RECORD#OPEN_COLLAB_CHAT">a91838b3b7900110ffe5ef54ce11a98c</target_event>
+        <target_payload_mapping>{
+    "container": {
+        "fields": {
+            "binding": {
+                "address": [
+                    "fields"
+                ]
+            },
+            "type": "EVENT_PAYLOAD_BINDING"
+        }
+    },
+    "type": "MAP_CONTAINER"
+}</target_payload_mapping>
+    </sys_ux_addon_event_mapping>
+</record_update>

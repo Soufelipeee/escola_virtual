@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_templated_snip_note_template">
+    <sn_templated_snip_note_template action="INSERT_OR_UPDATE">
+        <condition/>
+        <group_visibility/>
+        <html_script_body><![CDATA[<p>teste 1&nbsp;</p>]]></html_script_body>
+        <language/>
+        <name>ev - teste 1</name>
+        <short_name>ev - teste 1 </short_name>
+        <sys_class_name>sn_templated_snip_note_template</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-29 14:03:03</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4836816879589b58c34eb56e1a47c538</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>ev - teste 1</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sn_templated_snip_note_template_4836816879589b58c34eb56e1a47c538</sys_update_name>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-29 14:05:04</sys_updated_on>
+        <table>x_fub_fundbrad_ev_atendimento_ev</table>
+    </sn_templated_snip_note_template>
+    <sys_translated_text action="delete_multiple" query="documentkey=4836816879589b58c34eb56e1a47c538"/>
+</record_update>

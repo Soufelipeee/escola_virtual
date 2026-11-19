@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_suggestion_reader_group">
+    <sys_suggestion_reader_group action="INSERT_OR_UPDATE">
+        <click_in_mode>false</click_in_mode>
+        <context_config_id/>
+        <limit>5</limit>
+        <order>400</order>
+        <section_header>Suggested results</section_header>
+        <suggestion_type>Suggested Result Reader Group for Starter Workspace - Workspace Search</suggestion_type>
+        <sys_class_name>sys_suggestion_reader_group</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-17 00:53:39</sys_created_on>
+        <sys_id>a77e10a8f2841fd024df7c0c119c6612</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Suggested Result Reader Group for Starter Workspace - Workspace Search</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_suggestion_reader_group_a77e10a8f2841fd024df7c0c119c6612</sys_update_name>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-17 00:53:39</sys_updated_on>
+    </sys_suggestion_reader_group>
+</record_update>

@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section action="DELETE" caption="" section_id="cbffc8e9ecff031463f173bdfd6dd912" sys_domain="global" table="x_fub_fundbrad_ev_atendimento_ev" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>0</position>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-10-08 13:47:38</sys_created_on>
+            <sys_id>a559bcfdacf78394c34e0c1cb0feaf59</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="Default view">cbffc8e9ecff031463f173bdfd6dd912</sys_ui_section>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-10-08 13:47:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>contact_type</element>
+            <position>1</position>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-10-08 13:47:38</sys_created_on>
+            <sys_id>2959bcfdacf78394c34e0c1cb0feaf5a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="Default view">cbffc8e9ecff031463f173bdfd6dd912</sys_ui_section>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-10-08 13:47:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>short_description</element>
+            <position>2</position>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-10-08 13:47:38</sys_created_on>
+            <sys_id>e159bcfdacf78394c34e0c1cb0feaf5b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="Default view">cbffc8e9ecff031463f173bdfd6dd912</sys_ui_section>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-10-08 13:47:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>description</element>
+            <position>3</position>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-10-08 13:47:38</sys_created_on>
+            <sys_id>ad59bcfdacf78394c34e0c1cb0feaf5b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="Default view">cbffc8e9ecff031463f173bdfd6dd912</sys_ui_section>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-10-08 13:47:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>priority</element>
+            <position>4</position>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-10-08 13:47:38</sys_created_on>
+            <sys_id>6959bcfdacf78394c34e0c1cb0feaf5c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="Default view">cbffc8e9ecff031463f173bdfd6dd912</sys_ui_section>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-10-08 13:47:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>assignment_group</element>
+            <position>5</position>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-10-08 13:47:38</sys_created_on>
+            <sys_id>2559bcfdacf78394c34e0c1cb0feaf5d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="Default view">cbffc8e9ecff031463f173bdfd6dd912</sys_ui_section>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-10-08 13:47:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>state</element>
+            <position>6</position>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-10-08 13:47:38</sys_created_on>
+            <sys_id>ed59bcfdacf78394c34e0c1cb0feaf5d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="Default view">cbffc8e9ecff031463f173bdfd6dd912</sys_ui_section>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-10-08 13:47:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>substate</element>
+            <position>7</position>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-10-08 13:47:38</sys_created_on>
+            <sys_id>a959bcfdacf78394c34e0c1cb0feaf5e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="Default view">cbffc8e9ecff031463f173bdfd6dd912</sys_ui_section>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-10-08 13:47:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>opened_at</element>
+            <position>8</position>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-10-08 13:47:38</sys_created_on>
+            <sys_id>6559bcfdacf78394c34e0c1cb0feaf5f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="Default view">cbffc8e9ecff031463f173bdfd6dd912</sys_ui_section>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-10-08 13:47:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>opened_by</element>
+            <position>9</position>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-10-08 13:47:38</sys_created_on>
+            <sys_id>2159bcfdacf78394c34e0c1cb0feaf60</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="Default view">cbffc8e9ecff031463f173bdfd6dd912</sys_ui_section>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-10-08 13:47:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>comments</element>
+            <position>10</position>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-10-08 13:47:38</sys_created_on>
+            <sys_id>e959bcfdacf78394c34e0c1cb0feaf60</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="Default view">cbffc8e9ecff031463f173bdfd6dd912</sys_ui_section>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-10-08 13:47:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>work_notes</element>
+            <position>11</position>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-10-08 13:47:38</sys_created_on>
+            <sys_id>2559bcfdacf78394c34e0c1cb0feaf7a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="Default view">cbffc8e9ecff031463f173bdfd6dd912</sys_ui_section>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-10-08 13:47:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>close_notes</element>
+            <position>12</position>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-10-08 13:47:38</sys_created_on>
+            <sys_id>ed59bcfdacf78394c34e0c1cb0feaf7a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="Default view">cbffc8e9ecff031463f173bdfd6dd912</sys_ui_section>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-10-08 13:47:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>closed_at</element>
+            <position>13</position>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-10-08 13:47:38</sys_created_on>
+            <sys_id>a959bcfdacf78394c34e0c1cb0feaf7b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="Default view">cbffc8e9ecff031463f173bdfd6dd912</sys_ui_section>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-10-08 13:47:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>closed_by</element>
+            <position>14</position>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-10-08 13:47:38</sys_created_on>
+            <sys_id>6559bcfdacf78394c34e0c1cb0feaf7c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="Default view">cbffc8e9ecff031463f173bdfd6dd912</sys_ui_section>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-10-08 13:47:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="DELETE">
+            <caption/>
+            <header>false</header>
+            <name>x_fub_fundbrad_ev_atendimento_ev</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-10-07 16:08:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>cbffc8e9ecff031463f173bdfd6dd912</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_fub_fundbrad_ev_atendimento_ev</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+            <sys_update_name>sys_ui_section_cbffc8e9ecff031463f173bdfd6dd912</sys_update_name>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-10-07 16:08:29</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Exibição padrão" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</application>
+        <file_path/>
+        <instance_id>831a14741b984a5032182f8dee4bcbf0</instance_id>
+        <instance_name>fundbraddev</instance_name>
+        <name>sys_ui_section_cbffc8e9ecff031463f173bdfd6dd912</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="" section_id="cbffc8e9ecff031463f173bdfd6dd912" sys_domain="global" table="x_fub_fundbrad_ev_atendimento_ev" version="3" view=""><sys_ui_element action="INSERT_OR_UPDATE"><element>number</element><position>0</position><sys_created_by>felipe.valenca</sys_created_by><sys_created_on>2026-10-08 13:47:38</sys_created_on><sys_id>a559bcfdacf78394c34e0c1cb0feaf59</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="Default view">cbffc8e9ecff031463f173bdfd6dd912</sys_ui_section><sys_updated_by>felipe.valenca</sys_updated_by><sys_updated_on>2026-10-08 13:47:38</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>contact_type</element><position>1</position><sys_created_by>felipe.valenca</sys_created_by><sys_created_on>2026-10-08 13:47:38</sys_created_on><sys_id>2959bcfdacf78394c34e0c1cb0feaf5a</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="Default view">cbffc8e9ecff031463f173bdfd6dd912</sys_ui_section><sys_updated_by>felipe.valenca</sys_updated_by><sys_updated_on>2026-10-08 13:47:38</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>short_description</element><position>2</position><sys_created_by>felipe.valenca</sys_created_by><sys_created_on>2026-10-08 13:47:38</sys_created_on><sys_id>e159bcfdacf78394c34e0c1cb0feaf5b</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="Default view">cbffc8e9ecff031463f173bdfd6dd912</sys_ui_section><sys_updated_by>felipe.valenca</sys_updated_by><sys_updated_on>2026-10-08 13:47:38</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>description</element><position>3</position><sys_created_by>felipe.valenca</sys_created_by><sys_created_on>2026-10-08 13:47:38</sys_created_on><sys_id>ad59bcfdacf78394c34e0c1cb0feaf5b</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="Default view">cbffc8e9ecff031463f173bdfd6dd912</sys_ui_section><sys_updated_by>felipe.valenca</sys_updated_by><sys_updated_on>2026-10-08 13:47:38</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>priority</element><position>4</position><sys_created_by>felipe.valenca</sys_created_by><sys_created_on>2026-10-08 13:47:38</sys_created_on><sys_id>6959bcfdacf78394c34e0c1cb0feaf5c</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="Default view">cbffc8e9ecff031463f173bdfd6dd912</sys_ui_section><sys_updated_by>felipe.valenca</sys_updated_by><sys_updated_on>2026-10-08 13:47:38</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>assignment_group</element><position>5</position><sys_created_by>felipe.valenca</sys_created_by><sys_created_on>2026-10-08 13:47:38</sys_created_on><sys_id>2559bcfdacf78394c34e0c1cb0feaf5d</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="Default view">cbffc8e9ecff031463f173bdfd6dd912</sys_ui_section><sys_updated_by>felipe.valenca</sys_updated_by><sys_updated_on>2026-10-08 13:47:38</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>state</element><position>6</position><sys_created_by>felipe.valenca</sys_created_by><sys_created_on>2026-10-08 13:47:38</sys_created_on><sys_id>ed59bcfdacf78394c34e0c1cb0feaf5d</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="Default view">cbffc8e9ecff031463f173bdfd6dd912</sys_ui_section><sys_updated_by>felipe.valenca</sys_updated_by><sys_updated_on>2026-10-08 13:47:38</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>substate</element><position>7</position><sys_created_by>felipe.valenca</sys_created_by><sys_created_on>2026-10-08 13:47:38</sys_created_on><sys_id>a959bcfdacf78394c34e0c1cb0feaf5e</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="Default view">cbffc8e9ecff031463f173bdfd6dd912</sys_ui_section><sys_updated_by>felipe.valenca</sys_updated_by><sys_updated_on>2026-10-08 13:47:38</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>opened_at</element><position>8</position><sys_created_by>felipe.valenca</sys_created_by><sys_created_on>2026-10-08 13:47:38</sys_created_on><sys_id>6559bcfdacf78394c34e0c1cb0feaf5f</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="Default view">cbffc8e9ecff031463f173bdfd6dd912</sys_ui_section><sys_updated_by>felipe.valenca</sys_updated_by><sys_updated_on>2026-10-08 13:47:38</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>opened_by</element><position>9</position><sys_created_by>felipe.valenca</sys_created_by><sys_created_on>2026-10-08 13:47:38</sys_created_on><sys_id>2159bcfdacf78394c34e0c1cb0feaf60</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="Default view">cbffc8e9ecff031463f173bdfd6dd912</sys_ui_section><sys_updated_by>felipe.valenca</sys_updated_by><sys_updated_on>2026-10-08 13:47:38</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>comments</element><position>10</position><sys_created_by>felipe.valenca</sys_created_by><sys_created_on>2026-10-08 13:47:38</sys_created_on><sys_id>e959bcfdacf78394c34e0c1cb0feaf60</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="Default view">cbffc8e9ecff031463f173bdfd6dd912</sys_ui_section><sys_updated_by>felipe.valenca</sys_updated_by><sys_updated_on>2026-10-08 13:47:38</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>work_notes</element><position>11</position><sys_created_by>felipe.valenca</sys_created_by><sys_created_on>2026-10-08 13:47:38</sys_created_on><sys_id>2559bcfdacf78394c34e0c1cb0feaf7a</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="Default view">cbffc8e9ecff031463f173bdfd6dd912</sys_ui_section><sys_updated_by>felipe.valenca</sys_updated_by><sys_updated_on>2026-10-08 13:47:38</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>close_notes</element><position>12</position><sys_created_by>felipe.valenca</sys_created_by><sys_created_on>2026-10-08 13:47:38</sys_created_on><sys_id>ed59bcfdacf78394c34e0c1cb0feaf7a</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="Default view">cbffc8e9ecff031463f173bdfd6dd912</sys_ui_section><sys_updated_by>felipe.valenca</sys_updated_by><sys_updated_on>2026-10-08 13:47:38</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>closed_at</element><position>13</position><sys_created_by>felipe.valenca</sys_created_by><sys_created_on>2026-10-08 13:47:38</sys_created_on><sys_id>a959bcfdacf78394c34e0c1cb0feaf7b</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="Default view">cbffc8e9ecff031463f173bdfd6dd912</sys_ui_section><sys_updated_by>felipe.valenca</sys_updated_by><sys_updated_on>2026-10-08 13:47:38</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>closed_by</element><position>14</position><sys_created_by>felipe.valenca</sys_created_by><sys_created_on>2026-10-08 13:47:38</sys_created_on><sys_id>6559bcfdacf78394c34e0c1cb0feaf7c</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="Default view">cbffc8e9ecff031463f173bdfd6dd912</sys_ui_section><sys_updated_by>felipe.valenca</sys_updated_by><sys_updated_on>2026-10-08 13:47:38</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption/><header>false</header><name>x_fub_fundbrad_ev_atendimento_ev</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>felipe.valenca</sys_created_by><sys_created_on>2026-10-07 16:08:29</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>cbffc8e9ecff031463f173bdfd6dd912</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_fub_fundbrad_ev_atendimento_ev</sys_name><sys_overrides/><sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package><sys_policy/><sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope><sys_update_name>sys_ui_section_cbffc8e9ecff031463f173bdfd6dd912</sys_update_name><sys_updated_by>felipe.valenca</sys_updated_by><sys_updated_on>2026-10-07 16:08:29</sys_updated_on><sys_user/><title>true</title><view display_value="Exibição padrão" name="NULL">Default view</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+        <payload_hash>1680992296</payload_hash>
+        <record_name>Atendimento Escola Virtual</record_name>
+        <reverted_from/>
+        <source>bcce4069ecff031463f173bdfd6dd93c</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-08 13:47:38</sys_created_on>
+        <sys_id>a159bcfdacf78394c34e0c1cb0feaf80</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a11bc503310000001</sys_recorded_at>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-08 13:47:38</sys_updated_on>
+        <type>Form Layout</type>
+        <update_guid>a559bcfdd6f783949db775704c5b8d7f</update_guid>
+        <update_guid_history>a559bcfdd6f783949db775704c5b8d7f:1680992296,fe00a0a9c4f343147d6f84fb37474e7e:-1877107021,aa92d4e9e33343147e470b1ae3c85a84:850232906,584254a977334314310cf12ffe9b839c:-411620155,5c4254a9ae334314d8e08d7b9b23a52c:-1983914775</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-08 17:38:10</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_section">sys_ui_section</sys_db_object>
+        <sys_id>8108259a058d4240a52631b03c601000</sys_id>
+        <sys_metadata>cbffc8e9ecff031463f173bdfd6dd912</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_fub_fundbrad_ev_atendimento_ev</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_parent display_value="Service Virtual School">76ff44edecff031463f173bdfd6dd962</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_scope_delete display_value="">3911fbb3a8454a90b9d9310b67c884c9</sys_scope_delete>
+        <sys_update_name>sys_ui_section_cbffc8e9ecff031463f173bdfd6dd912</sys_update_name>
+        <sys_update_version display_value="sys_ui_section_cbffc8e9ecff031463f173bdfd6dd912">a159bcfdacf78394c34e0c1cb0feaf80</sys_update_version>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-08 17:38:10</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="ais_dictionary">
+    <ais_dictionary action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <auto_refresh>24</auto_refresh>
+        <blocked_field/>
+        <case_sensitive>false</case_sensitive>
+        <data_source>x_fub_fundbrad_ev_atendimento_ev</data_source>
+        <derived>true</derived>
+        <field/>
+        <label>atendimento-escola-virtual Search Profile Default Spell Check Dictionary</label>
+        <last_derived>2026-11-19 08:26:58</last_derived>
+        <locale>en</locale>
+        <name>x_fub_fundbrad_ev_atendimento_escola_virtual_search_profile_default_spell_check_dictionary</name>
+        <publish_id>e0cb39e8-834e-43d8-8010-d96431673619</publish_id>
+        <punctuation_sensitive>false</punctuation_sensitive>
+        <state>PUBLISHED</state>
+        <sys_class_name>ais_dictionary</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-17 00:53:43</sys_created_on>
+        <sys_id>bc8e14a879841fd0c34eb56e1a47c582</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_fub_fundbrad_ev_atendimento_escola_virtual_search_profile_default_spell_check_dictionary</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>ais_dictionary_bc8e14a879841fd0c34eb56e1a47c582</sys_update_name>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-17 00:53:43</sys_updated_on>
+        <type>SPELLCHECK</type>
+    </ais_dictionary>
+</record_update>

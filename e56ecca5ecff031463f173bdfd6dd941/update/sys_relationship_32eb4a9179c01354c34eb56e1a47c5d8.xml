@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_relationship">
+    <sys_relationship action="INSERT_OR_UPDATE">
+        <advanced>false</advanced>
+        <apply_to/>
+        <basic_apply_to>x_fub_fundbrad_ev_atendimento_ev</basic_apply_to>
+        <basic_query_from>x_fub_fundbrad_ev_atendimento_ev</basic_query_from>
+        <insert_callback/>
+        <name>Cases from the same requester</name>
+        <query_from/>
+        <query_with><![CDATA[(function refineQuery(current, parent) {
+
+	// Add your code here, such as current.addQuery(field, value);
+	if (parent.u_cpf_solicitante) {
+		current.addQuery('u_cpf_solicitante', parent.u_cpf_solicitante);
+	}
+
+})(current, parent);]]></query_with>
+        <reference_field/>
+        <related_list/>
+        <simple_reference>false</simple_reference>
+        <sys_class_name>sys_relationship</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-19 16:59:03</sys_created_on>
+        <sys_id>32eb4a9179c01354c34eb56e1a47c5d8</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Cases from the same requester</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_relationship_32eb4a9179c01354c34eb56e1a47c5d8</sys_update_name>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-03 13:45:36</sys_updated_on>
+    </sys_relationship>
+    <sys_translated_text action="delete_multiple" query="documentkey=32eb4a9179c01354c34eb56e1a47c5d8"/>
+    <sys_translated_text action="INSERT_OR_UPDATE">
+        <documentkey>32eb4a9179c01354c34eb56e1a47c5d8</documentkey>
+        <fieldname>name</fieldname>
+        <language>pb</language>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-19 17:02:10</sys_created_on>
+        <sys_id>e25fc25579041354c34eb56e1a47c5d5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-19 17:02:10</sys_updated_on>
+        <tablename>sys_relationship</tablename>
+        <value>Cases do mesmo solicitante</value>
+    </sys_translated_text>
+</record_update>

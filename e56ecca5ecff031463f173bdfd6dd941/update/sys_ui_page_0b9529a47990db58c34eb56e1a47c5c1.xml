@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[var evResolution = {
+    api: 'x_fub_fundbrad_ev.EvResolverAjax',
+    recordId: '',
+    code: '',
+    modalId: null,
+    templates: [],
+    codesLoaded: false,
+    loaded: false,
+    saving: false,
+    requestId: 0,
+};
+
+// Listener para comunicação com o Workspace
+window.addEventListener('message', function (event) {
+    if (event.origin !== window.location.origin || event.source !== window.parent) {
+        return;
+    }
+
+    var data = event.data;
+
+    if (!data ||
+        data.messageType !== 'IFRAME_MODAL_MESSAGE_TYPE' ||
+        data.modalAction !== 'IFRAME_MODAL_ACTION_INIT') {
+        return;
+    }
+
+    evResolution.modalId = data.modalId;
+
+    // Se por acaso o evCarregar() ainda não tiver rodado ou pegado o ID, executa aqui
+    if (!evResolution.codesLoaded) {
+        evCarregar();
+    } else {
+        evAtualizarControles();
+    }
+});
+
+function evMostrarErro(message) {
+    var element = gel('ev_error');
+    if (element) {
+        element.textContent = message || '';
+        element.style.display = message ? 'block' : 'none';
+    }
+}
+
+function evAtualizarControles() {
+    if (!gel('ev_confirm')) return;
+
+    var ready = evResolution.loaded &&
+        !!(evResolution.modalId || evResolution.dialog) &&
+        !evResolution.saving;
+
+    var elResCode = gel('ev_resolution_code');
+    var elTemplate = gel('ev_template');
+    var elCloseNotes = gel('ev_close_notes');
+    var elConfirm = gel('ev_confirm');
+    var elCancel = gel('ev_cancel');
+
+    if (elResCode) elResCode.disabled = !evResolution.codesLoaded || evResolution.saving;
+    if (elTemplate) elTemplate.disabled = !ready || !evResolution.templates.length;
+    if (elCloseNotes) elCloseNotes.disabled = !ready;
+    if (elConfirm) elConfirm.disabled = !ready;
+    if (elCancel) elCancel.disabled = evResolution.saving;
+}
+
+function evConsultar(method, params, callback) {
+    var ga = new GlideAjax(evResolution.api);
+
+    ga.addParam('sysparm_name', method);
+    ga.addParam('sysparm_record_id', evResolution.recordId);
+
+    for (var key in params) {
+        if (params.hasOwnProperty(key)) {
+            ga.addParam(key, params[key]);
+        }
+    }
+
+    ga.getXMLAnswer(function (answer) {
+        var response;
+
+        try {
+            response = JSON.parse(answer || '{}');
+        } catch (error) {
+            response = {
+                success: false,
+                error: 'Resposta inválida do servidor.'
+            };
+        }
+
+        callback(response || {
+            success: false,
+            error: 'Resposta vazia do servidor.'
+        });
+    });
+}
+
+function evPreencherSelect(id, options, placeholder) {
+    var select = gel(id);
+    if (!select) return;
+
+    select.options.length = 0;
+    select.add(new Option(placeholder, ''));
+
+    options.forEach(function (option) {
+        select.add(new Option(
+            option.displayValue || option.label || '',
+            option.value
+        ));
+    });
+}
+
+function evCarregar() {
+    var params = new URLSearchParams(window.location.search);
+    var context = params.get('sysparm_context') || '';
+    var recordId = params.get('sysparm_record_id') || '';
+
+    evResolution.dialog = null;
+
+    // Workspace recebe o registro pela URL.
+    // Somente o formulário clássico consulta as preferências do GlideModal.
+    if (!recordId && context !== 'workspace') {
+        if (typeof GlideDialogWindow !== 'undefined') {
+            var dialog = GlideDialogWindow.get();
+
+            if (dialog) {
+                evResolution.dialog = dialog;
+
+                recordId = String(
+                    dialog.getPreference('sysparm_record_id') || ''
+                );
+            }
+        }
+    }
+
+    evResolution.recordId = String(recordId).trim();
+
+    if (!/^[a-f0-9]{32}$/i.test(evResolution.recordId)) {
+        evMostrarErro(
+            'Atendimento não identificado. Feche e abra novamente pelo botão Resolver.'
+        );
+        return;
+    }
+
+    evAtualizarControles();
+
+    evConsultar('opcoes', {}, function (response) {
+        if (response.success !== true) {
+            evMostrarErro(
+                response.error || 'Erro ao carregar os códigos.'
+            );
+            return;
+        }
+
+        var codes = response.resolutionCodes || [];
+
+        evPreencherSelect(
+            'ev_resolution_code',
+            codes,
+            '-- Selecione --'
+        );
+
+        if (!codes.length) {
+            evMostrarErro('Nenhum código de resolução disponível.');
+            return;
+        }
+
+        evResolution.codesLoaded = true;
+        evAtualizarControles();
+    });
+}
+
+function evAlterarCodigo() {
+    if (evResolution.saving) return;
+
+    evMostrarErro('');
+
+    var code = gel('ev_resolution_code').value;
+    var requestId = ++evResolution.requestId;
+
+    evResolution.code = code;
+    evResolution.templates = [];
+    evResolution.loaded = false;
+
+    gel('ev_close_notes').value = '';
+
+    evPreencherSelect(
+        'ev_template',
+        [],
+        code ? 'Carregando...' : 'Selecione o código de resolução'
+    );
+
+    evAtualizarControles();
+
+    if (!code) return;
+
+    evConsultar('templates', {
+        sysparm_resolution_code: code
+    }, function (response) {
+        if (requestId !== evResolution.requestId) return;
+
+        if (response.success !== true) {
+            evMostrarErro(response.error || 'Erro ao carregar os templates.');
+            evPreencherSelect('ev_template', [], 'Falha ao carregar');
+            return;
+        }
+
+        evResolution.templates = response.templates || [];
+
+        evPreencherSelect(
+            'ev_template',
+            evResolution.templates,
+            evResolution.templates.length
+                ? '-- Selecione --'
+                : 'Nenhum template disponível'
+        );
+
+        if (evResolution.templates.length === 1) {
+            gel('ev_template').value = evResolution.templates[0].value;
+            evAplicarTemplate();
+        }
+
+        evResolution.loaded = true;
+        evAtualizarControles();
+    });
+}
+
+function evAplicarTemplate() {
+    if (evResolution.saving) return;
+
+    var id = gel('ev_template').value;
+    var text = '';
+
+    for (var i = 0; i < evResolution.templates.length; i++) {
+        if (evResolution.templates[i].value === id) {
+            text = evResolution.templates[i].text || '';
+            break;
+        }
+    }
+
+    gel('ev_close_notes').value = text;
+    evMostrarErro('');
+}
+
+function evEnviarResultado(action, data) {
+    if (evResolution.dialog) {
+        var dialog = evResolution.dialog;
+        var onResolved = dialog.getPreference('onResolved');
+
+        dialog.destroy();
+
+        if (action === 'IFRAME_MODAL_ACTION_CONFIRMED' && typeof onResolved === 'function') {
+            onResolved();
+        }
+
+        return false;
+    }
+
+    if (!evResolution.modalId) {
+        evMostrarErro('Comunicação com o Workspace indisponível. Feche e reabra o modal.');
+        return false;
+    }
+
+    window.parent.postMessage({
+        messageType: 'IFRAME_MODAL_MESSAGE_TYPE',
+        modalAction: action,
+        modalId: evResolution.modalId,
+        data: data || {}
+    }, window.location.origin);
+
+    return false;
+}
+
+function evConfirmar() {
+    if (evResolution.saving ||
+        !evResolution.loaded ||
+        !(evResolution.modalId || evResolution.dialog)) {
+        return false;
+    }
+
+    evMostrarErro('');
+
+    var notes = gel('ev_close_notes').value.trim();
+
+    if (!evResolution.code || notes.length < 20) {
+        evMostrarErro('Selecione o código e informe pelo menos 20 caracteres nas anotações.');
+        return false;
+    }
+
+    evResolution.saving = true;
+    evAtualizarControles();
+
+    evConsultar('resolver', {
+        sysparm_resolution_code: evResolution.code,
+        sysparm_template: gel('ev_template').value,
+        sysparm_close_notes: notes
+    }, function (response) {
+        if (response.success !== true) {
+            evResolution.saving = false;
+            evAtualizarControles();
+            evMostrarErro(response.error || 'Não foi possível resolver.');
+            return;
+        }
+
+        evEnviarResultado(
+            'IFRAME_MODAL_ACTION_CONFIRMED',
+            { success: true }
+        );
+    });
+
+    return false;
+}
+
+function evCancelar() {
+    if (evResolution.saving) return false;
+
+    return evEnviarResultado('IFRAME_MODAL_ACTION_CANCELED');
+}
+
+// Inicialização dupla para garantir carregamento tanto no Clássico quanto no Workspace
+addLoadEvent(evCarregar);
+setTimeout(function () {
+    if (!evResolution.codesLoaded) {
+        evCarregar();
+    }
+}, 1000);]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_fub_fundbrad_ev_ev_resolver_template_modal.do</endpoint>
+        <html><![CDATA[<j:jelly xmlns:j="jelly:core" xmlns:g="glide">
+    <div style="padding:20px;">
+
+        <div id="ev_error"
+             role="alert"
+             class="alert alert-danger"
+             style="display:none;">
+        </div>
+
+        <div class="form-group">
+            <label for="ev_resolution_code">
+                Código de resolução *
+            </label>
+
+            <select id="ev_resolution_code"
+                    class="form-control"
+                    disabled="disabled"
+                    onchange="evAlterarCodigo();">
+                <option value="">Carregando...</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="ev_template">
+                Template de resposta
+            </label>
+
+            <select id="ev_template"
+                    class="form-control"
+                    disabled="disabled"
+                    onchange="evAplicarTemplate();">
+                <option value="">Selecione o código de resolução</option>
+            </select>
+
+            <p style="font-size:12px;color:#666;margin-top:5px;">
+                Trocar o código ou o template substitui as anotações.
+            </p>
+        </div>
+
+        <div class="form-group">
+            <label for="ev_close_notes">
+                Anotações de encerramento *
+            </label>
+
+            <textarea id="ev_close_notes"
+                      class="form-control"
+                      rows="6"
+                      disabled="disabled"
+                      style="width:100%;resize:vertical;"></textarea>
+
+            <p style="font-size:12px;color:#666;margin-top:5px;">
+                Revise e edite o texto. Mínimo de 20 caracteres.
+            </p>
+        </div>
+
+        <div style="text-align:right;margin-top:20px;">
+            <button id="ev_cancel"
+                    type="button"
+                    class="btn btn-default"
+                    onclick="return evCancelar();">
+                Cancelar
+            </button>
+
+            <button id="ev_confirm"
+                    type="button"
+                    class="btn btn-primary"
+                    disabled="disabled"
+                    style="margin-left:8px;"
+                    onclick="return evConfirmar();">
+                Concluir resolução
+            </button>
+        </div>
+    </div>
+</j:jelly>]]></html>
+        <name>ev_resolver_template_modal</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-29 16:21:10</sys_created_on>
+        <sys_id>0b9529a47990db58c34eb56e1a47c5c1</sys_id>
+        <sys_mod_count>25</sys_mod_count>
+        <sys_name>ev_resolver_template_modal</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_ui_page_0b9529a47990db58c34eb56e1a47c5c1</sys_update_name>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-03 16:08:59</sys_updated_on>
+    </sys_ui_page>
+</record_update>

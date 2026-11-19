@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_screen">
+    <sys_ux_screen action="DELETE">
+        <active>true</active>
+        <app_config display_value="Escola Virtual App Config">af7e10a88e841fd0cc51ee0eb314ad12</app_config>
+        <description/>
+        <disable_auto_reflow>false</disable_auto_reflow>
+        <disable_interoperable>false</disable_interoperable>
+        <event_mappings/>
+        <macroponent display_value="Record page 3 column layout">426a984e79c0df54c34eb56e1a47c582</macroponent>
+        <macroponent_config>{
+    "bare": {
+        "type": "JSON_LITERAL",
+        "value": true
+    },
+    "headerLevel": {
+        "type": "JSON_LITERAL",
+        "value": "1"
+    },
+    "headingOnlyVisibleToScreenReaders": {
+        "type": "JSON_LITERAL",
+        "value": false
+    },
+    "interceptNotifications": {
+        "type": "JSON_LITERAL",
+        "value": false
+    },
+    "label": {
+        "type": "JSON_LITERAL",
+        "value": ""
+    },
+    "propagateNotifications": {
+        "type": "JSON_LITERAL",
+        "value": false
+    },
+    "scrollable": {
+        "type": "JSON_LITERAL",
+        "value": "y"
+    }
+}</macroponent_config>
+        <name>teste 2 </name>
+        <order>0</order>
+        <parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent>
+        <required_translations>[ ]</required_translations>
+        <rollback_screen/>
+        <screen_condition/>
+        <screen_type display_value="Record">af7e10a816841fd04ddfa45e5c4a6807</screen_type>
+        <sys_class_name>sys_ux_screen</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-21 16:26:44</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>876a1c4e79c0df54c34eb56e1a47c526</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>teste 2 </sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_ux_screen_876a1c4e79c0df54c34eb56e1a47c526</sys_update_name>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-21 16:26:44</sys_updated_on>
+    </sys_ux_screen>
+    <sys_translated_text action="DELETE" query="documentkey=876a1c4e79c0df54c34eb56e1a47c526"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</application>
+        <file_path/>
+        <instance_id>831a14741b984a5032182f8dee4bcbf0</instance_id>
+        <instance_name>fundbraddev</instance_name>
+        <name>sys_ux_screen_876a1c4e79c0df54c34eb56e1a47c526</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_screen"><sys_ux_screen action="INSERT_OR_UPDATE"><active>true</active><app_config display_value="Escola Virtual App Config">af7e10a88e841fd0cc51ee0eb314ad12</app_config><description/><disable_auto_reflow>false</disable_auto_reflow><disable_interoperable>false</disable_interoperable><event_mappings/><macroponent display_value="Record page 3 column layout">426a984e79c0df54c34eb56e1a47c582</macroponent><macroponent_config>{
+    "bare": {
+        "type": "JSON_LITERAL",
+        "value": true
+    },
+    "headerLevel": {
+        "type": "JSON_LITERAL",
+        "value": "1"
+    },
+    "headingOnlyVisibleToScreenReaders": {
+        "type": "JSON_LITERAL",
+        "value": false
+    },
+    "interceptNotifications": {
+        "type": "JSON_LITERAL",
+        "value": false
+    },
+    "label": {
+        "type": "JSON_LITERAL",
+        "value": ""
+    },
+    "propagateNotifications": {
+        "type": "JSON_LITERAL",
+        "value": false
+    },
+    "scrollable": {
+        "type": "JSON_LITERAL",
+        "value": "y"
+    }
+}</macroponent_config><name>teste 2 </name><order>0</order><parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent><required_translations>[ ]</required_translations><rollback_screen/><screen_condition/><screen_type display_value="Record">af7e10a816841fd04ddfa45e5c4a6807</screen_type><sys_class_name>sys_ux_screen</sys_class_name><sys_created_by>felipe.valenca</sys_created_by><sys_created_on>2026-10-21 16:26:44</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>876a1c4e79c0df54c34eb56e1a47c526</sys_id><sys_mod_count>0</sys_mod_count><sys_name>teste 2 </sys_name><sys_overrides/><sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package><sys_policy/><sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope><sys_update_name>sys_ux_screen_876a1c4e79c0df54c34eb56e1a47c526</sys_update_name><sys_updated_by>felipe.valenca</sys_updated_by><sys_updated_on>2026-10-21 16:26:44</sys_updated_on></sys_ux_screen><sys_translated_text action="delete_multiple" query="documentkey=876a1c4e79c0df54c34eb56e1a47c526"/></record_update>]]></payload>
+        <payload_hash>77897502</payload_hash>
+        <record_name>teste 2 </record_name>
+        <reverted_from/>
+        <source>3c5ed7f979809f54c34eb56e1a47c52e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-21 16:26:44</sys_created_on>
+        <sys_id>c76a1c4e79c0df54c34eb56e1a47c550</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a15f49570b0000001</sys_recorded_at>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-21 16:26:44</sys_updated_on>
+        <type>UX Screen</type>
+        <update_guid>cb6a1c4e61c0df54e0912f296b0b904f</update_guid>
+        <update_guid_history>cb6a1c4e61c0df54e0912f296b0b904f:77897502</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-21 16:28:27</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_screen">sys_ux_screen</sys_db_object>
+        <sys_id>3030c64ad5a4428a990ba8b8ec9f7984</sys_id>
+        <sys_metadata>876a1c4e79c0df54c34eb56e1a47c526</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>teste 2 </sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_scope_delete display_value="">3911fbb3a8454a90b9d9310b67c884c9</sys_scope_delete>
+        <sys_update_name>sys_ux_screen_876a1c4e79c0df54c34eb56e1a47c526</sys_update_name>
+        <sys_update_version display_value="sys_ux_screen_876a1c4e79c0df54c34eb56e1a47c526">c76a1c4e79c0df54c34eb56e1a47c550</sys_update_version>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-21 16:28:27</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

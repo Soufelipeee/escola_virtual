@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>10</order>
+        <role display_value="x_fub_fundbrad_ev.admin" name="x_fub_fundbrad_ev.admin">e16ecca5ecff031463f173bdfd6dd9af</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-07 16:01:33</sys_created_on>
+        <sys_id>ed6ecca5ecff031463f173bdfd6dd9b1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>e16ecca5ecff031463f173bdfd6dd9af</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_embedded_help_role_ed6ecca5ecff031463f173bdfd6dd9b1</sys_update_name>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-07 16:01:33</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

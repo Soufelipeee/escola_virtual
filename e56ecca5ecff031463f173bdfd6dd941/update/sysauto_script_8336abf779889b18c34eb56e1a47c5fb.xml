@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <advanced>false</advanced>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_run_end/>
+        <entered_run_start/>
+        <entered_time>1970-01-01 00:00:00</entered_time>
+        <max_drift/>
+        <name>[FB] Close record after 5 days [x_fub_fundbrad_ev_atendimento_ev]</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <repeat_every/>
+        <run_as display_value="Sistema ">b90c001687488b10138384c60cbb35f1</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_daysofweek/>
+        <run_end/>
+        <run_month/>
+        <run_period>1970-01-01 00:00:10</run_period>
+        <run_start>2026-10-27 17:46:34</run_start>
+        <run_time>1970-01-01 08:00:00</run_time>
+        <run_type>daily</run_type>
+        <run_weekinmonth/>
+        <script><![CDATA[function getBusinessDateLimit() {
+	// SIMULAÇÃO: Descomente abaixo para testar com data fixa se precisar
+	// var gdt = new GlideDateTime('2026-11-04 12:00:00');
+	var gdt = new GlideDateTime();
+	gs.info("=== [EV AUTO-CLEANUP] [GDT] Data relacionada: " + gdt);
+
+	// BUSCA DINÂMICA DE FERIADOS DO SISTEMA
+	var holidays = [];
+	var calendarHolyDaysId = 'abdbcc5687ed0e1036e032230cbb35dd'; //Feriados
+
+	var schedGr = new GlideRecord('cmn_schedule');
+	schedGr.addQuery('sys_id', calendarHolyDaysId);
+	schedGr.query();
+
+	if (schedGr.next()) {
+		var scheduleId = schedGr.getUniqueValue();
+		gs.info("=== [EV AUTO-CLEANUP] [CALENDAR] Calendário carregado com sucesso. Sys ID: " + scheduleId);
+
+		// Busca todos os spans/feriados vinculados a este calendário
+		var spanGr = new GlideRecord('cmn_schedule_span');
+		spanGr.addQuery('schedule', scheduleId);
+		spanGr.query();
+
+		while (spanGr.next()) {
+			var rawDate = spanGr.getValue('start_date_time'); // Ex: 20241102T000000
+
+			if (rawDate && rawDate.length >= 8) {
+				var year = rawDate.substring(0, 4);
+				var month = rawDate.substring(4, 6);
+				var day = rawDate.substring(6, 8);
+
+				var formattedDate = year + '-' + month + '-' + day;
+				holidays.push(formattedDate);
+			}
+		}
+	}
+
+	gs.info("=== [EV AUTO-CLEANUP] [CALENDAR] Total de feriados carregados: " + holidays.length + " | Datas: " + holidays.join(', '));
+
+	var subtractedDays = 0;
+	var safetyLoop = 0;
+
+	// Retrocede os dias úteis desconsiderando fins de semana e feriados
+	while (subtractedDays < 5 && safetyLoop < 30) {
+		safetyLoop++;
+		gdt.addDaysUTC(-1);
+
+		var dateString = gdt.getLocalDate().getValue(); // Formato YYYY-MM-DD
+		var dayOfWeek = gdt.getDayOfWeekUTC(); // 1 = Segunda, 6 = Sábado, 7 = Domingo
+
+		var isWeekend = (dayOfWeek === 6 || dayOfWeek === 7);
+		var isHoliday = holidays.indexOf(dateString) !== -1;
+
+		if (!isWeekend && !isHoliday) {
+			subtractedDays++;
+			gs.info("=== [EV AUTO-CLEANUP] [LOOP] Data: " + dateString + " -> DIA ÚTIL(Contabilizado | Total: " + subtractedDays + "/5)");
+		} else {
+			var motivo = isWeekend ? "Fim de semana" : "Feriado";
+			gs.info("=== [EV AUTO-CLEANUP] [LOOP] Data: " + dateString + " -> NÃO ÚTIL(" + motivo + " - Ignorado)");
+		}
+	}
+
+	var finalLimit = gdt.getLocalDate().getValue();
+	return finalLimit;
+}
+
+var limitDateStr = getBusinessDateLimit();
+gs.info("=== [EV AUTO-CLEANUP] [QUERY] Data limite de corte calculada: " + limitDateStr);
+
+// Consulta na tabela escopada buscando registros pendentes com service_date estritamente menor que o limite
+var gr = new GlideRecord('x_fub_fundbrad_ev_atendimento_ev');
+gr.addEncodedQuery("state=-5^substate=pending_requester");
+gr.addQuery('service_date', '<', limitDateStr + " 00:00:00");
+gr.query();
+
+var closedItems = [];
+
+while (gr.next()) {
+	var numeroRegistro = gr.getValue('number');
+	var dataServico = gr.getValue('service_date');
+
+	gs.info("=== [EV AUTO-CLEANUP] [ACTION] Processando encerramento do registro: " + numeroRegistro + " | service_date: " + dataServico);
+
+	gr.setValue('state', '6'); // Resolvido
+	gr.setValue('resolution_code', '10'); // Cancelado por falta de retorno
+	gr.setValue('substate', '');
+	gr.setValue('active', false);
+	gr.setValue('close_notes', 'Registro cancelado automaticamente pelo sistema após 5 dias úteis sem retorno do solicitante.');
+	gr.work_notes = 'Registro cancelado automaticamente pelo sistema após 5 dias úteis sem retorno do solicitante.';
+
+	// gr.setWorkflow(false);
+	gr.update();
+
+	gs.eventQueue(
+		'x_fub_fundbrad_ev.atendimento.cancelado',
+		gr,
+		gr.getValue('u_email_solicitante'), '');
+
+	closedItems.push(numeroRegistro);
+}
+
+gs.info("=== [EV AUTO-CLEANUP] [SUMMARY] Total de registros afetados e encerrados: " + closedItems.length);
+
+if (closedItems.length > 0) {
+	gs.info("=== [EV AUTO-CLEANUP] [SUMMARY] Itens afetados: " + closedItems.join(', '));
+}]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-27 17:49:31</sys_created_on>
+        <sys_id>8336abf779889b18c34eb56e1a47c5fb</sys_id>
+        <sys_mod_count>38</sys_mod_count>
+        <sys_name>[FB] Close record after 5 days [x_fub_fundbrad_ev_atendimento_ev]</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sysauto_script_8336abf779889b18c34eb56e1a47c5fb</sys_update_name>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-03 13:24:07</sys_updated_on>
+        <time_zone/>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

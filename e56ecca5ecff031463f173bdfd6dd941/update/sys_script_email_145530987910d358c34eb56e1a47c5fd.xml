@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>link_ev_notificar_solicitante</name>
+        <new_lines_to_html>true</new_lines_to_html>
+        <script><![CDATA[(function runMailScript(/* GlideRecord */ current, /* TemplatePrinter */ template,
+        /* Optional EmailOutbound */ email, /* Optional GlideRecord */ email_action,
+        /* Optional GlideRecord */ event) {
+
+	var instanceUrl = gs.getProperty('glide.servlet.uri');
+	var tableName = current.getTableName();
+	var sysId = current.getUniqueValue();
+
+	// Link Instance
+	var recordLink = instanceUrl + 'nav_to.do?uri=' + tableName + '.do?sys_id=' + sysId;
+	// Link Workspace
+	var workspaceLink = instanceUrl + 'x/fub/atendimento-escola-virtual/record/' + tableName + '/' + sysId;
+
+	// HTML limpo usando tabela com suporte a largura fixa para e-mails
+	var html = '';
+	html += '<table border="0" cellspacing="0" cellpadding="0" style="margin: 25px 0;">';
+	html += '  <tr>';
+
+	// Botão Workspace (Azul)
+	html += '    <td align="center" bgcolor="#007bff" style="border-radius: 4px; padding: 12px 20px;">';
+	html += '      <a href="' + workspaceLink + '" target="_blank" style="font-size: 14px; font-family: Arial, sans-serif; color: #ffffff; text-decoration: none; font-weight: bold; display: inline-block;">Acessar no Workspace</a>';
+	html += '    </td>';
+
+	// // Espaçamento entre os botões
+	// html += '    <td style="width: 10px;">&nbsp;</td>';
+
+	// // Botão Interface Clássica (Cinza)
+	// html += '    <td align="center" bgcolor="#6c757d" style="border-radius: 4px; padding: 12px 20px;">';
+	// html += '      <a href="' + recordLink + '" target="_blank" style="font-size: 14px; font-family: Arial, sans-serif; color: #ffffff; text-decoration: none; font-weight: bold; display: inline-block;">Interface Clássica</a>';
+	// html += '    </td>';
+
+	html += '  </tr>';
+	html += '</table>';
+
+	template.print(html);
+
+})(current, template, email, email_action, event);]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-28 18:13:16</sys_created_on>
+        <sys_id>145530987910d358c34eb56e1a47c5fd</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>link_ev_notificar_solicitante</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_script_email_145530987910d358c34eb56e1a47c5fd</sys_update_name>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-28 19:25:25</sys_updated_on>
+    </sys_script_email>
+</record_update>

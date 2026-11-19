@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_applicability_m2m_list">
+    <sys_ux_applicability_m2m_list action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applicability display_value="Audience for app atendimento-escola-virtual">408e90a879841fd0c34eb56e1a47c55e</applicability>
+        <list display_value="Resolved">673b2c2c79481fd0c34eb56e1a47c5ae</list>
+        <order>0</order>
+        <sys_class_name>sys_ux_applicability_m2m_list</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-19 11:45:00</sys_created_on>
+        <sys_id>e8c6c99dc5c0135463f182ce4dc0c693</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_ux_applicability_m2m_list_e8c6c99dc5c0135463f182ce4dc0c693</sys_update_name>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-19 11:45:00</sys_updated_on>
+    </sys_ux_applicability_m2m_list>
+</record_update>

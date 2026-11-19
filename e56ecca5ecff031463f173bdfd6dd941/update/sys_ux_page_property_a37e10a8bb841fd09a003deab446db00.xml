@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_page_property">
+    <sys_ux_page_property action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>Ribbon Config ID</description>
+        <name>ribbonConfigId</name>
+        <page display_value="Atendimento Escola Virtual">ef7e10a829841fd08f1690f61c9f1f13</page>
+        <required_translations/>
+        <route/>
+        <suffix/>
+        <sys_class_name>sys_ux_page_property</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-17 00:53:39</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>global</sys_domain_path>
+        <sys_id>a37e10a8bb841fd09a003deab446db00</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ribbonConfigId</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_ux_page_property_a37e10a8bb841fd09a003deab446db00</sys_update_name>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-17 00:53:39</sys_updated_on>
+        <type>string</type>
+        <unique_name>x_fub_fundbrad_ev.ef7e10a829841fd08f1690f61c9f1f13.root.ribbonConfigId</unique_name>
+        <value>ab7e10a815841fd0739d346fb80e1700</value>
+    </sys_ux_page_property>
+    <sys_translated_text action="delete_multiple" query="documentkey=a37e10a8bb841fd09a003deab446db00"/>
+</record_update>

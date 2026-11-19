@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_search_source">
+    <sys_search_source action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_fub_fundbrad_ev_atendimento_ev">active=true<item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
+        </condition>
+        <group/>
+        <name>Escola Virtual - x_fub_fundbrad_ev_atendimento_ev</name>
+        <roles/>
+        <source_table>x_fub_fundbrad_ev_atendimento_ev</source_table>
+        <sys_class_name>sys_search_source</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-17 00:53:42</sys_created_on>
+        <sys_id>dc8ed0a879841fd0c34eb56e1a47c552</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Escola Virtual - x_fub_fundbrad_ev_atendimento_ev</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_search_source_dc8ed0a879841fd0c34eb56e1a47c552</sys_update_name>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-17 00:53:42</sys_updated_on>
+    </sys_search_source>
+    <sys_translated_text action="delete_multiple" query="documentkey=dc8ed0a879841fd0c34eb56e1a47c552"/>
+</record_update>

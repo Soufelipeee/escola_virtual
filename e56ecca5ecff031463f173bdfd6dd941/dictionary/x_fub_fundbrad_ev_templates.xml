@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="b9ae19e07910db58c34eb56e1a47c5b0" label="Templates" max_length="40" name="x_fub_fundbrad_ev_templates" type="collection">
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" choice="3" label="Category" max_length="40" name="u_categoria_solicitacao" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Institucional" language="pb" sequence="11" value="institutional"/>
+                <element inactive_on_update="false" label="Avaliação" language="pb" sequence="3" value="assessment"/>
+                <element inactive_on_update="false" label="Parcerias" language="pb" sequence="14" value="partnerships"/>
+                <element inactive_on_update="false" label="Institucional" sequence="11" value="institutional"/>
+                <element inactive_on_update="false" label="Aprender" language="pb" sequence="6" value="learn"/>
+                <element inactive_on_update="false" label="Cadastro" language="pb" sequence="4" value="registration"/>
+                <element inactive_on_update="false" label="Outros assuntos" language="pb" sequence="13" value="other_topics"/>
+                <element inactive_on_update="false" label="Trails" sequence="15" value="trails"/>
+                <element inactive_on_update="false" label="Configurações" language="pb" sequence="8" value="settings"/>
+                <element inactive_on_update="false" label="Assessment" sequence="3" value="assessment"/>
+                <element inactive="true" inactive_on_update="true" label="Trilhas" language="pb" sequence="10" value="learning_paths"/>
+                <element inactive_on_update="false" label="To develop" sequence="7" value="develop"/>
+                <element inactive_on_update="false" label="Support" sequence="9" value="support"/>
+                <element inactive_on_update="false" label="Access" sequence="0" value="access"/>
+                <element inactive_on_update="false" label="Penalties" sequence="10" value="penalties"/>
+                <element inactive_on_update="false" label="Enrollment" sequence="12" value="enrollment"/>
+                <element inactive_on_update="false" label="Accessibility" sequence="1" value="accessibility"/>
+                <element inactive="true" inactive_on_update="true" label="Conteúdos" language="pb" sequence="6" value="content"/>
+                <element inactive_on_update="false" label="Registration" sequence="4" value="registration"/>
+                <element inactive_on_update="false" label="Penalidades" language="pb" sequence="10" value="penalties"/>
+                <element inactive_on_update="false" label="Learn" sequence="6" value="learn"/>
+                <element inactive_on_update="false" label="Partnerships" sequence="14" value="partnerships"/>
+                <element inactive_on_update="false" label="App" sequence="2" value="app"/>
+                <element inactive_on_update="false" label="Acessibilidade" language="pb" sequence="1" value="accessibility"/>
+                <element inactive_on_update="false" label="Acesso" language="pb" sequence="0" value="access"/>
+                <element inactive_on_update="false" label="Matrículas" language="pb" sequence="12" value="enrollment"/>
+                <element inactive_on_update="false" label="Suporte" language="pb" sequence="9" value="support"/>
+                <element inactive_on_update="false" label="Trilhas" language="pb" sequence="15" value="trails"/>
+                <element inactive_on_update="false" label="Certificado" sequence="5" value="certificate"/>
+                <element inactive_on_update="false" label="Other topics" sequence="13" value="other_topics"/>
+                <element inactive="true" inactive_on_update="true" label="Learning paths" sequence="10" value="learning_paths"/>
+                <element inactive_on_update="false" label="Aplicativo" language="pb" sequence="2" value="app"/>
+                <element inactive="true" inactive_on_update="true" label="Content" sequence="6" value="content"/>
+                <element inactive_on_update="false" label="Desenvolver" language="pb" sequence="7" value="develop"/>
+                <element inactive_on_update="false" label="Settings" sequence="8" value="settings"/>
+                <element inactive_on_update="false" label="Certificado" language="pb" sequence="5" value="certificate"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Template" max_length="500" name="u_template" type="string"/>
+        <element attributes="edge_encryption_enabled=true" display="true" label="Name" max_length="255" name="u_name" type="string"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" choice="3" label="Resolution code" max_length="40" name="resolution_code" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Cancelled due to lack of response" sequence="10" value="10"/>
+                <element inactive_on_update="false" label="Sucessfly terminated" sequence="20" value="20"/>
+                <element inactive_on_update="false" label="Duplicate" sequence="30" value="30"/>
+            </choice>
+        </element>
+    </element>
+</database>

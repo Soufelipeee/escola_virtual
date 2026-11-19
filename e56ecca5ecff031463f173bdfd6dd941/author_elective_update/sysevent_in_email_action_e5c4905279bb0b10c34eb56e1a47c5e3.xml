@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_in_email_action">
+    <sysevent_in_email_action action="DELETE">
+        <action>reply_email</action>
+        <active>false</active>
+        <assignment_operator/>
+        <condition_script/>
+        <description/>
+        <event_name>email.read</event_name>
+        <filter_condition/>
+        <from/>
+        <name>EV – Resposta do aluno</name>
+        <order>100</order>
+        <reply_email/>
+        <required_roles/>
+        <script><![CDATA[(function runAction(/*GlideRecord*/ current, /*GlideRecord*/ event, /*EmailWrapper*/ email, /*ScopedEmailLogger*/ logger, /*EmailClassifier*/ classifier) {
+
+	// Implement email action here
+
+})(current, event, email, logger, classifier);]]></script>
+        <stop_processing>false</stop_processing>
+        <sys_class_name>sysevent_in_email_action</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-10 00:25:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e5c4905279bb0b10c34eb56e1a47c5e3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>EV – Resposta do aluno</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sysevent_in_email_action_e5c4905279bb0b10c34eb56e1a47c5e3</sys_update_name>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-10 00:25:33</sys_updated_on>
+        <table/>
+        <template/>
+        <type>new</type>
+    </sysevent_in_email_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</application>
+        <file_path/>
+        <instance_id>831a14741b984a5032182f8dee4bcbf0</instance_id>
+        <instance_name>fundbraddev</instance_name>
+        <name>sysevent_in_email_action_e5c4905279bb0b10c34eb56e1a47c5e3</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sysevent_in_email_action"&gt;&lt;sysevent_in_email_action action="INSERT_OR_UPDATE"&gt;&lt;action&gt;reply_email&lt;/action&gt;&lt;active&gt;false&lt;/active&gt;&lt;assignment_operator/&gt;&lt;condition_script/&gt;&lt;description/&gt;&lt;event_name&gt;email.read&lt;/event_name&gt;&lt;filter_condition/&gt;&lt;from/&gt;&lt;name&gt;EV – Resposta do aluno&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;reply_email/&gt;&lt;required_roles/&gt;&lt;script&gt;&lt;![CDATA[(function runAction(/*GlideRecord*/ current, /*GlideRecord*/ event, /*EmailWrapper*/ email, /*ScopedEmailLogger*/ logger, /*EmailClassifier*/ classifier) {
+
+	// Implement email action here
+
+})(current, event, email, logger, classifier);]]&gt;&lt;/script&gt;&lt;stop_processing&gt;false&lt;/stop_processing&gt;&lt;sys_class_name&gt;sysevent_in_email_action&lt;/sys_class_name&gt;&lt;sys_created_by&gt;stephanie.flavio&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-10-10 00:25:33&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;e5c4905279bb0b10c34eb56e1a47c5e3&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;EV – Resposta do aluno&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev"&gt;e56ecca5ecff031463f173bdfd6dd941&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Escola Virtual"&gt;e56ecca5ecff031463f173bdfd6dd941&lt;/sys_scope&gt;&lt;sys_update_name&gt;sysevent_in_email_action_e5c4905279bb0b10c34eb56e1a47c5e3&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;stephanie.flavio&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-10-10 00:25:33&lt;/sys_updated_on&gt;&lt;table/&gt;&lt;template/&gt;&lt;type&gt;new&lt;/type&gt;&lt;/sysevent_in_email_action&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>2124916933</payload_hash>
+        <record_name>EV – Resposta do aluno</record_name>
+        <reverted_from/>
+        <source>0aebad31ac3bc394c34e0c1cb0feaf6f</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-10 00:25:33</sys_created_on>
+        <sys_id>f3e4509279bb0b10c34eb56e1a47c5f5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a1233365dc0000001</sys_recorded_at>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-10 00:25:33</sys_updated_on>
+        <type>Inbound Email Actions</type>
+        <update_guid>b3e45092d1bb0b10bd09b43931f972f4</update_guid>
+        <update_guid_history>b3e45092d1bb0b10bd09b43931f972f4:2124916933</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-14 18:49:16</sys_created_on>
+        <sys_db_object display_value="" name="sysevent_in_email_action">sysevent_in_email_action</sys_db_object>
+        <sys_id>73f16b66b8184404bc20d2e495f59c69</sys_id>
+        <sys_metadata>e5c4905279bb0b10c34eb56e1a47c5e3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>EV – Resposta do aluno</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_scope_delete display_value="">3911fbb3a8454a90b9d9310b67c884c9</sys_scope_delete>
+        <sys_update_name>sysevent_in_email_action_e5c4905279bb0b10c34eb56e1a47c5e3</sys_update_name>
+        <sys_update_version display_value="sysevent_in_email_action_e5c4905279bb0b10c34eb56e1a47c5e3">f3e4509279bb0b10c34eb56e1a47c5f5</sys_update_version>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-14 18:49:16</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

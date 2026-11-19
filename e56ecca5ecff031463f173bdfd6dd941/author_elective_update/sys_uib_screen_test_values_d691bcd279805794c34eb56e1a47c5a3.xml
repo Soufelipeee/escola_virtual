@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_uib_screen_test_values">
+    <sys_uib_screen_test_values action="DELETE">
+        <macroponent display_value="teste">6eba209a798c1794c34eb56e1a47c548</macroponent>
+        <macroponent_config>{}</macroponent_config>
+        <screen/>
+        <sys_class_name>sys_uib_screen_test_values</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-22 12:46:29</sys_created_on>
+        <sys_id>d691bcd279805794c34eb56e1a47c5a3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_uib_screen_test_values_d691bcd279805794c34eb56e1a47c5a3</sys_update_name>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-22 12:46:29</sys_updated_on>
+    </sys_uib_screen_test_values>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</application>
+        <file_path/>
+        <instance_id>831a14741b984a5032182f8dee4bcbf0</instance_id>
+        <instance_name>fundbraddev</instance_name>
+        <name>sys_uib_screen_test_values_d691bcd279805794c34eb56e1a47c5a3</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_uib_screen_test_values"><sys_uib_screen_test_values action="INSERT_OR_UPDATE"><macroponent display_value="teste">6eba209a798c1794c34eb56e1a47c548</macroponent><macroponent_config>{}</macroponent_config><screen/><sys_class_name>sys_uib_screen_test_values</sys_class_name><sys_created_by>felipe.valenca</sys_created_by><sys_created_on>2026-10-22 12:46:29</sys_created_on><sys_id>d691bcd279805794c34eb56e1a47c5a3</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package><sys_policy/><sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope><sys_update_name>sys_uib_screen_test_values_d691bcd279805794c34eb56e1a47c5a3</sys_update_name><sys_updated_by>felipe.valenca</sys_updated_by><sys_updated_on>2026-10-22 12:46:29</sys_updated_on></sys_uib_screen_test_values></record_update>]]></payload>
+        <payload_hash>1760527708</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>3c5ed7f979809f54c34eb56e1a47c52e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-22 12:46:29</sys_created_on>
+        <sys_id>da91bcd279805794c34eb56e1a47c5a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a163a60e350000001</sys_recorded_at>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-22 12:46:29</sys_updated_on>
+        <type>UIB Screen Test Values</type>
+        <update_guid>9a91bcd20e8057946948d24383ffffa5</update_guid>
+        <update_guid_history>9a91bcd20e8057946948d24383ffffa5:1760527708</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-22 12:53:49</sys_created_on>
+        <sys_db_object display_value="" name="sys_uib_screen_test_values">sys_uib_screen_test_values</sys_db_object>
+        <sys_id>027046697654479890fd4e57931d04c4</sys_id>
+        <sys_metadata>d691bcd279805794c34eb56e1a47c5a3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_scope_delete display_value="">3911fbb3a8454a90b9d9310b67c884c9</sys_scope_delete>
+        <sys_update_name>sys_uib_screen_test_values_d691bcd279805794c34eb56e1a47c5a3</sys_update_name>
+        <sys_update_version display_value="sys_uib_screen_test_values_d691bcd279805794c34eb56e1a47c5a3">da91bcd279805794c34eb56e1a47c5a6</sys_update_version>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-22 12:53:49</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

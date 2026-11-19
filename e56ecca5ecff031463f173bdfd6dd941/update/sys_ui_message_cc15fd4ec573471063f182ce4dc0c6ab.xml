@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_message">
+    <sys_ui_message action="INSERT_OR_UPDATE">
+        <application/>
+        <code/>
+        <commented_message/>
+        <key>nome_invalido_msg</key>
+        <language>pb</language>
+        <message>O nome do solicitante não pode conter números.</message>
+        <sys_class_name>sys_ui_message</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-09 12:47:03</sys_created_on>
+        <sys_id>cc15fd4ec573471063f182ce4dc0c6ab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>nome_invalido_msg</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_ui_message_cc15fd4ec573471063f182ce4dc0c6ab</sys_update_name>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-09 12:47:03</sys_updated_on>
+    </sys_ui_message>
+</record_update>

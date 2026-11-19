@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_email_action">
+    <sysevent_email_action action="INSERT_OR_UPDATE">
+        <action_insert>false</action_insert>
+        <action_update>false</action_update>
+        <active>true</active>
+        <advanced_condition/>
+        <affected_field_on_event/>
+        <category display_value="Uncategorized" name="Uncategorized">c97d83137f4432005f58108c3ffa917a</category>
+        <collection>x_fub_fundbrad_ev_atendimento_ev</collection>
+        <condition/>
+        <content_type>text/html</content_type>
+        <default_digest>false</default_digest>
+        <default_interval/>
+        <description/>
+        <digest_from/>
+        <digest_html/>
+        <digest_reply_to/>
+        <digest_separator_html><![CDATA[<p>&nbsp;</p>
+<hr>
+<p>&nbsp;</p>]]></digest_separator_html>
+        <digest_separator_text><![CDATA[\n--------------------------------------------------------------------------------\n]]></digest_separator_text>
+        <digest_subject/>
+        <digest_template/>
+        <digest_text/>
+        <digest_type>single</digest_type>
+        <digestable>false</digestable>
+        <enable_dynamic_translation>false</enable_dynamic_translation>
+        <event_name>x_fub_fundbrad_ev.atendimento.notificar</event_name>
+        <event_parm_1>false</event_parm_1>
+        <event_parm_2>false</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from>Escola Virtual &lt;int.escolavirtual@escolavirtual.com&gt;</from>
+        <generation_type>event</generation_type>
+        <importance>high</importance>
+        <include_attachments>false</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<p>Ol&aacute;, <strong>${assigned_to}</strong>,</p>
+<p>O solicitante enviou uma nova resposta/atualiza&ccedil;&atilde;o no chamado abaixo:</p>
+<ul style="margin: 15px 0; padding-left: 20px; list-style-type: disc;">
+<li style="margin-bottom: 8px;"><strong>Protocolo:</strong> ${number}</li>
+</ul>
+<p>Acesse o sistema para verificar o retorno do solicitante e dar continuidade ao atendimento:</p>
+<div style="margin: 20px 0;">${mail_script:link_ev_notificar_solicitante}</div>
+<p style="margin-top: 25px;">Atenciosamente,<br><strong>funda&ccedil;&atilde;o bradesco | escola virtual</strong></p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>EV – Notificar analista</name>
+        <omit_watermark>false</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields>assigned_to</recipient_fields>
+        <recipient_groups/>
+        <recipient_users/>
+        <reply_to/>
+        <send_self>false</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject>Protocolo ${number} – Aluno respondeu a solicitação - Escola Virtual</subject>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-28 16:32:18</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>70ded89479989358c34eb56e1a47c5a3</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>EV – Notificar analista</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sysevent_email_action_70ded89479989358c34eb56e1a47c5a3</sys_update_name>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-29 12:33:10</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template display_value="FB - Template escola virtual">2744dd10795cd358c34eb56e1a47c52b</template>
+        <type>email</type>
+        <weight>0</weight>
+    </sysevent_email_action>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>70ded89479989358c34eb56e1a47c5a3</id>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-28 16:32:19</sys_created_on>
+        <sys_id>01de9c9479989358c34eb56e1a47c588</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-28 16:32:19</sys_updated_on>
+        <table>sysevent_email_action</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

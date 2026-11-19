@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Atendimento" section_id="cd8e94a879841fd0c34eb56e1a47c51f" sys_domain="global" table="x_fub_fundbrad_ev_atendimento_ev" version="3" view="workspace-escola-virtual-0">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>0</position>
+            <sys_created_by>stephanie.flavio</sys_created_by>
+            <sys_created_on>2026-10-17 00:53:45</sys_created_on>
+            <sys_id>0d8e94a879841fd0c34eb56e1a47c540</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Atendimento" display_value="Atendimento" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="af7e10a80a841fd0cb2ed0db6b07b608">cd8e94a879841fd0c34eb56e1a47c51f</sys_ui_section>
+            <sys_updated_by>stephanie.flavio</sys_updated_by>
+            <sys_updated_on>2026-10-17 00:53:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>contact_type</element>
+            <position>1</position>
+            <sys_created_by>stephanie.flavio</sys_created_by>
+            <sys_created_on>2026-10-17 00:53:45</sys_created_on>
+            <sys_id>898e94a879841fd0c34eb56e1a47c53d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Atendimento" display_value="Atendimento" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="af7e10a80a841fd0cb2ed0db6b07b608">cd8e94a879841fd0c34eb56e1a47c51f</sys_ui_section>
+            <sys_updated_by>stephanie.flavio</sys_updated_by>
+            <sys_updated_on>2026-10-17 00:53:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>priority</element>
+            <position>2</position>
+            <sys_created_by>stephanie.flavio</sys_created_by>
+            <sys_created_on>2026-10-17 00:53:45</sys_created_on>
+            <sys_id>8d8e94a879841fd0c34eb56e1a47c53e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Atendimento" display_value="Atendimento" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="af7e10a80a841fd0cb2ed0db6b07b608">cd8e94a879841fd0c34eb56e1a47c51f</sys_ui_section>
+            <sys_updated_by>stephanie.flavio</sys_updated_by>
+            <sys_updated_on>2026-10-17 00:53:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_categoria_solicitacao</element>
+            <position>3</position>
+            <sys_created_by>stephanie.flavio</sys_created_by>
+            <sys_created_on>2026-10-17 00:53:45</sys_created_on>
+            <sys_id>058e94a879841fd0c34eb56e1a47c53e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Atendimento" display_value="Atendimento" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="af7e10a80a841fd0cb2ed0db6b07b608">cd8e94a879841fd0c34eb56e1a47c51f</sys_ui_section>
+            <sys_updated_by>stephanie.flavio</sys_updated_by>
+            <sys_updated_on>2026-10-17 00:53:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>assignment_group</element>
+            <position>4</position>
+            <sys_created_by>stephanie.flavio</sys_created_by>
+            <sys_created_on>2026-10-17 00:53:45</sys_created_on>
+            <sys_id>098e94a879841fd0c34eb56e1a47c53f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Atendimento" display_value="Atendimento" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="af7e10a80a841fd0cb2ed0db6b07b608">cd8e94a879841fd0c34eb56e1a47c51f</sys_ui_section>
+            <sys_updated_by>stephanie.flavio</sys_updated_by>
+            <sys_updated_on>2026-10-17 00:53:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>assigned_to</element>
+            <position>5</position>
+            <sys_created_by>stephanie.flavio</sys_created_by>
+            <sys_created_on>2026-10-17 00:53:45</sys_created_on>
+            <sys_id>858e94a879841fd0c34eb56e1a47c53c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Atendimento" display_value="Atendimento" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="af7e10a80a841fd0cb2ed0db6b07b608">cd8e94a879841fd0c34eb56e1a47c51f</sys_ui_section>
+            <sys_updated_by>stephanie.flavio</sys_updated_by>
+            <sys_updated_on>2026-10-17 00:53:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>opened_at</element>
+            <position>6</position>
+            <sys_created_by>stephanie.flavio</sys_created_by>
+            <sys_created_on>2026-10-17 00:53:45</sys_created_on>
+            <sys_id>818e94a879841fd0c34eb56e1a47c540</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Atendimento" display_value="Atendimento" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="af7e10a80a841fd0cb2ed0db6b07b608">cd8e94a879841fd0c34eb56e1a47c51f</sys_ui_section>
+            <sys_updated_by>stephanie.flavio</sys_updated_by>
+            <sys_updated_on>2026-10-17 00:53:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>resolved_by</element>
+            <position>7</position>
+            <sys_created_by>stephanie.flavio</sys_created_by>
+            <sys_created_on>2026-10-17 00:53:45</sys_created_on>
+            <sys_id>018e94a879841fd0c34eb56e1a47c53d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Atendimento" display_value="Atendimento" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="af7e10a80a841fd0cb2ed0db6b07b608">cd8e94a879841fd0c34eb56e1a47c51f</sys_ui_section>
+            <sys_updated_by>stephanie.flavio</sys_updated_by>
+            <sys_updated_on>2026-10-17 00:53:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>resolved_at</element>
+            <position>8</position>
+            <sys_created_by>stephanie.flavio</sys_created_by>
+            <sys_created_on>2026-10-17 00:53:45</sys_created_on>
+            <sys_id>858e94a879841fd0c34eb56e1a47c541</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Atendimento" display_value="Atendimento" name="x_fub_fundbrad_ev_atendimento_ev" sys_domain="global" view="af7e10a80a841fd0cb2ed0db6b07b608">cd8e94a879841fd0c34eb56e1a47c51f</sys_ui_section>
+            <sys_updated_by>stephanie.flavio</sys_updated_by>
+            <sys_updated_on>2026-10-17 00:53:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Atendimento</caption>
+            <header>false</header>
+            <name>x_fub_fundbrad_ev_atendimento_ev</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>stephanie.flavio</sys_created_by>
+            <sys_created_on>2026-10-17 00:53:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>cd8e94a879841fd0c34eb56e1a47c51f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_fub_fundbrad_ev_atendimento_ev</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+            <sys_update_name>sys_ui_section_cd8e94a879841fd0c34eb56e1a47c51f</sys_update_name>
+            <sys_updated_by>stephanie.flavio</sys_updated_by>
+            <sys_updated_on>2026-10-17 00:53:45</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Workspace Escola Virtual 0" name="workspace-escola-virtual-0">af7e10a80a841fd0cb2ed0db6b07b608</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

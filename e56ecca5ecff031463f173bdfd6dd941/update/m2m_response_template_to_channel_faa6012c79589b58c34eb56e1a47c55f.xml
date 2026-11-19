@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="m2m_response_template_to_channel">
+    <m2m_response_template_to_channel action="INSERT_OR_UPDATE">
+        <channel display_value="Form">54e9450c3b4300105a18802b13efc420</channel>
+        <response_template display_value="ev - teste 1">4836816879589b58c34eb56e1a47c538</response_template>
+        <sys_class_name>m2m_response_template_to_channel</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-29 14:04:52</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>faa6012c79589b58c34eb56e1a47c55f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Form.test</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>m2m_response_template_to_channel_faa6012c79589b58c34eb56e1a47c55f</sys_update_name>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-29 14:04:52</sys_updated_on>
+    </m2m_response_template_to_channel>
+</record_update>

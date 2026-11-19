@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_fub_fundbrad_ev.EvRetomarAtendimentoAjax</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>EvRetomarAtendimentoAjax</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var EvRetomarAtendimentoAjax = Class.create();
+
+EvRetomarAtendimentoAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    TABLE: 'x_fub_fundbrad_ev_atendimento_ev',
+
+    retomar: function () {
+        var record = this._getRecord();
+
+        if (!record) {
+            return this._error('Atendimento indisponível para retomada.');
+        }
+
+        if (!record.getElement('work_notes').canWrite()) {
+            return this._error('Sem permissão para registrar anotações de trabalho.');
+        }
+
+        var reason = record.getValue('substate') === 'pending_internal_action'
+            ? 'aguardando ação interna'
+            : 'aguardando fornecedor';
+
+        record.setValue('state', '2');
+        record.setValue('substate', '');
+        record.work_notes = 'Atendimento retomado pelo atendente. ' +
+            'Pendência anterior: ' + reason + '.';
+
+        if (!record.update()) {
+            return this._error('Não foi possível retomar o atendimento.');
+        }
+
+        var saved = new GlideRecord(this.TABLE);
+
+        if (!saved.get(record.getUniqueValue()) ||
+            saved.getValue('state') !== '2' ||
+            !gs.nil(saved.getValue('substate'))) {
+            return this._error(
+                'O resultado da gravação divergiu do solicitado. ' +
+                'Verifique as regras do atendimento antes de repetir a ação.'
+            );
+        }
+
+        return JSON.stringify({ success: true });
+    },
+
+    _getRecord: function () {
+        var id = String(this.getParameter('sysparm_record_id') || '').trim();
+
+        if (!/^[a-f0-9]{32}$/i.test(id) ||
+            !gs.hasRole('x_fub_fundbrad_ev.agent')) {
+            return null;
+        }
+
+        var secure = new GlideRecordSecure(this.TABLE);
+
+        if (!secure.get(id) || !secure.canRead() || !secure.canWrite()) {
+            return null;
+        }
+
+        // Gravação controlada dos campos protegidos pela action.
+        var record = new GlideRecord(this.TABLE);
+
+        if (!record.get(id) ||
+            record.getRecordClassName() !== this.TABLE ||
+            !record.canRead() ||
+            !record.canWrite()) {
+            return null;
+        }
+
+        var substate = record.getValue('substate');
+
+        if (record.getValue('u_origem') !== 'escola_virtual' ||
+            record.getValue('state') !== '-5' ||
+            record.getValue('assigned_to') !== gs.getUserID() ||
+            (substate !== 'pending_internal_action' &&
+                substate !== 'pending_supplier')) {
+            return null;
+        }
+
+        return record;
+    },
+
+    _error: function (message) {
+        return JSON.stringify({ success: false, error: message });
+    },
+
+    isPublic: function () {
+        return false;
+    },
+
+    type: 'EvRetomarAtendimentoAjax'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-28 19:24:01</sys_created_on>
+        <sys_id>e806491479d4d358c34eb56e1a47c542</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>EvRetomarAtendimentoAjax</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_script_include_e806491479d4d358c34eb56e1a47c542</sys_update_name>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-28 20:08:17</sys_updated_on>
+    </sys_script_include>
+</record_update>

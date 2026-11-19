@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_email_layout">
+    <sys_email_layout action="INSERT_OR_UPDATE">
+        <advanced>false</advanced>
+        <advanced_layout/>
+        <description/>
+        <layout><![CDATA[<div style="text-align: center;"><!-- Tabela Container Principal (Largura Fixa de 600px para segurança em e-mails) -->
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; margin-left: auto; margin-right: auto; width: 600px; max-width: 100%; background-color: #ffffff;">
+<tbody><!-- HEADER -->
+<tr>
+<td style="width: 100%; padding: 0; line-height: 0;"><img src="x_fub_fundbrad_ev.ev-header.jpg" alt="Cabe&ccedil;alho" style="display: block; width: 100%; height: auto; border: 0;"></td>
+</tr>
+<!-- CORPO DA MENSAGEM (${notification:body}) -->
+<tr>
+<td style="font-family: 'Bradesco Sans', Arial, sans-serif; text-align: left; padding: 40px 50px; width: 100%; color: #333333; background-color: #ffffff;"><span style="font-size: 12pt;">${notification:body}</span></td>
+</tr>
+<!-- FOOTER -->
+<tr>
+<td style="width: 100%; padding: 0; line-height: 0;"><img src="x_fub_fundbrad_ev.ev-footer.jpg" alt="Rodap&eacute;" data-library="false" style="display: block; width: 100%; height: auto; border: 0;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<style>
+    @font-face {
+        font-family: 'Bradesco Sans';
+        src: url('/sys_attachment.do?sys_id=d344f8b533238a50249781ac4f5c7ba2') format('woff');
+    }
+    @font-face {
+        font-family: 'Bradesco Sans';
+        src: url('/sys_attachment.do?sys_id=9344f8b533238a50249781ac4f5c7ba4') format('woff');
+    }
+
+    /* Regras globais de tipografia para o corpo injetado */
+    p {
+        font-family: 'Bradesco Sans', Arial, sans-serif !important;
+        font-size: 12.0pt;
+        line-height: 1.5;
+        margin: 0 0 15px 0;
+    }
+    
+    strong {
+        font-family: 'Bradesco Sans', Arial, sans-serif;
+        font-size: 14.0pt;
+    }
+</style>]]></layout>
+        <name>FB - Template escola virtual</name>
+        <sys_class_name>sys_email_layout</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-28 20:27:08</sys_created_on>
+        <sys_id>7c9491d0795cd358c34eb56e1a47c5f4</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>FB - Template escola virtual</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_email_layout_7c9491d0795cd358c34eb56e1a47c5f4</sys_update_name>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-28 20:36:26</sys_updated_on>
+    </sys_email_layout>
+</record_update>

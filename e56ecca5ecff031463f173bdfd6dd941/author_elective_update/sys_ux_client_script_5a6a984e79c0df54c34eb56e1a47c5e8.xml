@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Record page 3 column layout">426a984e79c0df54c34eb56e1a47c582</macroponent>
+        <name>On Gen AI Modal Cancel Clicked</name>
+        <preset/>
+        <required_translations>[
+    {
+        "message": "&lt;b&gt;Selected tasks:&lt;/b&gt; {0}"
+    }
+]</required_translations>
+        <script><![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+async function handler({api, event, helpers, imports}) {
+    helpers.modal.close("modal_gen_ai");
+    var sysIdStr;
+    if (api.data.fetch_gaps_incident_sysids?.results?.length > 0) {
+        var sysIds = api.data.fetch_gaps_incident_sysids.results;
+        sysIdStr = (sysIds.map((sysId) => sysId.task.displayValue)).join(", ");
+    } else if (api.state.genAiSourceRecordId) {
+        // for the agent flow case
+        // if creating article from incident without gen ai, then there should be only 1 source
+        sysIdStr = api.data.record.form.fields.source?.displayValue;
+    }
+
+    if (sysIdStr) {
+        var message = await helpers.translate("<b>Selected tasks:</b> {0}", sysIdStr);
+        var content = `<span>${message}</span>`;
+        api.emit("NOW_UXF_PAGE#ADD_NOTIFICATIONS", {
+            items: [{
+                id: "gaps_tasks",
+                status: "info",
+                icon: "circle-info-outline",
+                content: {
+                    type: "html",
+                    value: content
+                },
+                action: {
+                    type: "dismiss"
+                }
+            }]
+        });
+    }
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-21 16:26:41</sys_created_on>
+        <sys_id>5a6a984e79c0df54c34eb56e1a47c5e8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>On Gen AI Modal Cancel Clicked</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_ux_client_script_5a6a984e79c0df54c34eb56e1a47c5e8</sys_update_name>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-21 16:26:41</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</application>
+        <file_path/>
+        <instance_id>831a14741b984a5032182f8dee4bcbf0</instance_id>
+        <instance_name>fundbraddev</instance_name>
+        <name>sys_ux_client_script_5a6a984e79c0df54c34eb56e1a47c5e8</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;controller_preset/&gt;&lt;includes/&gt;&lt;macroponent display_value="Record page 3 column layout"&gt;426a984e79c0df54c34eb56e1a47c582&lt;/macroponent&gt;&lt;name&gt;On Gen AI Modal Cancel Clicked&lt;/name&gt;&lt;preset/&gt;&lt;required_translations&gt;[
+    {
+        "message": "&amp;lt;b&amp;gt;Selected tasks:&amp;lt;/b&amp;gt; {0}"
+    }
+]&lt;/required_translations&gt;&lt;script&gt;&lt;![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+async function handler({api, event, helpers, imports}) {
+    helpers.modal.close("modal_gen_ai");
+    var sysIdStr;
+    if (api.data.fetch_gaps_incident_sysids?.results?.length &gt; 0) {
+        var sysIds = api.data.fetch_gaps_incident_sysids.results;
+        sysIdStr = (sysIds.map((sysId) =&gt; sysId.task.displayValue)).join(", ");
+    } else if (api.state.genAiSourceRecordId) {
+        // for the agent flow case
+        // if creating article from incident without gen ai, then there should be only 1 source
+        sysIdStr = api.data.record.form.fields.source?.displayValue;
+    }
+
+    if (sysIdStr) {
+        var message = await helpers.translate("&lt;b&gt;Selected tasks:&lt;/b&gt; {0}", sysIdStr);
+        var content = `&lt;span&gt;${message}&lt;/span&gt;`;
+        api.emit("NOW_UXF_PAGE#ADD_NOTIFICATIONS", {
+            items: [{
+                id: "gaps_tasks",
+                status: "info",
+                icon: "circle-info-outline",
+                content: {
+                    type: "html",
+                    value: content
+                },
+                action: {
+                    type: "dismiss"
+                }
+            }]
+        });
+    }
+}]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;felipe.valenca&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-10-21 16:26:41&lt;/sys_created_on&gt;&lt;sys_id&gt;5a6a984e79c0df54c34eb56e1a47c5e8&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;On Gen AI Modal Cancel Clicked&lt;/sys_name&gt;&lt;sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev"&gt;e56ecca5ecff031463f173bdfd6dd941&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Escola Virtual"&gt;e56ecca5ecff031463f173bdfd6dd941&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_5a6a984e79c0df54c34eb56e1a47c5e8&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;felipe.valenca&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-10-21 16:26:41&lt;/sys_updated_on&gt;&lt;target&gt;macroponent&lt;/target&gt;&lt;type&gt;default&lt;/type&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-413341860</payload_hash>
+        <record_name>On Gen AI Modal Cancel Clicked</record_name>
+        <reverted_from/>
+        <source>3c5ed7f979809f54c34eb56e1a47c52e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-21 16:26:41</sys_created_on>
+        <sys_id>526a984e79c0df54c34eb56e1a47c5ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a15f494da40000001</sys_recorded_at>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-21 16:26:41</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>526a984e40c0df541d1b36c06c1611eb</update_guid>
+        <update_guid_history>526a984e40c0df541d1b36c06c1611eb:-413341860</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-21 16:28:28</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>712e3d6ee2b444c0ae72634bb9515ef1</sys_id>
+        <sys_metadata>5a6a984e79c0df54c34eb56e1a47c5e8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>On Gen AI Modal Cancel Clicked</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_scope_delete display_value="">3911fbb3a8454a90b9d9310b67c884c9</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_5a6a984e79c0df54c34eb56e1a47c5e8</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_5a6a984e79c0df54c34eb56e1a47c5e8">526a984e79c0df54c34eb56e1a47c5ec</sys_update_version>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-21 16:28:28</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

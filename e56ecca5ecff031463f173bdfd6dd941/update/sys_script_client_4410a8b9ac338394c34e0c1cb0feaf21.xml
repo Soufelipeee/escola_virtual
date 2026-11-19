@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>u_data_nascimento_solicitante</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>[FB] Verify data birth</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	if (isLoading || newValue === '') {
+		return;
+	}
+
+	// 1. Validação prévia no Client-Side: Verifica se segue o formato aceito(ex: yyyy-MM-dd ou dd/MM/yyyy)
+	var formatoIso = /^\d{4}-\d{2}-\d{2}$/;
+	var formatoBr = /^\d{2}\/\d{2}\/\d{4}$/;
+
+	if (!formatoIso.test(newValue) && !formatoBr.test(newValue)) {
+		g_form.clearValue('u_data_nascimento_solicitante');
+		getMessage('data_invalida_msg', function (msg) {
+			g_form.showFieldMsg('u_data_nascimento_solicitante', msg, 'error', true);
+		});
+		return;
+	}
+
+	var ga = new GlideAjax('x_fub_fundbrad_ev.EVUtils');
+	ga.addParam('sysparm_name', 'isDateGreaterThanToday');
+	ga.addParam('sysparm_date', newValue);
+	ga.getXMLAnswer(function (response) {
+
+		if (response === 'true') {
+			g_form.clearValue('u_data_nascimento_solicitante');
+			getMessage('data_superior_msg', function (msg) {
+				g_form.showFieldMsg('u_data_nascimento_solicitante', msg, 'error', true);
+			});
+		} else {
+			g_form.hideFieldMsg('u_data_nascimento_solicitante', 'error');
+		}
+	});
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-08 11:59:28</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4410a8b9ac338394c34e0c1cb0feaf21</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>[FB] Verify data birth</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_script_client_4410a8b9ac338394c34e0c1cb0feaf21</sys_update_name>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-23 15:31:41</sys_updated_on>
+        <table>x_fub_fundbrad_ev_atendimento_ev</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

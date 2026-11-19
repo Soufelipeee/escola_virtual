@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="u_categoria_solicitacao" table="x_fub_fundbrad_ev_templates" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>u_categoria_solicitacao</element>
+            <name>x_fub_fundbrad_ev_templates</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-10-30 12:39:45</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>u_categoria_solicitacao</sys_name>
+            <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+            <sys_update_name>sys_choice_x_fub_fundbrad_ev_templates_u_categoria_solicitacao</sys_update_name>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-10-30 12:39:45</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_categoria_solicitacao</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Access</label>
+            <language>en</language>
+            <name>x_fub_fundbrad_ev_templates</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-11-03 15:09:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-11-03 15:09:13</sys_updated_on>
+            <value>access</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_categoria_solicitacao</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Acesso</label>
+            <language>pb</language>
+            <name>x_fub_fundbrad_ev_templates</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-11-03 15:09:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-11-03 15:09:13</sys_updated_on>
+            <value>access</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_categoria_solicitacao</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Accessibility</label>
+            <language>en</language>
+            <name>x_fub_fundbrad_ev_templates</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-11-03 15:09:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-11-03 15:09:13</sys_updated_on>
+            <value>accessibility</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_categoria_solicitacao</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Acessibilidade</label>
+            <language>pb</language>
+            <name>x_fub_fundbrad_ev_templates</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-11-03 15:09:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-11-03 15:09:14</sys_updated_on>
+            <value>accessibility</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_categoria_solicitacao</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>App</label>
+            <language>en</language>
+            <name>x_fub_fundbrad_ev_templates</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-11-03 15:09:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-11-03 15:09:14</sys_updated_on>
+            <value>app</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_categoria_solicitacao</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Aplicativo</label>
+            <language>pb</language>
+            <name>x_fub_fundbrad_ev_templates</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-11-03 15:09:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-11-03 15:09:14</sys_updated_on>
+            <value>app</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_categoria_solicitacao</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Avaliação</label>
+            <language>pb</language>
+            <name>x_fub_fundbrad_ev_templates</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-11-03 15:09:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-11-03 15:09:13</sys_updated_on>
+            <value>assessment</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_categoria_solicitacao</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Assessment</label>
+            <language>en</language>
+            <name>x_fub_fundbrad_ev_templates</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-11-03 15:09:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-11-03 15:09:14</sys_updated_on>
+            <value>assessment</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_categoria_solicitacao</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Cadastro</label>
+            <language>pb</language>
+            <name>x_fub_fundbrad_ev_templates</name>
+            <sequence>4</sequence>
+            <synonyms/>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-11-03 15:09:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-11-03 15:09:14</sys_updated_on>
+            <value>registration</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_categoria_solicitacao</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Registration</label>
+            <language>en</language>
+            <name>x_fub_fundbrad_ev_templates</name>
+            <sequence>4</sequence>
+            <synonyms/>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-11-03 15:09:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-11-03 15:09:13</sys_updated_on>
+            <value>registration</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_categoria_solicitacao</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Certificado</label>
+            <language>en</language>
+            <name>x_fub_fundbrad_ev_templates</name>
+            <sequence>5</sequence>
+            <synonyms/>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-11-03 15:09:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-11-03 15:09:14</sys_updated_on>
+            <value>certificate</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_categoria_solicitacao</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Certificado</label>
+            <language>pb</language>
+            <name>x_fub_fundbrad_ev_templates</name>
+            <sequence>5</sequence>
+            <synonyms/>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-11-03 15:09:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-11-03 15:09:14</sys_updated_on>
+            <value>certificate</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_categoria_solicitacao</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>Conteúdos</label>
+            <language>pb</language>
+            <name>x_fub_fundbrad_ev_templates</name>
+            <sequence>6</sequence>
+            <synonyms/>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-11-03 15:09:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-11-03 15:09:13</sys_updated_on>
+            <value>content</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_categoria_solicitacao</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>Content</label>
+            <language>en</language>
+            <name>x_fub_fundbrad_ev_templates</name>
+            <sequence>6</sequence>
+            <synonyms/>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-11-03 15:09:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-11-03 15:09:14</sys_updated_on>
+            <value>content</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_categoria_solicitacao</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Aprender</label>
+            <language>pb</language>
+            <name>x_fub_fundbrad_ev_templates</name>
+            <sequence>6</sequence>
+            <synonyms/>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-11-03 15:09:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-11-03 15:09:13</sys_updated_on>
+            <value>learn</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_categoria_solicitacao</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Learn</label>
+            <language>en</language>
+            <name>x_fub_fundbrad_ev_templates</name>
+            <sequence>6</sequence>
+            <synonyms/>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-11-03 15:09:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-11-03 15:09:14</sys_updated_on>
+            <value>learn</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_categoria_solicitacao</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>To develop</label>
+            <language>en</language>
+            <name>x_fub_fundbrad_ev_templates</name>
+            <sequence>7</sequence>
+            <synonyms/>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-11-03 15:09:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-11-03 15:09:13</sys_updated_on>
+            <value>develop</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_categoria_solicitacao</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Desenvolver</label>
+            <language>pb</language>
+            <name>x_fub_fundbrad_ev_templates</name>
+            <sequence>7</sequence>
+            <synonyms/>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-11-03 15:09:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-11-03 15:09:13</sys_updated_on>
+            <value>develop</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_categoria_solicitacao</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Configurações</label>
+            <language>pb</language>
+            <name>x_fub_fundbrad_ev_templates</name>
+            <sequence>8</sequence>
+            <synonyms/>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-11-03 15:09:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-11-03 15:09:13</sys_updated_on>
+            <value>settings</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_categoria_solicitacao</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Settings</label>
+            <language>en</language>
+            <name>x_fub_fundbrad_ev_templates</name>
+            <sequence>8</sequence>
+            <synonyms/>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-11-03 15:09:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-11-03 15:09:14</sys_updated_on>
+            <value>settings</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_categoria_solicitacao</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Support</label>
+            <language>en</language>
+            <name>x_fub_fundbrad_ev_templates</name>
+            <sequence>9</sequence>
+            <synonyms/>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-11-03 15:09:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-11-03 15:09:14</sys_updated_on>
+            <value>support</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_categoria_solicitacao</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Suporte</label>
+            <language>pb</language>
+            <name>x_fub_fundbrad_ev_templates</name>
+            <sequence>9</sequence>
+            <synonyms/>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-11-03 15:09:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-11-03 15:09:13</sys_updated_on>
+            <value>support</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_categoria_solicitacao</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>Trilhas</label>
+            <language>pb</language>
+            <name>x_fub_fundbrad_ev_templates</name>
+            <sequence>10</sequence>
+            <synonyms/>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-11-03 15:09:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-11-03 15:09:14</sys_updated_on>
+            <value>learning_paths</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_categoria_solicitacao</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>Learning paths</label>
+            <language>en</language>
+            <name>x_fub_fundbrad_ev_templates</name>
+            <sequence>10</sequence>
+            <synonyms/>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-11-03 15:09:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-11-03 15:09:14</sys_updated_on>
+            <value>learning_paths</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_categoria_solicitacao</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Penalties</label>
+            <language>en</language>
+            <name>x_fub_fundbrad_ev_templates</name>
+            <sequence>10</sequence>
+            <synonyms/>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-11-03 15:09:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-11-03 15:09:13</sys_updated_on>
+            <value>penalties</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_categoria_solicitacao</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Penalidades</label>
+            <language>pb</language>
+            <name>x_fub_fundbrad_ev_templates</name>
+            <sequence>10</sequence>
+            <synonyms/>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-11-03 15:09:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-11-03 15:09:14</sys_updated_on>
+            <value>penalties</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_categoria_solicitacao</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Institucional</label>
+            <language>pb</language>
+            <name>x_fub_fundbrad_ev_templates</name>
+            <sequence>11</sequence>
+            <synonyms/>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-11-03 15:09:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-11-03 15:09:13</sys_updated_on>
+            <value>institutional</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_categoria_solicitacao</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Institucional</label>
+            <language>en</language>
+            <name>x_fub_fundbrad_ev_templates</name>
+            <sequence>11</sequence>
+            <synonyms/>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-11-03 15:09:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-11-03 15:09:14</sys_updated_on>
+            <value>institutional</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_categoria_solicitacao</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Enrollment</label>
+            <language>en</language>
+            <name>x_fub_fundbrad_ev_templates</name>
+            <sequence>12</sequence>
+            <synonyms/>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-11-03 15:09:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-11-03 15:09:14</sys_updated_on>
+            <value>enrollment</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_categoria_solicitacao</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Matrículas</label>
+            <language>pb</language>
+            <name>x_fub_fundbrad_ev_templates</name>
+            <sequence>12</sequence>
+            <synonyms/>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-11-03 15:09:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-11-03 15:09:13</sys_updated_on>
+            <value>enrollment</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_categoria_solicitacao</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Outros assuntos</label>
+            <language>pb</language>
+            <name>x_fub_fundbrad_ev_templates</name>
+            <sequence>13</sequence>
+            <synonyms/>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-11-03 15:09:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-11-03 15:09:14</sys_updated_on>
+            <value>other_topics</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_categoria_solicitacao</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other topics</label>
+            <language>en</language>
+            <name>x_fub_fundbrad_ev_templates</name>
+            <sequence>13</sequence>
+            <synonyms/>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-11-03 15:09:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-11-03 15:09:13</sys_updated_on>
+            <value>other_topics</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_categoria_solicitacao</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Parcerias</label>
+            <language>pb</language>
+            <name>x_fub_fundbrad_ev_templates</name>
+            <sequence>14</sequence>
+            <synonyms/>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-11-03 15:09:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-11-03 15:09:13</sys_updated_on>
+            <value>partnerships</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_categoria_solicitacao</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Partnerships</label>
+            <language>en</language>
+            <name>x_fub_fundbrad_ev_templates</name>
+            <sequence>14</sequence>
+            <synonyms/>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-11-03 15:09:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-11-03 15:09:14</sys_updated_on>
+            <value>partnerships</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_categoria_solicitacao</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Trails</label>
+            <language>en</language>
+            <name>x_fub_fundbrad_ev_templates</name>
+            <sequence>15</sequence>
+            <synonyms/>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-11-03 15:09:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-11-03 15:09:14</sys_updated_on>
+            <value>trails</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_categoria_solicitacao</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Trilhas</label>
+            <language>pb</language>
+            <name>x_fub_fundbrad_ev_templates</name>
+            <sequence>15</sequence>
+            <synonyms/>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-11-03 15:09:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-11-03 15:09:13</sys_updated_on>
+            <value>trails</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

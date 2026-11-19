@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege">
+    <sys_scope_privilege action="INSERT_OR_UPDATE">
+        <operation>execute</operation>
+        <source_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</source_scope>
+        <status>allowed</status>
+        <sys_class_name>sys_scope_privilege</sys_class_name>
+        <sys_created_by>guest</sys_created_by>
+        <sys_created_on>2026-10-14 19:07:25</sys_created_on>
+        <sys_id>281cf8b379bf4f90c34eb56e1a47c5c1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ScopedEmailWrapper</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_scope_privilege_281cf8b379bf4f90c34eb56e1a47c5c1</sys_update_name>
+        <sys_updated_by>guest</sys_updated_by>
+        <sys_updated_on>2026-10-14 19:07:25</sys_updated_on>
+        <target_name>ScopedEmailWrapper</target_name>
+        <target_scope display_value="Global">global</target_scope>
+        <target_type>scriptable</target_type>
+    </sys_scope_privilege>
+</record_update>

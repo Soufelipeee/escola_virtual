@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_translated">
+    <sys_translated action="INSERT_OR_UPDATE">
+        <element>question_text</element>
+        <id/>
+        <label>Data de nascimento</label>
+        <language>pb</language>
+        <name>question</name>
+        <sys_class_name>sys_translated</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-08 16:56:26</sys_created_on>
+        <sys_id>df84e9fdac37c394c34e0c1cb0feaf1a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Data de nascimento</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_translated_df84e9fdac37c394c34e0c1cb0feaf1a</sys_update_name>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-08 16:56:26</sys_updated_on>
+        <value>Date of birth</value>
+    </sys_translated>
+</record_update>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_fub_fundbrad_ev.EVUtils</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>EVUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var EVUtils = Class.create();
+EVUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+	/**
+	 * Valida um número de CPF(com ou sem máscara) recebido via GlideAjax ou parâmetro direto.
+	 */
+	validarCPF: function (cpf) {
+		var cpfVal = this.getParameter('sysparm_cpf') || cpf;
+		if (!cpfVal) return 'false';
+		cpfVal = String(cpfVal).replace(/\D/g, '');
+		if (cpfVal.length !== 11) return 'false';
+		return this._isCpfValid(cpfVal) ? 'true' : 'false';
+	},
+
+	/**
+	 * Executa a validação matemática oficial do CPF(dígitos verificadores).
+	 */
+	_isCpfValid: function (cpf) {
+		if (/^(\d)\1+$/.test(cpf)) return false;
+
+		var sum = 0, remainder;
+		for (var i = 1; i <= 9; i++) {
+			sum += parseInt(cpf.substring(i - 1, i), 10) * (11 - i);
+		}
+		remainder = (sum * 10) % 11;
+		if (remainder === 10 || remainder === 11) remainder = 0;
+		if (remainder !== parseInt(cpf.substring(9, 10), 10)) return false;
+
+		sum = 0;
+		for (var i = 1; i <= 10; i++) {
+			sum += parseInt(cpf.substring(i - 1, i), 10) * (12 - i);
+		}
+		remainder = (sum * 10) % 11;
+		if (remainder === 10 || remainder === 11) remainder = 0;
+		if (remainder !== parseInt(cpf.substring(10, 11), 10)) return false;
+
+		return true;
+	},
+
+	/**
+	 * Verifica se a data informada é posterior à data atual utilizando GlideDate.
+	 */
+	isDateGreaterThanToday: function (inputDate) {
+		var dateToProcess = this.getParameter('sysparm_date') || inputDate;
+
+		if (!dateToProcess) {
+			return 'false';
+		}
+
+		// Se a data vier no formato dd/MM/yyyy, converte para yyyy-MM-dd
+		if (/^\d{2}\/\d{2}\/\d{4}$/.test(dateToProcess)) {
+			var parts = dateToProcess.split('/');
+			dateToProcess = parts[2] + '-' + parts[1] + '-' + parts[0];
+		}
+
+		var targetDate = new GlideDate();
+		targetDate.setValue(dateToProcess);
+
+		var todayDate = new GlideDate();
+		todayDate.setValue(new GlideDate().getValue());
+
+		var isAfter = targetDate.after(todayDate);
+
+		return isAfter ? 'true' : 'false';
+	},
+
+	/**
+	 * Método exposto via GlideAjax para processar a validação de e-mail.
+	 */
+	ajaxValidateEmail: function (email) {
+		var emailVal = this.getParameter('sysparm_email') || email;
+		return this.isEmailValid(emailVal).toString();
+	},
+
+	/**
+	 * Valida se uma string possui um formato de e-mail válido utilizando Regex.
+	 */
+	isEmailValid: function (email) {
+		if (!email) {
+			return false;
+		}
+
+		var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+		return emailRegex.test(String(email).trim());
+	},
+
+	/**
+	 * Formata e valida um número de telefone brasileiro(com DDD).
+	 */
+	formatPhoneNumber: function (phone) {
+		var rawPhone = this.getParameter('sysparm_telefone') || phone;
+		if (!rawPhone) {
+			return JSON.stringify({ isValid: false, formattedPhone: '' });
+		}
+
+		var cleanPhone = String(rawPhone).replace(/\D/g, '');
+		var formattedPhone = '';
+		var isValid = false;
+
+		if (cleanPhone.length === 11) {
+			formattedPhone = cleanPhone.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3');
+			isValid = true;
+		} else if (cleanPhone.length === 10) {
+			formattedPhone = cleanPhone.replace(/^(\d{2})(\d{4})(\d{4})$/, '($1) $2-$3');
+			isValid = true;
+		} else {
+			formattedPhone = rawPhone;
+			isValid = false;
+		}
+
+		return JSON.stringify({
+			isValid: isValid,
+			formattedPhone: formattedPhone
+		});
+	},
+
+	/**
+	 * Valida se o nome não contém números.
+	 */
+	validateName: function (name) {
+		var nameVal = this.getParameter('sysparm_name_to_validate') || name;
+		return this._isNameValid(nameVal) ? 'true' : 'false';
+	},
+
+	/**
+	 * Função auxiliar de validação de nome.
+	 */
+	_isNameValid: function (name) {
+		if (!name) {
+			return false;
+		}
+
+		var nameRegex = /^[A-Za-zÀ-ÿ\s]+$/;
+		return nameRegex.test(String(name).trim());
+	},
+
+	getTemplatesForTable: function () {
+		var tableName = this.getParameter('sysparm_table');
+		var templates = [];
+
+
+		var tableName = 'x_fub_fundbrad_ev_atendimento_ev'; // Troque se necessário
+		var gr = new GlideRecord('sn_templated_snip_note_template');
+		gr.addQuery('table', tableName);
+		gr.query();
+
+		gs.print('Total encontrado: ' + gr.getRowCount());
+		while (gr.next()) {
+			gs.print('Template encontrado: ' + gr.getValue('name'));
+		}
+		// // Consulta a tabela de Response Templates do ServiceNow
+		// var gr = new GlideRecord('sn_templated_snip_note_template');
+		// gr.addQuery('table', tableName);
+		// gr.addQuery('active', true);
+		// gr.query();
+
+		while (gr.next()) {
+			templates.push({
+				sys_id: gr.getUniqueValue(),
+				name: gr.getValue('name'),
+				body: gr.getValue('message') || gr.getValue('template') || ''
+			});
+		}
+
+		return JSON.stringify(templates);
+	},
+
+	type: 'EVUtils'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-07 19:01:00</sys_created_on>
+        <sys_id>619674a5ecbb431463f173bdfd6dd978</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_name>EVUtils</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_script_include_619674a5ecbb431463f173bdfd6dd978</sys_update_name>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-20 18:13:04</sys_updated_on>
+    </sys_script_include>
+</record_update>

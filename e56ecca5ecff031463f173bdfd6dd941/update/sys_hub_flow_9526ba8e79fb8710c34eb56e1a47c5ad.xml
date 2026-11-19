@@ -1,0 +1,955 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=411835000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>28100</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>EV – Abertura de Atendimento Fale Conosco</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>ev__abertura_de_atendimento_fale_conosco</internal_name>
+        <label_cache>[{"name":"Created_1.current.u_email_solicitante","label":"Trigger - Record Created➛Atendimento Escola Virtual Record➛Requester email","reference":"","reference_display":"Requester email","type":"string","base_type":"string","parent_table_name":"x_fub_fundbrad_ev_atendimento_ev","column_name":"u_email_solicitante","usedInstances":{"6e8b41fa-36e1-498c-9d7b-11ab33b21287":["parm1"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Atendimento Escola Virtual Record","reference":"x_fub_fundbrad_ev_atendimento_ev","reference_display":"Atendimento Escola Virtual","type":"reference","base_type":"reference","usedInstances":{"9476c779-d8d8-4170-b1d4-dbf095941114":["record"],"d6adae15-e111-496a-ba5b-e6b8b14dc163":["record"],"b06dcd40-c119-40bd-9304-87236a2b76bf":["record"],"6e8b41fa-36e1-498c-9d7b-11ab33b21287":["record"]},"attributes":{}},{"name":"Created_1.current.state","label":"Trigger - Record Created➛Atendimento Escola Virtual Record➛State","reference":"","reference_display":"State","type":"choice","base_type":"choice","parent_table_name":"x_fub_fundbrad_ev_atendimento_ev","column_name":"state","choices":[{"label":"New","used":false,"image":"","rawLabel":"New","selected":false,"missing":false,"reference":false,"value":"1","parameters":{"name":"x_fub_fundbrad_ev_atendimento_ev","dependent_values":[""]}},{"label":"Work in Progress","used":false,"image":"","rawLabel":"Work in Progress","selected":false,"missing":false,"reference":false,"value":"2","parameters":{"name":"x_fub_fundbrad_ev_atendimento_ev","dependent_values":[""]}},{"label":"Pending","used":false,"image":"","rawLabel":"Pending","selected":false,"missing":false,"reference":false,"value":"-5","parameters":{"name":"x_fub_fundbrad_ev_atendimento_ev","dependent_values":[""]}},{"label":"Resolved","used":false,"image":"","rawLabel":"Resolved","selected":false,"missing":false,"reference":false,"value":"6","parameters":{"name":"x_fub_fundbrad_ev_atendimento_ev","dependent_values":[""]}}],"usedInstances":{"c5ef0c06-4bd2-46b8-9d85-8c2222bc06af":["condition"]}},{"name":"Created_1.current.assignment_group","label":"Trigger - Record Created➛Atendimento Escola Virtual Record➛Assignment group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","parent_table_name":"x_fub_fundbrad_ev_atendimento_ev","column_name":"assignment_group","usedInstances":{"99acef56-073d-41fa-b112-e409b866c092":["condition"]}},{"name":"Created_1.current.assignment_group.sys_id","label":"Trigger - Record Created➛Atendimento Escola Virtual Record➛Assignment group➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sys_user_group","column_name":"sys_id","usedInstances":{}}]</label_cache>
+        <master_snapshot>11baa30e793bc710c34eb56e1a47c501</master_snapshot>
+        <master_snapshot_digest/>
+        <name>EV – Abertura de Atendimento Fale Conosco</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>d72957a7c5fbc79063f182ce4dc0c6db</remote_trigger_id>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-09 17:31:24</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9526ba8e79fb8710c34eb56e1a47c5ad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>EV – Abertura de Atendimento Fale Conosco</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_hub_flow_9526ba8e79fb8710c34eb56e1a47c5ad</sys_update_name>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-15 15:31:29</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>8c432ad14848579064620c76fcb0ec48</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=9526ba8e79fb8710c34eb56e1a47c5ad"/>
+    <sys_translated_text action="INSERT_OR_UPDATE">
+        <documentkey>9526ba8e79fb8710c34eb56e1a47c5ad</documentkey>
+        <fieldname>annotation</fieldname>
+        <language>pb</language>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-09 17:31:25</sys_created_on>
+        <sys_id>5526ba8e79fb8710c34eb56e1a47c5ae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-09 17:31:25</sys_updated_on>
+        <tablename>sys_hub_flow</tablename>
+        <value/>
+    </sys_translated_text>
+    <sys_variable_value action="delete_multiple" query="document_key=9526ba8e79fb8710c34eb56e1a47c5ad"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_fub_fundbrad_ev_atendimento_ev">u_origem=escola_virtual<item display_value="Virtual school" endquery="false" field="u_origem" goto="false" newquery="false" operator="=" or="false" value="escola_virtual"/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>false</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-14 11:55:21</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d72957a7c5fbc79063f182ce4dc0c6db</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-14 11:55:21</sys_updated_on>
+        <table>x_fub_fundbrad_ev_atendimento_ev</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>9526ba8e79fb8710c34eb56e1a47c5ad</identifier>
+        <identifier_type>flow</identifier_type>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-14 11:55:21</sys_created_on>
+        <sys_id>1f2957a7c5fbc79063f182ce4dc0c6dc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-14 11:55:21</sys_updated_on>
+        <trigger display_value="">d72957a7c5fbc79063f182ce4dc0c6db</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=9526ba8e79fb8710c34eb56e1a47c5ad^sys_idNOT IN1f2957a7c5fbc79063f182ce4dc0c6dc"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=9526ba8e79fb8710c34eb56e1a47c5ad"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=9526ba8e79fb8710c34eb56e1a47c5ad^sys_idNOT IN5126fa8e79fb8710c34eb56e1a47c5bc"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>9526ba8e79fb8710c34eb56e1a47c5ad</id>
+        <name>EV – Abertura de Atendimento Fale Conosco</name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-09 17:31:25</sys_created_on>
+        <sys_id>5126fa8e79fb8710c34eb56e1a47c5bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-09 17:31:25</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=5126fa8e79fb8710c34eb56e1a47c5bc"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=9526ba8e79fb8710c34eb56e1a47c5ad^sys_idNOT IN7ba6fa42793f8710c34eb56e1a47c56d,a7a6fa42793f8710c34eb56e1a47c520"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="EV – Abertura de Atendimento Fale Conosco">9526ba8e79fb8710c34eb56e1a47c5ad</model>
+        <model_id>9526ba8e79fb8710c34eb56e1a47c5ad</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_9526ba8e79fb8710c34eb56e1a47c5ad</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-09 17:33:45</sys_created_on>
+        <sys_id>7ba6fa42793f8710c34eb56e1a47c56d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-09 17:33:45</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=7ba6fa42793f8710c34eb56e1a47c56d"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="EV – Abertura de Atendimento Fale Conosco">9526ba8e79fb8710c34eb56e1a47c5ad</model>
+        <model_id>9526ba8e79fb8710c34eb56e1a47c5ad</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_9526ba8e79fb8710c34eb56e1a47c5ad</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-09 17:33:45</sys_created_on>
+        <sys_id>a7a6fa42793f8710c34eb56e1a47c520</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-09 17:33:45</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=a7a6fa42793f8710c34eb56e1a47c520"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=9526ba8e79fb8710c34eb56e1a47c5ad"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=9526ba8e79fb8710c34eb56e1a47c5ad"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=9526ba8e79fb8710c34eb56e1a47c5ad^sys_idNOT IN33a6fa42793f8710c34eb56e1a47c594"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="EV – Abertura de Atendimento Fale Conosco">9526ba8e79fb8710c34eb56e1a47c5ad</flow>
+        <generation_source/>
+        <name>Created</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-09 17:33:45</sys_created_on>
+        <sys_id>33a6fa42793f8710c34eb56e1a47c594</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-09 18:55:58</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VY227jNhD9FUFPLeACuthxnLc0yaIBthvA8W4f0kCgRNImSpGuRCnxLvLvHepiy7o4dqxsnYcEEElxDo/OnBn64YfJkU+4eWHOkM+JOTCZUCQSiM9WSwLDSg97AoV6LkQCIyWjlXmhooQMTBrJcEbCJUcKFlPEYxiUESaReWEPzBTxhNyv4lsMO8H72TbFnmYxDc/PHk18+BPYjxD2SOrBdgKzkAgl4RGWYhZDkNW34o3LzbxxEweSI+Mbi1SCOKwNFozjiAjz4uFxYC5RBFGVRvSjNsU0rIAGaOIQK3Bt13Esyzkf2v6Z69sOdhGxLNiwTlHtGKqFqQ0H5FljJXhNT4PEiCB8J/hqvWIB3yAnLETPMfsOu59beh0lgD0g+dz60SvIyYeDhWQBuVsqJkU+kuPMJyVPQvElx69pJRQlXJW0wkgSw35kqSFrEAUier+QT9My4CcmstMVk1wGwHv5hJSKmJ8oEmvCKeNAvZdzE8skytBPb67uptfeX5ezqz9upt705n42vb2a3VybL9m5vH/1lywQFli8/Dgvay18YoTrDyiS0Ac0AzMOIrZUl4FiaSnGl8FG4FcSJJOx0hB5UE7F2yIvT79L5ZbVqfOgErHUeuLJiM1J+HdiWS4mmXa99I3aPTtDCBPUoV2fVrRbPX0LPNVCRPWEu1RcjOwj46Fl/U9CLvzqrToOJSb8erOdCZPzOSibiWWiNFtPSKjYA79CGHsVHvVSwPSasPOzNdX9uq6jRMAW3voLNdWdEblm9DOL4QAPkJslW9mWME8/F1tOE2FI+JTwzwiSCMhSRul29DZE84Jjek84CVRFFvRrXH36k8UxE/MK6nXQjJVGzHU4kJdRHimPHR8Z/LHP1G6SntbIrFWsg3Pbtin1CXWssc5s23J9altja4Qodi0rcCq53QTTiVLVJPEuOX5YhseZGPke0qtTXIC3qtmwl4zSbQ2WJGiJFEZy1Q80uydojoZWM0T3IEdcyzIfvt5W566j9dwRIJwieAPva4x6wR4OSLl8AjN+g/v5KPhnHknoPut2pPc0mDA2K4xfCv5+7dEJqYzIbgDbK07JAze0l8JFYtWD+7nU9idkSCwwPRf8zh9NJn6AHErHZ2Pi2DX328BoxfYhXO8VtaVtcu1ywFbhpG16O8D7jgDY8MGDAR7vgIUwW/0vn/sYTve0IMIDqJHHtZc1DG/OGSblXL/Z3gidbvL72Iyn55NgZI/HwRjuMZDxdEh8ZA+dEZqMz9zzUS3jG1B2wVQtzPyU2028ijMgHW7wNZ86rSv7e8o2JkrpcnR4lRbQx2bvoDxIpVLqz2JkpiIj44sUv91u1hn3BApgdsXtq1zvg0J/WON9YfhSLRr9AoT+Hca3Qus+s4OVk7tS1USSbp/16CsVGZ6PJtRttxg6abOYDZhumCffXuyZIWlnrrX1GfsKPm3Nm87G4A0Srsmk2jHsaGn6IsXunRTn/Uhxj26jylzsvEe+BewHKmFZX3FMHdMxiSdp1byvpQETBgQxGDWK3xYJNvyVoRYEKOXQL0NAQ0c/1rWrVaQJZa3gnwsk78Ab1QyGjaKBOr1CVZNCvzdggsdoNHI7+uFJ/QbcBugVvCdftg7OirQtyXbWrsP2re/ZWr0qkt1WxJ51qddTtxen407dWp5eO/XxhWfX/b0FxYmWlMf/ALSxAJRzHwAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=9526ba8e79fb8710c34eb56e1a47c5ad^sys_idNOT IN148832df79770790c34eb56e1a47c55d,cc89cbce7933c710c34eb56e1a47c5e5,4489cbce7933c710c34eb56e1a47c5e9"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Fire Event">80a30edeff30311077a95dac793bf19b</action_type>
+        <action_type_parent display_value="Fire Event">15e10e5eff30311077a95dac793bf11e</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>80a30edeff30311077a95dac793bf19b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="EV – Abertura de Atendimento Fale Conosco">9526ba8e79fb8710c34eb56e1a47c5ad</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-13 14:54:07</sys_created_on>
+        <sys_id>148832df79770790c34eb56e1a47c55d</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-10-14 12:01:01</sys_updated_on>
+        <ui_id>6e8b41fa-36e1-498c-9d7b-11ab33b21287</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2W227bRhCGX4XgtSjwsBRJ3wV2XARI4zZOfRMExHB3aG+wIpXlUrFr+GX6Kn2xzpK0JFqWYqWOgSK9kICdPc38Mx9nP966UrhHbsoh8lFgWUZ+FAR+kkAWC+BJFhVlkKE7cSuYI63EJVYm7wYTdwmqtUaGieAlxyRLIp4EPo8YFvEMA2AJj2OflgrZLBTcXAw7rvOyLehXiUKDyHE5BYOVkHM6vZ5Cgdq0Gmgfv5JKaKzco4+fJu4CNN1sULtHtw+mnhqHosMVLX1tA6l3BGZuFtamsUS6gN+b3g5732/Yay2sO8HExWsbApIfJagGJ+4cKgGm1jfukdEtGTSCOKvUzWrFlazMyhdH1E4jG4NzcAQ2+BnI8KVFGizRaVA7VkRSQFi353DdyD/JyyicbDh65DY3TR+Lxkt7mnY35vMhD10QdlrTteh0G+qGVpYnYOCc3OWUAHtcl4Nacmx6nUlcaJU53rT1C84WRtZVv8VAoXY5w2vVzqt3vezu6sT70iBL25CjuLBqWn0Gscrzq/rrSvpTWXXCD5Oq5qA2liJofnUqUYmHuQVjtCxaY52/dVv5YTvXvfGxbKNCW6L5HBYLWV3mC10vZecHhTWfXioaTEtVfyX/G3lZTYFbUaZUBzA9JftJZ74ALa1Cv9IxnSat/KOSlOs3nbvoRyiS0kuAMY+xuPCKgkUe9+MsAz8MyyB07yZW3GMFTbOWkoLIv7RWiF7YQcK8T4vdwrVcmFfk1BIHte4mw0eA+/vgAbZmRSOnst/4ANzeHlNtGxR5MOWtJrXM3d029Qfz/ASX1CpLfTk/4uVAs6h52yVPigc8nwwzzpuTNdHhvyH6rPiMRPQvth7ed36skRbgGHsxjMnbCfQOfp8f1u9hs5fhADR34DdOzhjAcXpeBMEy4BAHYeSFUcI9lvHUSxnSH4EYsizlIZ99B4K90t/icG8Tg2Rd4f1xawy3umq+0VVpuE3kq/W887qh7INzIan3kv8Hs/ptt+9Z/dCV/3YcA6jdcLMVv13vU+i86ycGTKP9mA6WNad9wa5gS/3/EGyHN8IdtI0UHsM20vhFWMtCxspZmnpFCMJj6YxRu/NTLwmYH1JBhVEc/YB2J9K99Vqsy5Mqfx7s73bTNqdnm1R5UyvJpYHK4GMd8JCth+H3hHDu8fsN9N9/0Vn09gu2oxwgpF5KGX8A4Pm9cYCPHQjfuEn+TqmjItAOCVvr7qlrW6SjkaSgOqsdnDstvYY5CJRdu+SkAicRcNQxU9//KTFe5WiM8CpLL4LvLPYz3w9LT8xS9FhQhh4EWeqFYVQEYsZZOMt+BL5sb72X48ION/B9hnfpEy5/BLZw26dDYIv/h+2nh61kMxbxJPEYlR+9S1PqlQnGXhSLMmEi4bM0eEbYPv0DqmF2liESAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=148832df79770790c34eb56e1a47c55d"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="EV – Abertura de Atendimento Fale Conosco">9526ba8e79fb8710c34eb56e1a47c5ad</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id>c5ef0c06-4bd2-46b8-9d85-8c2222bc06af</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-09 18:55:58</sys_created_on>
+        <sys_id>cc89cbce7933c710c34eb56e1a47c5e5</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-10-14 12:01:01</sys_updated_on>
+        <ui_id>d6adae15-e111-496a-ba5b-e6b8b14dc163</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVXWviQBT9KzLPEhK10vpWdAsL3RbaxZduCTeZGx2YZLIzE6sr/ve9k0yMaNu10Jeygsj9mjnn5hzztGWCswkbIQ+jq2icDqPhcBCGg8tRlIyHSTTgQ0CMWJ8VkCN1akyV5hSvQFYusd1ONYJFHkdBWmmNhd3tqM6FKSVs5r6NMulSSE51Nnl67rMSNJ1oUbPJ9qh0LiQJCUpqfcCFMFarV1DaTelirtIqJ2SxaJO3fnbmK73vM6rQkAMUhX2Ga4sFR4KSgTTYZzkUHKzSGzaxuqIE0eb3hdzsO5aisA3VHNZG/KGbR6Hry5C4pX4N+zD2K2rS2QwsPNLJqa30fmNKpGiarXDMoJJ2ephrGu5LK1TRjFhIZDutZJUXd81G2P6AgydSGQKBpePpkDe0sselenloQd6Iol6JpyhVCnIfgbVaJJV1cLYMJdY7zqEsRbGIS61Woh4mKHmwkBQEmVQvdKcRiyKA1OEOaKsQ3FB+VqfnoIUj8YOOoeFdn5mNmUowpqNCO4x/Vw5JQ8xTiOst1CuIayW44VSL0l7TVSv0wHd9L/vk4j2NpVedoA7O7KS/jrMqoW/BEw08xlUMTjPCbUFReOqC667e+2boAUFvLrR1TD7qjzOwt/746X7hDTLeISe5225YYu+uKXh/XHyaPy6/kj88jS9vkH/ZIhy8+9eLnZJqJ5gDSxhLFvhVheGQR6fyP6p+TPBnoGoFP4W8VOYVmK3YMSdYFuMG9pHgfbE398X9S+HTVB+Nw/rzhbT/37wbnv8Csj8XCRQJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=cc89cbce7933c710c34eb56e1a47c5e5"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="EV – Abertura de Atendimento Fale Conosco">9526ba8e79fb8710c34eb56e1a47c5ad</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>99acef56-073d-41fa-b112-e409b866c092</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-09 18:55:58</sys_created_on>
+        <sys_id>4489cbce7933c710c34eb56e1a47c5e9</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-10-14 12:01:01</sys_updated_on>
+        <ui_id>b06dcd40-c119-40bd-9304-87236a2b76bf</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVTWvjMBD9K0FnE+w4TZvcSrKFhW4L7ZJLU8xYGqcC2fLKctpsyH/fkS0noe12U+glbMAEzYf03mje6GHDpGATNkQRRuNoxOMojgdhOLgYRukoTqOBiAExYgErIEeKNMi1EbRegaqdYbOZGgSLIon6vDYGC7vdkl/IqlSwnvswsvAnqQT52eThMWAlGNrRomGTzSvXsZAUpKgo9A6XsrJGv4PSrku3FprXOSFLZGe89rkz7+l9n5GHkhygKAwYvlgsBBKUDFSFAcuhEGC1WbOJNTUZiLa4LdR6F/EkC9tSzeGlkr/p5GHo4jIkbtyXYbdMfIlaczYDC/e0M7e12VVMS45VWxWBGdTKTg9tbcBtaaUu2hQLqeqytarz4qatCNttcHAjdUUgsHQ8HfKWVnb/pJ/vOpBXsmhK4ikqzUHtVmCtkWltHZwNQ4VNjXMoS1ksk9LolWySCUreXypa9DOln+nMSi6LPnCHu09Vhf4V2WeNeQ5GOhI/aBtK3gasWldTBVW1p0I1TH7VDklLzFNImio0JUiaTnDJ3MjSXtJRK/TAt4Fv+/Tsox7j431DHey5b/2XJKtT+gqRGhAJrhJwPSNdFTQt36rgcu/vfavogqA3l8Y6Jp/VxxHYO338dP/wFzJeIW9s1/tkhb2b1uH1cfZl+rg4JX14GicvkH/JIhx8OHpx30mNEqoDSRAIQtiwXBpdl4s6DGOxWXRCWLDJ4gMVLFiwaPdqAi/ORxmeZRHw85TH4yGPhxjyiKdhhpBl4yacyNNYPzL+nZfpFCB/bjQccX/daJhCXurqnQvtxgLmVAOLSXvBr0aDd/bm3rl7Pr9sPkSjsPmd0JT4b17Rxz+z3a12PgoAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4489cbce7933c710c34eb56e1a47c5e9"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=9526ba8e79fb8710c34eb56e1a47c5ad"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=9526ba8e79fb8710c34eb56e1a47c5ad^sys_idNOT INffa6fa42793f8710c34eb56e1a47c598,c489cbce7933c710c34eb56e1a47c5e8"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">37a6fa42793f8710c34eb56e1a47c598</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="EV – Abertura de Atendimento Fale Conosco">9526ba8e79fb8710c34eb56e1a47c5ad</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-09 17:33:45</sys_created_on>
+        <sys_id>ffa6fa42793f8710c34eb56e1a47c598</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-14 11:55:19</sys_updated_on>
+        <ui_id>c5ef0c06-4bd2-46b8-9d85-8c2222bc06af</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1UXWvbMBT9K8HPxthOE9a8lW6FwLqOJRTGKOZauk7EZEmT5KRZyH/flT/S0KZbGXvcW3Tu1znHh+wj3XjTeLfUV86JlYpm3x7iSKiA0e99pKDGaBYxrbjwQquiBeJoA7IJhXk1WnjwOBJuhLXxO6px4YyE3f1vWthaSG6xv2fA0laPNprtn5X8zmAhoURJmxbeCrWiccHpVaVQZZcsY+N8Os7TNH93kZXTcZnlfAwIY+obBq8H+qOPLRK/qivcI9wNl7TlgVaWxhE+elQc6XQF0mEc1aA4eG13R8Qi8Dsln4C1UJ7WRaH50YmftDufTEJjhaSRYVc8Poveuw5may0Y3plAsEM8lLKfYVo2tfrU6QiuYwWN9IPrhDSO9qEJpAOLnlK1WOvtl+HgjVCtwL4oNQN5fIEnG8rGowsfBiXWtKiowRgypzBWb0Q7TFzqZCXpkVRSb+loyFICLBBPyCNIbgh/38L3YEVQcUtraLijWYITrGhzR+u8JQmH1pbiRxMIdQJ7KUXnBjU4ZoXxV3Rngz3rQ/wytCd53e+v6SN55EWWsMaSBz5xIZ2Hw3zx4fbz8uvLAL9p5l8k+hIm1SRLJ+cTfTE9l+gzWX49xvkfYhyMf2OK0zT9H+PTGAtXdHHstbXH/zrFDyGy3QXX5YYjE46ILAM2H/6hQ2FHARDsFNpq+z1IeMIOvwB9fB0G6wUAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">c489cbce7933c710c34eb56e1a47c5e7</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="EV – Abertura de Atendimento Fale Conosco">9526ba8e79fb8710c34eb56e1a47c5ad</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-09 18:55:58</sys_created_on>
+        <sys_id>c489cbce7933c710c34eb56e1a47c5e8</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-14 11:55:19</sys_updated_on>
+        <ui_id>99acef56-073d-41fa-b112-e409b866c092</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1UXWvbMBT9K8HPxthOE9a8lW6FwLqOJRTGKOZavk7EZEmT5KRZyH/flWWnoU1ZN/a4N+vcr3PuPXgfqdbp1tmlurKWr2Q0+/YQR1x6jL73kYQGo1nElKy440oWHRBHGxCtD8zrUahsULrRyqhWj7gdYaPdjtIqbrWA3f3bstmai8pgz0KDoVkOTTTbPwu5ncZCQImCmi6c4XJF5byiV51CnV2yjI3z6ThP0/zdRVZOx2WWV2NAGFPeUHg9iBp97JD4VbV+HuF2mKRM5WllaRzho0NZIY2uQViMowZkBU6Z3RExCNWdFE/AmktH7SKf/Gj5T+qdTyY+sUbSyDAEj8+iX2OA2VpxhnfaEwyIg1L0NUyJtpGfgg5/AKyhFW44ACGtpX6oPWnPoqdUL9Zq+2UYeMNlJ7APCsVAHF/gaA1l69D6w6BAf8yiAa1pOYU2asO7YuLSJCtBj6QWaktD/eUTYJ54QjuC5Ibw9x18D4Z7FbfUhooDzRIsZ0XnRmrnDEk4dGspfrSeUBDYSynCNijBMsO1u6I5G+xZH+KXVj5x8X5/TUdyWBVZwlpDO3AJHI1adEY9HOaLD7efl19f2vpPy/+Fzy9hUk+ydHLe5xfTcz4/4/DXzZ3/xtz+HG/0dpqm/819am5ui2DSXls3/K+9/eCNHCbY4JsKGbdEZOmx+fA394EdGYCzU2irzHcv4Qk7/AJyZHIJFwYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=9526ba8e79fb8710c34eb56e1a47c5ad"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=9526ba8e79fb8710c34eb56e1a47c5ad"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_variable_9526ba8e79fb8710c34eb56e1a47c5ad"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_9526ba8e79fb8710c34eb56e1a47c5ad</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-09 17:33:45</sys_created_on>
+        <sys_id>37a6fa42793f8710c34eb56e1a47c571</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-09 17:33:45</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_9526ba8e79fb8710c34eb56e1a47c5ad</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-09 17:33:45</sys_created_on>
+        <sys_id>b3a6fa42793f8710c34eb56e1a47c56c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-09 17:33:45</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_9526ba8e79fb8710c34eb56e1a47c5ad"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_9526ba8e79fb8710c34eb56e1a47c5ad"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>28100</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>EV – Abertura de Atendimento Fale Conosco</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>ev__abertura_de_atendimento_fale_conosco</internal_name>
+        <label_cache>[{"name":"Created_1.current.u_email_solicitante","label":"Trigger - Record Created➛Atendimento Escola Virtual Record➛Requester email","reference":"","reference_display":"Requester email","type":"string","base_type":"string","parent_table_name":"x_fub_fundbrad_ev_atendimento_ev","column_name":"u_email_solicitante","usedInstances":{"6e8b41fa-36e1-498c-9d7b-11ab33b21287":["parm1"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Atendimento Escola Virtual Record","reference":"x_fub_fundbrad_ev_atendimento_ev","reference_display":"Atendimento Escola Virtual","type":"reference","base_type":"reference","usedInstances":{"9476c779-d8d8-4170-b1d4-dbf095941114":["record"],"d6adae15-e111-496a-ba5b-e6b8b14dc163":["record"],"b06dcd40-c119-40bd-9304-87236a2b76bf":["record"],"6e8b41fa-36e1-498c-9d7b-11ab33b21287":["record"]},"attributes":{}},{"name":"Created_1.current.state","label":"Trigger - Record Created➛Atendimento Escola Virtual Record➛State","reference":"","reference_display":"State","type":"choice","base_type":"choice","parent_table_name":"x_fub_fundbrad_ev_atendimento_ev","column_name":"state","choices":[{"label":"New","used":false,"image":"","rawLabel":"New","selected":false,"missing":false,"reference":false,"value":"1","parameters":{"name":"x_fub_fundbrad_ev_atendimento_ev","dependent_values":[""]}},{"label":"Work in Progress","used":false,"image":"","rawLabel":"Work in Progress","selected":false,"missing":false,"reference":false,"value":"2","parameters":{"name":"x_fub_fundbrad_ev_atendimento_ev","dependent_values":[""]}},{"label":"Pending","used":false,"image":"","rawLabel":"Pending","selected":false,"missing":false,"reference":false,"value":"-5","parameters":{"name":"x_fub_fundbrad_ev_atendimento_ev","dependent_values":[""]}},{"label":"Resolved","used":false,"image":"","rawLabel":"Resolved","selected":false,"missing":false,"reference":false,"value":"6","parameters":{"name":"x_fub_fundbrad_ev_atendimento_ev","dependent_values":[""]}}],"usedInstances":{"c5ef0c06-4bd2-46b8-9d85-8c2222bc06af":["condition"]}},{"name":"Created_1.current.assignment_group","label":"Trigger - Record Created➛Atendimento Escola Virtual Record➛Assignment group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","parent_table_name":"x_fub_fundbrad_ev_atendimento_ev","column_name":"assignment_group","usedInstances":{"99acef56-073d-41fa-b112-e409b866c092":["condition"]}},{"name":"Created_1.current.assignment_group.sys_id","label":"Trigger - Record Created➛Atendimento Escola Virtual Record➛Assignment group➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sys_user_group","column_name":"sys_id","usedInstances":{}}]</label_cache>
+        <master>true</master>
+        <name>EV – Abertura de Atendimento Fale Conosco</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="EV – Abertura de Atendimento Fale Conosco">9526ba8e79fb8710c34eb56e1a47c5ad</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-09 21:21:03</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>11baa30e793bc710c34eb56e1a47c501</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-14 11:55:20</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=11baa30e793bc710c34eb56e1a47c501"/>
+    <sys_variable_value action="delete_multiple" query="document_key=11baa30e793bc710c34eb56e1a47c501"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=11baa30e793bc710c34eb56e1a47c501"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=11baa30e793bc710c34eb56e1a47c501^sys_idNOT IN19baa30e793bc710c34eb56e1a47c502"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>11baa30e793bc710c34eb56e1a47c501</id>
+        <name>EV – Abertura de Atendimento Fale Conosco</name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-09 21:21:03</sys_created_on>
+        <sys_id>19baa30e793bc710c34eb56e1a47c502</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-09 21:21:03</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=19baa30e793bc710c34eb56e1a47c502"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=11baa30e793bc710c34eb56e1a47c501^sys_idNOT IN19baa30e793bc710c34eb56e1a47c504,e5baa30e793bc710c34eb56e1a47c52e"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="EV – Abertura de Atendimento Fale Conosco">11baa30e793bc710c34eb56e1a47c501</model>
+        <model_id>11baa30e793bc710c34eb56e1a47c501</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_11baa30e793bc710c34eb56e1a47c501</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-09 21:21:03</sys_created_on>
+        <sys_id>19baa30e793bc710c34eb56e1a47c504</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-14 11:55:20</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=19baa30e793bc710c34eb56e1a47c504"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="EV – Abertura de Atendimento Fale Conosco">11baa30e793bc710c34eb56e1a47c501</model>
+        <model_id>11baa30e793bc710c34eb56e1a47c501</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_11baa30e793bc710c34eb56e1a47c501</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-09 21:21:04</sys_created_on>
+        <sys_id>e5baa30e793bc710c34eb56e1a47c52e</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-14 11:55:20</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=e5baa30e793bc710c34eb56e1a47c52e"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=11baa30e793bc710c34eb56e1a47c501"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=11baa30e793bc710c34eb56e1a47c501"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=11baa30e793bc710c34eb56e1a47c501^sys_idNOT INe5baa30e793bc710c34eb56e1a47c59c"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="EV – Abertura de Atendimento Fale Conosco">11baa30e793bc710c34eb56e1a47c501</flow>
+        <generation_source/>
+        <name>Created</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-09 21:21:05</sys_created_on>
+        <sys_id>e5baa30e793bc710c34eb56e1a47c59c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-09 21:21:05</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VY227jNhD9FUFPLeACuthxnLc0yaIBthvA8W4f0kCgRNImSpGuRCnxLvLvHepiy7o4dqxsnYcEEElxDo/OnBn64YfJkU+4eWHOkM+JOTCZUCQSiM9WSwLDSg97AoV6LkQCIyWjlXmhooQMTBrJcEbCJUcKFlPEYxiUESaReWEPzBTxhNyv4lsMO8H72TbFnmYxDc/PHk18+BPYjxD2SOrBdgKzkAgl4RGWYhZDkNW34o3LzbxxEweSI+Mbi1SCOKwNFozjiAjz4uFxYC5RBFGVRvSjNsU0rIAGaOIQK3Bt13Esyzkf2v6Z69sOdhGxLNiwTlHtGKqFqQ0H5FljJXhNT4PEiCB8J/hqvWIB3yAnLETPMfsOu59beh0lgD0g+dz60SvIyYeDhWQBuVsqJkU+kuPMJyVPQvElx69pJRQlXJW0wkgSw35kqSFrEAUier+QT9My4CcmstMVk1wGwHv5hJSKmJ8oEmvCKeNAvZdzE8skytBPb67uptfeX5ezqz9upt705n42vb2a3VybL9m5vH/1lywQFli8/Dgvay18YoTrDyiS0Ac0AzMOIrZUl4FiaSnGl8FG4FcSJJOx0hB5UE7F2yIvT79L5ZbVqfOgErHUeuLJiM1J+HdiWS4mmXa99I3aPTtDCBPUoV2fVrRbPX0LPNVCRPWEu1RcjOwj46Fl/U9CLvzqrToOJSb8erOdCZPzOSibiWWiNFtPSKjYA79CGHsVHvVSwPSasPOzNdX9uq6jRMAW3voLNdWdEblm9DOL4QAPkJslW9mWME8/F1tOE2FI+JTwzwiSCMhSRul29DZE84Jjek84CVRFFvRrXH36k8UxE/MK6nXQjJVGzHU4kJdRHimPHR8Z/LHP1G6SntbIrFWsg3Pbtin1CXWssc5s23J9altja4Qodi0rcCq53QTTiVLVJPEuOX5YhseZGPke0qtTXIC3qtmwl4zSbQ2WJGiJFEZy1Q80uydojoZWM0T3IEdcyzIfvt5W566j9dwRIJwieAPva4x6wR4OSLl8AjN+g/v5KPhnHknoPut2pPc0mDA2K4xfCv5+7dEJqYzIbgDbK07JAze0l8JFYtWD+7nU9idkSCwwPRf8zh9NJn6AHErHZ2Pi2DX328BoxfYhXO8VtaVtcu1ywFbhpG16O8D7jgDY8MGDAR7vgIUwW/0vn/sYTve0IMIDqJHHtZc1DG/OGSblXL/Z3gidbvL72Iyn55NgZI/HwRjuMZDxdEh8ZA+dEZqMz9zzUS3jG1B2wVQtzPyU2028ijMgHW7wNZ86rSv7e8o2JkrpcnR4lRbQx2bvoDxIpVLqz2JkpiIj44sUv91u1hn3BApgdsXtq1zvg0J/WON9YfhSLRr9AoT+Hca3Qus+s4OVk7tS1USSbp/16CsVGZ6PJtRttxg6abOYDZhumCffXuyZIWlnrrX1GfsKPm3Nm87G4A0Srsmk2jHsaGn6IsXunRTn/Uhxj26jylzsvEe+BewHKmFZX3FMHdMxiSdp1byvpQETBgQxGDWK3xYJNvyVoRYEKOXQL0NAQ0c/1rWrVaQJZa3gnwsk78Ab1QyGjaKBOr1CVZNCvzdggsdoNHI7+uFJ/QbcBugVvCdftg7OirQtyXbWrsP2re/ZWr0qkt1WxJ51qddTtxen407dWp5eO/XxhWfX/b0FxYmWlMf/ALSxAJRzHwAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=11baa30e793bc710c34eb56e1a47c501^sys_idNOT INe48872df79770790c34eb56e1a47c506,a5baa30e793bc710c34eb56e1a47c599,29baa30e793bc710c34eb56e1a47c59a"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Fire Event">80a30edeff30311077a95dac793bf19b</action_type>
+        <action_type_parent display_value="Fire Event">15e10e5eff30311077a95dac793bf11e</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>80a30edeff30311077a95dac793bf19b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="EV – Abertura de Atendimento Fale Conosco">11baa30e793bc710c34eb56e1a47c501</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-13 14:54:08</sys_created_on>
+        <sys_id>e48872df79770790c34eb56e1a47c506</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-13 14:54:08</sys_updated_on>
+        <ui_id>6e8b41fa-36e1-498c-9d7b-11ab33b21287</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2W227bOBCGX0XQtWXoQFmS74K4KQp020XTzU1RCBQ5jLmgJJei3HiNvHtHB9uyXbtxkQZYtBcJoOFB//wzn0ef1rbk9tSOGQ1c4CBE4Aae50YRTUJOWZQEmfASsEd2QXPAnbCEwqTtw8heUlU3QQIRZ4JBlEQBizyXBQSycAIeJRELQxe3clktFF3d9SceUlFn+FfwTFOewnJMDRRc5nh7OaYZaFNriufYXCquobCnnz6P7AXV+GYD2p6uD5aemofCyxVufdUkciIvs1o0MQ0C8H62Cb3tj34YxEvNGzXeyIaHJgNAGYKqCkZ2TgtOTalX9tToGgMaKH9fqNV2x1yihKk9g0pq4NbtqjKQW60yy8ypsap5WStuZWCJZofdXPpQyf9QXeCPBgKndrWquhw03MuqsWiwnvb2b/K2PrSbNDWyLHCjmFFDb1ElQ9ub21rnS8mg6txFS2mtzPUw1m14v2jvaI8YmqlTWlip6rx417ltb2/cNARG6gp1wqIxsbGl90jczsuvW8dvZNH63S+qklE12ApUs/mNBMUPS0qN0TKrTSN+bdfy43GJu+D3igwKmsZMc7pYyOI+XehyKVsdmFY+vlf4MBaq/Ir6K3lfjClrTBlj+en4BuOzNnxHtWwc+guvaT2p5T+F/FLDm1YuuAHwSDgRJcQhJMycLCOBw9wwSajr+8Lz7cdRY+61olW1sxKTSL/UjRGdsb2FaVeW5gjTcmGuUNQSerceRz36zD2HDCU7RDQw7PYB9uv1Nba0AZ56Y1ZrdMs8Ph6zfjHFT5CktlXqNR1q7BHmJavb0kl+APGsX7HezHYY+8+B8eumHTphVpn9C8xYQpc5Eg0WdGy3nJyB+QS7z0/qz4DZuXABlyfY26/NPn371XkR/oTHaOj5geMHEXNIwmInJoD/kEKfJDHz2eQn+Ouc/hGEZ+cWjXYNvmmd5alBmg4GKT4e43i1W7deVVh9at1JHLeo/2JQfyx7A+rHXvdBGj2m7eNw+r4dHrPedQs9pMF5SPvIjtKuX7esxe7/iLXLh+AJ2PYc3mdtz+MXQS3xCRGTOHYyn3KHxBOCo86Nncgjro/95Adh8AtGHY/Ptmu2a09s/Nw7P+nGdQo5lSqtSiWZNLQw8L3pd8nRy+h7Qjob+v7eXGV5x0n2DOLnIBb8gL/bTbBnj1zI3v6EvCpWVmtp93WrAQ1YQmXhLxG1tu8fkOr+lqxundjndFuLF2F0ErqJ6/rC4ZMYHOIJ36FeEju+H2QenzDiT5JfwSg529Riv339AaPP8OH5hJcfE+UfS7qEqPAPUb8JUYJMSMCiyCHYY/iBGePUiyB0gpCLiPCITWLvGYn6/A0wk64M3REAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=e48872df79770790c34eb56e1a47c506"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="EV – Abertura de Atendimento Fale Conosco">11baa30e793bc710c34eb56e1a47c501</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id>c5ef0c06-4bd2-46b8-9d85-8c2222bc06af</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-09 21:21:04</sys_created_on>
+        <sys_id>a5baa30e793bc710c34eb56e1a47c599</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-09 21:21:04</sys_updated_on>
+        <ui_id>d6adae15-e111-496a-ba5b-e6b8b14dc163</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVXWviQBT9KzLPEhJjpfWt6AoL3RbaxZduCTeZGx2YfOzMxOqK/33vJJMYtHQt9KWs4MP9mjnn5pzkec8EZ1M2Ru4HN8EkCYMwHPn+6HocxJMwDkY8BMSADVkOGVKnwqRQnOINyMom9vuZQjDIo8BLKqUwN4cD1bnQpYTd0rVRJlkLyanOps8vQ1aCohMNKjbdn5QuhSQhRkmtjy2mU4xmV9qYF0mVEa5ItMk7Nzl3lcH3OVVoyMIJ/CHDrcGcIwFJQWocsgxyDqZQOzY1qqIEkeYPudx1HWuRm4ZoBlst/tDNY9/2pUjMEreELozcgpp0OgcDT3RyYirV7asQCepmJxxTqKSZ9XNNw0NpRJE3IwZi2U4Xssry+2YjrDug9zwqTSCwtDwt8oZW+rQuXh9bkAuR1ytxFGWRgOwiMEaJuDIWzp6hxHrHGZSlyFdRqYqNqIcJSuatJAVeKotXulOLVe5BYnF7tFXwFpSf1+klKGFJ/KBjaPgwZHqnZxK0PlKhHUa/K4ukIeYoRPUW6hVEtRLscKJEaW7pqg064IehE3189Z7CkpujoHpnHoW/jdIqpn/OYwU8wk0EVjPCbqGg8NwDt8f64JumBwSDpVDGMvmoOy7A3rrjZ62Jt7k4g5zl7vqzg/um4Oxx9Wn2uP5K9nA0vrw//uUKf/Tue7enpNoIuucIbcgBvyrfD3lwrv6T6sf0fgGqVu8LgZLrN2C2YseMYBmMGtgngnfFwdIVu2/Cp6k+mPj17wtp/7/5NLz8BRDzNgIRCQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=a5baa30e793bc710c34eb56e1a47c599"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="EV – Abertura de Atendimento Fale Conosco">11baa30e793bc710c34eb56e1a47c501</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>99acef56-073d-41fa-b112-e409b866c092</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-09 21:21:04</sys_created_on>
+        <sys_id>29baa30e793bc710c34eb56e1a47c59a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-09 21:21:04</sys_updated_on>
+        <ui_id>b06dcd40-c119-40bd-9304-87236a2b76bf</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVTWvjMBD9K0FnE+w4TZvcSrOFhW4L7ZJLU8xYGqcC+WNlOW025L/vSJaTkJY2hV7CBnLQfPm9p5nR45pJwSZsiCKMxtGIx1EcD8JwcDGM0lGcRgMRA2LEAlZAjhSpkZda0HkJqrGG9fpKIxgUSdTnjdZYmM2G/ELWlYLVzIeRhT9LJcjPJo9PAatAU0WDmk3WB65jISlIUVHofYfpEKNZVfYsSt7khCuRnfHGZ069p/dzSh5KsnCiMGD4arAQSEAyUDUGLIdCgCn1ik2MbshApMVdoVbbiGdZmJZoDq+1/EtfHoY2LkNixr0I22PiBWrN2RQMPFBlbhq91auUHOtWE4EZNMpc7dvagLvKyLJoUwykqssuVZMXt60ibFtg7z6amkBgZXla5C2t7OG5fLnvQF7LwkniKaqSg9qewBgt08ZYOGuGCp3GOVSVLBZJpculdMkEJe8vFB36mSpf6Ju1XBR94BZ3n1SF/jXZp848Ay0tiV9UhpI3AatX9ZWCut5RIQ2TP41F0hLzFBKngpMgcZ1gk7mWlbmkTy3RA98EvunTs486jI93DbVXc9f4r0nWpPQvRKpBJLhMwPaMtCqUdHw7A5c7f+9HTRcEvZnUxjL56nQcgb2bjt+uJ97n4gfkje1mP7d32zr8eJx923hcnNJ4eBonPx+fTUU4+HDv7nWSG4R6byIIBCF0LBe6bKp5E4axWM+7OZizyfyDIZizYN7WcoEX56MMz7II+HnK4/GQx0MMecTTMEPIsrELJ/K01Y+Mf+dZOgXIX9sMR9xftxmuJSpRv3Oh3VrAnDQwmLQXfLAavLM3887t6/lt+yEahe53Qlviv3lEn/4BywLsqDsKAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=29baa30e793bc710c34eb56e1a47c59a"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=11baa30e793bc710c34eb56e1a47c501"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=11baa30e793bc710c34eb56e1a47c501^sys_idNOT INe1baa30e793bc710c34eb56e1a47c596,21baa30e793bc710c34eb56e1a47c598"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">37a6fa42793f8710c34eb56e1a47c598</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="EV – Abertura de Atendimento Fale Conosco">11baa30e793bc710c34eb56e1a47c501</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-09 21:21:04</sys_created_on>
+        <sys_id>e1baa30e793bc710c34eb56e1a47c596</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-14 11:55:20</sys_updated_on>
+        <ui_id>c5ef0c06-4bd2-46b8-9d85-8c2222bc06af</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VXWvbMBT9K0HPxthOE9a8lXSFQLuOJRTGKOZalhMxWdIkOaln8t935Y8krNnWsj72LTr365zje0lDVOV05exKXVnL15LMvj0GhEuP4e+GSCgZmRGqZM4dVzJtgYBsQVQ+sChGSweOjbgdsVK7GmM5t1pA/fCXFLrhIjesn6fBYFfHDJk1v4V4jh2KCIr4ksZ0nEzHSRQlHy7ibDrO4iQfA4MxNhSQMYGp84Ho6LZFgj8qcLX2uHWGy3X/vu27LAdQmdyziqOAsCfHZM6QTwHCsoCUIHNwytQHxDDI76U4AhsuHbYjPvnJ8p84MJlMfGLBUCJlXfDwTHvrOri4BgdIpaKuMn0q3ShOme3MyVkBlXDzU6xLuNdealfiIBNDtRJVKT91jpBDg+FLIVJZJMG0V+qp9zqK5Ubtvgwsb7hsXemDQlEQhxc49C6rnOfTECZYiY3SErRGR1Nt1Ja3xcilDNcCH2Eh1A6H+v0LgXriIRoL4Q3i1y38AIZ7FXfYBos7mhlYTtN2V7Ed2sTIPiC2tnMB1h5Forvpj8pT7CT34tLOH19CDdfuCidvWa9jHzxf/ZOtb5o5fmvH8jQOaWXQFRdav+P7/WL58e7z6uvzM3hRzevu4hImxSSOJufv4mJ67i7OXMQrjyH5xzH4L/HCW4ii6P0Y/vsYuE27Fe61tcPf8BYe/eJ3Mw9eU26R2spji+HfwgdqXC5OT6GdMt+9qCO2/wX5gN4AdwYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">c489cbce7933c710c34eb56e1a47c5e7</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="EV – Abertura de Atendimento Fale Conosco">11baa30e793bc710c34eb56e1a47c501</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-09 21:21:04</sys_created_on>
+        <sys_id>21baa30e793bc710c34eb56e1a47c598</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-14 11:55:20</sys_updated_on>
+        <ui_id>99acef56-073d-41fa-b112-e409b866c092</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VXWvbMBT9K0HPxthJE9a8lXSFQLuOJRTGKOZalhMxWfL0kdQz+e+78ldCm7GG7XFv0dG9V+cc30NqopwtnTVrdWMM30gy//YcEC49hr9rIqFgZE6okhm3XMmkAQKyA+H8xTIftZ0Fk3a00cqVI25GrChthWUZN6WA6ul91XTLRaZZx6IEjW9Zpsm8fnXFMxyWR5DH1zSmk/FsMo6i8YerOJ1N0nicTYDBBAcKSJnA0kVPf3TfIMFvddmq9LixmstNd77vpqx6UOnMs4qjgLAXy2TGkE8OwrCAFCAzsEpXA6IZZI9SHIEtlxbHEV/8YvhPfHA8nfrCnKFEytrL4Zh0LrZwfgsWkIqj1umulG4Vp8y05mQsByfs4hRrCx5LL7VtsZCKvlsJV8hPrSNkGNB/NEScQRKs9Eo99U5Hvtqq/Zee5R2XjSvdpVAUxHACi96lzno+NWGC+QVICihLdDQptdrxphm5FOFG4CHMhdrjo35bQqCeeIjGQniH+G0DP4HmXsUDjsHmlmYKhtOk2WAchzYxcgiIqcxCgDFHkehu8sN5iq3kTlzS+uNbqOalvcGXd6zTcQjeBuIkC3W9wG9tWZbEIXUaXbEhDOueNOt+OCxXHx8+r7++Dcel7Zel5Rqm+TSOpufTcjU7l5YzObkwIuM/RMR/n3cmJIqi/xH564hwk7SL3WlrHv+HCXn2cWjfHLym3CC1tceW/T+Lv6hwuTg9hfZKf/eijtjhF+knIVyjBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=11baa30e793bc710c34eb56e1a47c501"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=11baa30e793bc710c34eb56e1a47c501"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_variable_11baa30e793bc710c34eb56e1a47c501"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_11baa30e793bc710c34eb56e1a47c501</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-09 21:21:04</sys_created_on>
+        <sys_id>25baa30e793bc710c34eb56e1a47c52a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-09 21:21:04</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_11baa30e793bc710c34eb56e1a47c501</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-09 21:21:04</sys_created_on>
+        <sys_id>e1baa30e793bc710c34eb56e1a47c58c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-09 21:21:04</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_11baa30e793bc710c34eb56e1a47c501"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_11baa30e793bc710c34eb56e1a47c501"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>9526ba8e79fb8710c34eb56e1a47c5ad</sys_id>
+        <latest_snapshot>11baa30e793bc710c34eb56e1a47c501</latest_snapshot>
+        <compiler_build>glide-zurich-07-01-2025__patch13-09-17-2026_10-06-2026_0908.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=9526ba8e79fb8710c34eb56e1a47c5ad^sys_idNOT INb5baa30e793bc710c34eb56e1a47c5c4"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"b5baa30e793bc710c34eb56e1a47c5c4","name":"plan","plan_signature":null}}</plan>
+        <plan_id>9526ba8e79fb8710c34eb56e1a47c5ad</plan_id>
+        <snapshot>eaee721874605b90c34eb8e9fc4060de</snapshot>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-09 21:21:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b5baa30e793bc710c34eb56e1a47c5c4</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-14 11:55:21</sys_updated_on>
+        <trigger display_value="">d72957a7c5fbc79063f182ce4dc0c6db</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=9526ba8e79fb8710c34eb56e1a47c5ad"/>
+</record_update>

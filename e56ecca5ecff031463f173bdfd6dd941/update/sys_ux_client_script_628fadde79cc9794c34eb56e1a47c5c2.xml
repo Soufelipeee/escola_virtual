@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="teste CSM">268fe9de79cc9794c34eb56e1a47c58a</macroponent>
+        <name>set shn actionSysId</name>
+        <preset/>
+        <required_translations>[]</required_translations>
+        <script><![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+async function handler({api, event, helpers, imports}) {
+    const actionItems = event?.payload?.data?.GlideViewQuery_Query?.uiView?.glideLayoutItem?._query?.GlideUxActionLayout_Query?.getActionLayout?.actionLayoutItems;
+    const length = actionItems.length;
+    let shnActionItem = null;
+    for(let i = 0;i < length;i++){
+        const actionItem = actionItems[i];
+        if(actionItem.name && actionItem.name.toLowerCase() === "special handling notes"){
+            shnActionItem = actionItem;
+            break;
+        }
+    }
+    api.setState('shnActionSysId', shnActionItem?.sysId);
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-22 17:17:06</sys_created_on>
+        <sys_id>628fadde79cc9794c34eb56e1a47c5c2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>set shn actionSysId</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_ux_client_script_628fadde79cc9794c34eb56e1a47c5c2</sys_update_name>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-22 17:17:06</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+</record_update>

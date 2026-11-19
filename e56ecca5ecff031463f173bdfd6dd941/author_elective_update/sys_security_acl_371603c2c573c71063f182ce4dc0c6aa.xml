@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>true</advanced>
+        <applies_to/>
+        <condition/>
+        <controlled_by_refs/>
+        <decision_type>allow</decision_type>
+        <description>Allow write for u_protocolo_origem in x_fub_fundbrad_ev_atendimento_ev, for users with role snc_internal, and if the ACL script returns true.</description>
+        <local_or_existing>Existing</local_or_existing>
+        <name>x_fub_fundbrad_ev_atendimento_ev.u_origem</name>
+        <operation display_value="write">write</operation>
+        <script><![CDATA[answer = false;]]></script>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-09 18:41:12</sys_created_on>
+        <sys_id>371603c2c573c71063f182ce4dc0c6aa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_fub_fundbrad_ev_atendimento_ev.u_origem</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_security_acl_371603c2c573c71063f182ce4dc0c6aa</sys_update_name>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-09 18:41:12</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</application>
+        <file_path/>
+        <instance_id>831a14741b984a5032182f8dee4bcbf0</instance_id>
+        <instance_name>fundbraddev</instance_name>
+        <name>sys_security_acl_371603c2c573c71063f182ce4dc0c6aa</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_security_acl"&gt;&lt;sys_security_acl action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;admin_overrides&gt;true&lt;/admin_overrides&gt;&lt;advanced&gt;true&lt;/advanced&gt;&lt;applies_to/&gt;&lt;condition/&gt;&lt;controlled_by_refs/&gt;&lt;decision_type&gt;allow&lt;/decision_type&gt;&lt;description&gt;Allow write for u_protocolo_origem in x_fub_fundbrad_ev_atendimento_ev, for users with role snc_internal, and if the ACL script returns true.&lt;/description&gt;&lt;local_or_existing&gt;Existing&lt;/local_or_existing&gt;&lt;name&gt;x_fub_fundbrad_ev_atendimento_ev.u_origem&lt;/name&gt;&lt;operation display_value="write"&gt;write&lt;/operation&gt;&lt;script&gt;&lt;![CDATA[answer = false;]]&gt;&lt;/script&gt;&lt;security_attribute/&gt;&lt;sys_class_name&gt;sys_security_acl&lt;/sys_class_name&gt;&lt;sys_created_by&gt;felipe.valenca&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-10-09 18:41:12&lt;/sys_created_on&gt;&lt;sys_id&gt;371603c2c573c71063f182ce4dc0c6aa&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;x_fub_fundbrad_ev_atendimento_ev.u_origem&lt;/sys_name&gt;&lt;sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev"&gt;e56ecca5ecff031463f173bdfd6dd941&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Escola Virtual"&gt;e56ecca5ecff031463f173bdfd6dd941&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_security_acl_371603c2c573c71063f182ce4dc0c6aa&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;felipe.valenca&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-10-09 18:41:12&lt;/sys_updated_on&gt;&lt;type display_value="record"&gt;record&lt;/type&gt;&lt;/sys_security_acl&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1306007611</payload_hash>
+        <record_name>x_fub_fundbrad_ev_atendimento_ev.u_origem</record_name>
+        <reverted_from/>
+        <source>bcce4069ecff031463f173bdfd6dd93c</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-09 18:41:13</sys_created_on>
+        <sys_id>771643c2c573c71063f182ce4dc0c69a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a121f825700000001</sys_recorded_at>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-09 18:41:13</sys_updated_on>
+        <type>Access Control</type>
+        <update_guid>371643c23773c710575eb92af1d98299</update_guid>
+        <update_guid_history>371643c23773c710575eb92af1d98299:-1306007611</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-09 18:43:21</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>9578df51f4a1433d8f498e94c2a4c021</sys_id>
+        <sys_metadata>371603c2c573c71063f182ce4dc0c6aa</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_fub_fundbrad_ev_atendimento_ev.u_origem</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_parent display_value="Origin">1c7c24e9ecf7431463f173bdfd6dd9fb</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_scope_delete display_value="">3911fbb3a8454a90b9d9310b67c884c9</sys_scope_delete>
+        <sys_update_name>sys_security_acl_371603c2c573c71063f182ce4dc0c6aa</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_371603c2c573c71063f182ce4dc0c6aa">771643c2c573c71063f182ce4dc0c69a</sys_update_version>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-09 18:43:21</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

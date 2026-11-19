@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Record page 3 column layout">426a984e79c0df54c34eb56e1a47c582</macroponent>
+        <name>On Language Dropdown List Open</name>
+        <preset/>
+        <required_translations>[]</required_translations>
+        <script><![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+function handler({api, event, helpers, imports}) {
+    var selectedKnowledgeBase = api.state.selectedKnowledgeBase;
+    var kbLanguages = api.state.writableKnowledgeBaseData.kbIdToLanguageMap[selectedKnowledgeBase];
+    api.setState('kbLanguages', kbLanguages);
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-21 16:26:41</sys_created_on>
+        <sys_id>166a984e79c0df54c34eb56e1a47c5c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>On Language Dropdown List Open</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_ux_client_script_166a984e79c0df54c34eb56e1a47c5c7</sys_update_name>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-21 16:26:41</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</application>
+        <file_path/>
+        <instance_id>831a14741b984a5032182f8dee4bcbf0</instance_id>
+        <instance_name>fundbraddev</instance_name>
+        <name>sys_ux_client_script_166a984e79c0df54c34eb56e1a47c5c7</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;controller_preset/&gt;&lt;includes/&gt;&lt;macroponent display_value="Record page 3 column layout"&gt;426a984e79c0df54c34eb56e1a47c582&lt;/macroponent&gt;&lt;name&gt;On Language Dropdown List Open&lt;/name&gt;&lt;preset/&gt;&lt;required_translations&gt;[]&lt;/required_translations&gt;&lt;script&gt;&lt;![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+function handler({api, event, helpers, imports}) {
+    var selectedKnowledgeBase = api.state.selectedKnowledgeBase;
+    var kbLanguages = api.state.writableKnowledgeBaseData.kbIdToLanguageMap[selectedKnowledgeBase];
+    api.setState('kbLanguages', kbLanguages);
+}]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;felipe.valenca&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-10-21 16:26:41&lt;/sys_created_on&gt;&lt;sys_id&gt;166a984e79c0df54c34eb56e1a47c5c7&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;On Language Dropdown List Open&lt;/sys_name&gt;&lt;sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev"&gt;e56ecca5ecff031463f173bdfd6dd941&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Escola Virtual"&gt;e56ecca5ecff031463f173bdfd6dd941&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_166a984e79c0df54c34eb56e1a47c5c7&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;felipe.valenca&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-10-21 16:26:41&lt;/sys_updated_on&gt;&lt;target&gt;macroponent&lt;/target&gt;&lt;type&gt;default&lt;/type&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1730877374</payload_hash>
+        <record_name>On Language Dropdown List Open</record_name>
+        <reverted_from/>
+        <source>3c5ed7f979809f54c34eb56e1a47c52e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-21 16:26:41</sys_created_on>
+        <sys_id>126a984e79c0df54c34eb56e1a47c5cb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a15f494ceb0000001</sys_recorded_at>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-21 16:26:41</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>126a984e56c0df54ecc7f71a61437fca</update_guid>
+        <update_guid_history>126a984e56c0df54ecc7f71a61437fca:-1730877374</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-21 16:28:28</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>6a2c6776d4d34bf080dadca944c24764</sys_id>
+        <sys_metadata>166a984e79c0df54c34eb56e1a47c5c7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>On Language Dropdown List Open</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_scope_delete display_value="">3911fbb3a8454a90b9d9310b67c884c9</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_166a984e79c0df54c34eb56e1a47c5c7</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_166a984e79c0df54c34eb56e1a47c5c7">126a984e79c0df54c34eb56e1a47c5cb</sys_update_version>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-21 16:28:28</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

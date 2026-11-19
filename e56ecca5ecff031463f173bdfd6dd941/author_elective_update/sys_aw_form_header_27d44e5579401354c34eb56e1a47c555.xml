@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_aw_form_header">
+    <sys_aw_form_header action="DELETE">
+        <active>true</active>
+        <header_image/>
+        <hide_tags>false</hide_tags>
+        <ignore_highlight>false</ignore_highlight>
+        <order>100</order>
+        <primary_field>short_description</primary_field>
+        <secondary_fields/>
+        <specificity>20</specificity>
+        <subheading/>
+        <sys_class_name>sys_aw_form_header</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-19 16:16:52</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>27d44e5579401354c34eb56e1a47c555</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>x_fub_fundbrad_ev_atendimento_ev</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_aw_form_header_27d44e5579401354c34eb56e1a47c555</sys_update_name>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-19 16:18:50</sys_updated_on>
+        <table>x_fub_fundbrad_ev_atendimento_ev</table>
+        <workspace/>
+    </sys_aw_form_header>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</application>
+        <file_path/>
+        <instance_id>831a14741b984a5032182f8dee4bcbf0</instance_id>
+        <instance_name>fundbraddev</instance_name>
+        <name>sys_aw_form_header_27d44e5579401354c34eb56e1a47c555</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_aw_form_header"><sys_aw_form_header action="INSERT_OR_UPDATE"><active>true</active><header_image/><hide_tags>false</hide_tags><ignore_highlight>false</ignore_highlight><order>100</order><primary_field>short_description</primary_field><secondary_fields/><specificity>20</specificity><subheading/><sys_class_name>sys_aw_form_header</sys_class_name><sys_created_by>felipe.valenca</sys_created_by><sys_created_on>2026-10-19 16:16:52</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>27d44e5579401354c34eb56e1a47c555</sys_id><sys_mod_count>2</sys_mod_count><sys_name>x_fub_fundbrad_ev_atendimento_ev</sys_name><sys_overrides/><sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package><sys_policy/><sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope><sys_update_name>sys_aw_form_header_27d44e5579401354c34eb56e1a47c555</sys_update_name><sys_updated_by>felipe.valenca</sys_updated_by><sys_updated_on>2026-10-19 16:18:50</sys_updated_on><table>x_fub_fundbrad_ev_atendimento_ev</table><workspace/></sys_aw_form_header></record_update>]]></payload>
+        <payload_hash>1839848099</payload_hash>
+        <record_name>x_fub_fundbrad_ev_atendimento_ev</record_name>
+        <reverted_from/>
+        <source>3baf3a04c54cd3d063f182ce4dc0c6a9</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-19 16:18:50</sys_created_on>
+        <sys_id>b3654e1979401354c34eb56e1a47c5fe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a154f563dc0000001</sys_recorded_at>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-19 16:18:50</sys_updated_on>
+        <type>Form Header</type>
+        <update_guid>b3654e190b401354aa6d44f50676e2fd</update_guid>
+        <update_guid_history>b3654e190b401354aa6d44f50676e2fd:1839848099,b5558ed5b2401354b833723b5a22b198:-1477079878,c3f4429573401354024ad4dfac9406f2:1908518465</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-19 16:19:54</sys_created_on>
+        <sys_db_object display_value="" name="sys_aw_form_header">sys_aw_form_header</sys_db_object>
+        <sys_id>5501738bf3b54b74a7324201f2b70790</sys_id>
+        <sys_metadata>27d44e5579401354c34eb56e1a47c555</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_fub_fundbrad_ev_atendimento_ev</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_scope_delete display_value="">3911fbb3a8454a90b9d9310b67c884c9</sys_scope_delete>
+        <sys_update_name>sys_aw_form_header_27d44e5579401354c34eb56e1a47c555</sys_update_name>
+        <sys_update_version display_value="sys_aw_form_header_27d44e5579401354c34eb56e1a47c555">b3654e1979401354c34eb56e1a47c5fe</sys_update_version>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-19 16:19:54</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

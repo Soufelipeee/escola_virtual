@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="cmn_schedule">
+    <cmn_schedule action="INSERT_OR_UPDATE">
+        <cal_type/>
+        <calendar_name>EV - SLA de Atendimento - 24h dias úteis e feriado</calendar_name>
+        <description>SLA de 24 horas, contabilizado de segunda a sexta-feira, exceto feriados cadastrados.</description>
+        <document/>
+        <document_key/>
+        <is_legacy_schedule>true</is_legacy_schedule>
+        <label>EV - SLA de Atendimento - 24h dias úteis e feriado</label>
+        <name>EV - SLA de Atendimento - 24h dias úteis e feriado</name>
+        <parent/>
+        <plural_label/>
+        <read_only>false</read_only>
+        <sys_class_name>cmn_schedule</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-15 13:41:07</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1caa3c48c5c813d063f182ce4dc0c63b</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>EV - SLA de Atendimento - 24h dias úteis e feriado</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>cmn_schedule_1caa3c48c5c813d063f182ce4dc0c63b</sys_update_name>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-15 14:24:55</sys_updated_on>
+        <time_zone>America/Sao_Paulo</time_zone>
+        <type/>
+    </cmn_schedule>
+</record_update>

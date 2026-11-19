@@ -1,0 +1,2440 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=96898000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>28100</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>64ae46eac54453d463f182ce4dc0c683</copied_from>
+        <copied_from_name>[FB] Escola Virtual — Abertura p</copied_from_name>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>copy_of_fb_escola_virtual__abertura_por_email</internal_name>
+        <label_cache>[{"name":"f9fdaa69-7bd3-4bd5-9021-2f4060e03a1f.record","label":"2 - Create Record➛Service Virtual School Record","reference":"x_fub_fundbrad_ev_atendimento_ev","reference_display":"Service Virtual School","type":"reference","base_type":"reference","usedInstances":{"b73607ee-8d9d-4deb-95cd-fa73e14ed72c":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Inbound Email_1.inbound_email.sys_id","label":"Trigger - Inbound Email➛Email Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sys_email","column_name":"sys_id","usedInstances":{"ca668e5f-b0ff-44d0-aa73-9dd6f4e805a7":["source_record_sys_id_"]}},{"name":"f9fdaa69-7bd3-4bd5-9021-2f4060e03a1f.record.sys_id","label":"2 - Create Record➛Service Virtual School Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_fub_fundbrad_ev_atendimento_ev","column_name":"sys_id","usedInstances":{"ca668e5f-b0ff-44d0-aa73-9dd6f4e805a7":["target_record_sys_id_"]}},{"name":"Inbound Email_1.inbound_email","label":"Trigger - Inbound Email➛Email Record","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference","usedInstances":{},"attributes":{}},{"name":"flow_variable.from","label":"Flow Variables➛From","type":"string","base_type":"string","usedInstances":{"f9fdaa69-7bd3-4bd5-9021-2f4060e03a1f":["u_email_solicitante","short_description"],"950e7d78-21c7-4e3e-ac60-fdcfffaf0d06":["variable_child2"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"1b145dfb-d82a-4f16-8059-775f5ce5f082"}},{"name":"flow_variable.body","label":"Flow Variables➛Body","type":"string","base_type":"string","usedInstances":{"80d25685-2d81-4bec-9f9c-76add971c857":["body-0"],"f9fdaa69-7bd3-4bd5-9021-2f4060e03a1f":["work_notes"],"950e7d78-21c7-4e3e-ac60-fdcfffaf0d06":["variable_child1"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"29ca298e-4c78-41a9-9585-0e26fe36cb7c"}},{"name":"f9fdaa69-7bd3-4bd5-9021-2f4060e03a1f.__action_status__.message","label":"2➛Action Status➛Message","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"70cdfd71-8ede-420d-a58c-6cf63f755969":["variable-0"]},"attributes":{}},{"name":"Inbound Email_1.from_address","label":"Trigger - Inbound Email➛From address","type":"string_full_utf8","base_type":"string_full_utf8","usedInstances":{"f9fdaa69-7bd3-4bd5-9021-2f4060e03a1f":["u_email_solicitante","short_description"],"852ec01a-185c-4326-9515-03ed8b4e972f":["condition"],"605c47d5-6c12-4057-b5b3-a3e9163bfd86":["condition"]},"attributes":{"test_input_hidden":"true"}},{"name":"Inbound Email_1.subject","label":"Trigger - Inbound Email➛Subject","type":"string_full_utf8","base_type":"string_full_utf8","usedInstances":{"f9fdaa69-7bd3-4bd5-9021-2f4060e03a1f":["description"]},"attributes":{"test_input_hidden":"true"}},{"name":"Inbound Email_1.inbound_email.recipients","label":"Trigger - Inbound Email➛Email Record➛Recipients","reference":"","reference_display":"Recipients","type":"string","base_type":"string","parent_table_name":"sys_email","column_name":"recipients","usedInstances":{"f9fdaa69-7bd3-4bd5-9021-2f4060e03a1f":["u_email_solicitante","short_description"]}},{"name":"flow_variable.is_forwarded_reply","label":"Flow Variables➛Forwarded Reply","reference":"","reference_display":"","type":"boolean","base_type":"boolean","column_name":"","choices":[],"usedInstances":{"2de27557-e39d-45ee-bd72-d40b13538479":["condition"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"11cc911e-9151-44e0-86d6-6062468e8f97"}}]</label_cache>
+        <master_snapshot>b1469cead1501350c34ea7aa17dde0f7</master_snapshot>
+        <master_snapshot_digest/>
+        <name>[EV] Escola Virtual — Abertura por Email.</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>ca46dcead1501350c34ea7aa17dde0f9</remote_trigger_id>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 14:52:41</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7d2b4462d1dcdf10c34ea7aa17dde070</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>[EV] Escola Virtual — Abertura por Email.</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_hub_flow_7d2b4462d1dcdf10c34ea7aa17dde070</sys_update_name>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-05 17:47:42</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>1fcc75b274941710c34eb8e9fc406018</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=7d2b4462d1dcdf10c34ea7aa17dde070"/>
+    <sys_variable_value action="delete_multiple" query="document_key=7d2b4462d1dcdf10c34ea7aa17dde070"/>
+    <sys_flow_email_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <email_conditions table="sys_email">type=received^receive_type=new^ORreceive_type=forward^user_id=bdab16df79bbc390c34eb56e1a47c5f0<item display_value="received" endquery="false" field="type" goto="false" newquery="false" operator="=" or="false" value="received"/>
+            <item display_value="New" endquery="false" field="receive_type" goto="false" newquery="false" operator="=" or="false" value="new"/>
+            <item display_value="Forward" endquery="false" field="receive_type" goto="false" newquery="false" operator="=" or="true" value="forward"/>
+            <item display_table="sys_user" display_value="Escola Virtual" endquery="false" field="user_id" goto="false" newquery="false" operator="=" or="false" value="bdab16df79bbc390c34eb56e1a47c5f0"/>
+        </email_conditions>
+        <event_name>email.read</event_name>
+        <name/>
+        <order/>
+        <published_version/>
+        <stop_condition_evaluation>true</stop_condition_evaluation>
+        <sys_class_name>sys_flow_email_trigger</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 15:41:19</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ca46dcead1501350c34ea7aa17dde0f9</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-05 17:47:42</sys_updated_on>
+        <target_table/>
+        <trigger_definition display_value="Inbound Email">6f0180400b320300f4eb8bf637673ad4</trigger_definition>
+    </sys_flow_email_trigger>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=7d2b4462d1dcdf10c34ea7aa17dde070"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=7d2b4462d1dcdf10c34ea7aa17dde070"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=7d2b4462d1dcdf10c34ea7aa17dde070^sys_idNOT IN752b4462d1dcdf10c34ea7aa17dde072"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>7d2b4462d1dcdf10c34ea7aa17dde070</id>
+        <name>Copy of [FB] Escola Virtual — Abertura por Email</name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 14:52:41</sys_created_on>
+        <sys_id>752b4462d1dcdf10c34ea7aa17dde072</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:52:41</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=752b4462d1dcdf10c34ea7aa17dde072"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=7d2b4462d1dcdf10c34ea7aa17dde070^sys_idNOT IN062b8462d1dcdf10c34ea7aa17dde040,0a2b8462d1dcdf10c34ea7aa17dde033,422b8462d1dcdf10c34ea7aa17dde046,822b8462d1dcdf10c34ea7aa17dde05e,8e2b8462d1dcdf10c34ea7aa17dde04b,c62b8462d1dcdf10c34ea7aa17dde03a,ce2b8462d1dcdf10c34ea7aa17dde063"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=string_full_utf8,uiTypeLabel=String (Full UTF-8)</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>body_text</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">string_full_utf8</internal_type>
+        <label>Body Text</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="[EV] Escola Virtual — Abertura por Email.">7d2b4462d1dcdf10c34ea7aa17dde070</model>
+        <model_id>7d2b4462d1dcdf10c34ea7aa17dde070</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_7d2b4462d1dcdf10c34ea7aa17dde070</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 14:52:42</sys_created_on>
+        <sys_id>062b8462d1dcdf10c34ea7aa17dde040</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:55:06</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=062b8462d1dcdf10c34ea7aa17dde040"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>inbound_email</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Inbound Email</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="[EV] Escola Virtual — Abertura por Email.">7d2b4462d1dcdf10c34ea7aa17dde070</model>
+        <model_id>7d2b4462d1dcdf10c34ea7aa17dde070</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_7d2b4462d1dcdf10c34ea7aa17dde070</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sys_email">sys_email</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual>type=received^sys_created_onONLast 3 months@javascript:gs.beginningOfLast3Months()@javascript:gs.endOfLast3Months()^EQ</reference_qual>
+        <reference_qual_condition table="sys_email">type=received^sys_created_onONLast 3 months@javascript:gs.beginningOfLast3Months()@javascript:gs.endOfLast3Months()^EQ<item display_value="received" endquery="false" field="type" goto="false" newquery="false" operator="=" or="false" value="received"/>
+            <item endquery="false" field="sys_created_on" goto="false" newquery="false" operator="ON" or="false" value="Last 3 months@javascript:gs.beginningOfLast3Months()@javascript:gs.endOfLast3Months()"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </reference_qual_condition>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 14:52:42</sys_created_on>
+        <sys_id>0a2b8462d1dcdf10c34ea7aa17dde033</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:55:06</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=0a2b8462d1dcdf10c34ea7aa17dde033"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=string_full_utf8,uiTypeLabel=String (Full UTF-8)</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>subject</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">string_full_utf8</internal_type>
+        <label>Subject</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="[EV] Escola Virtual — Abertura por Email.">7d2b4462d1dcdf10c34ea7aa17dde070</model>
+        <model_id>7d2b4462d1dcdf10c34ea7aa17dde070</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_7d2b4462d1dcdf10c34ea7aa17dde070</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 14:52:42</sys_created_on>
+        <sys_id>422b8462d1dcdf10c34ea7aa17dde046</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:55:06</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=422b8462d1dcdf10c34ea7aa17dde046"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>target_table_name</dependent>
+        <dependent_on_field>target_table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>target_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Target Record</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="[EV] Escola Virtual — Abertura por Email.">7d2b4462d1dcdf10c34ea7aa17dde070</model>
+        <model_id>7d2b4462d1dcdf10c34ea7aa17dde070</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_7d2b4462d1dcdf10c34ea7aa17dde070</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 14:52:42</sys_created_on>
+        <sys_id>822b8462d1dcdf10c34ea7aa17dde05e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:55:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=822b8462d1dcdf10c34ea7aa17dde05e"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=reference,uiTypeLabel=Reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>user</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>User</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="[EV] Escola Virtual — Abertura por Email.">7d2b4462d1dcdf10c34ea7aa17dde070</model>
+        <model_id>7d2b4462d1dcdf10c34ea7aa17dde070</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_7d2b4462d1dcdf10c34ea7aa17dde070</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sys_user">sys_user</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 14:52:42</sys_created_on>
+        <sys_id>8e2b8462d1dcdf10c34ea7aa17dde04b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:55:06</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=8e2b8462d1dcdf10c34ea7aa17dde04b"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>target_table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Target Table</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="[EV] Escola Virtual — Abertura por Email.">7d2b4462d1dcdf10c34ea7aa17dde070</model>
+        <model_id>7d2b4462d1dcdf10c34ea7aa17dde070</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_7d2b4462d1dcdf10c34ea7aa17dde070</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 14:52:42</sys_created_on>
+        <sys_id>c62b8462d1dcdf10c34ea7aa17dde03a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:55:06</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=c62b8462d1dcdf10c34ea7aa17dde03a"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=string_full_utf8,uiTypeLabel=String (Full UTF-8)</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>from_address</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">string_full_utf8</internal_type>
+        <label>From address</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="[EV] Escola Virtual — Abertura por Email.">7d2b4462d1dcdf10c34ea7aa17dde070</model>
+        <model_id>7d2b4462d1dcdf10c34ea7aa17dde070</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_7d2b4462d1dcdf10c34ea7aa17dde070</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 14:52:42</sys_created_on>
+        <sys_id>ce2b8462d1dcdf10c34ea7aa17dde063</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:55:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=ce2b8462d1dcdf10c34ea7aa17dde063"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=7d2b4462d1dcdf10c34ea7aa17dde070"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=7d2b4462d1dcdf10c34ea7aa17dde070"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=7d2b4462d1dcdf10c34ea7aa17dde070^sys_idNOT IN0a2b8462d1dcdf10c34ea7aa17dde08e"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="[EV] Escola Virtual — Abertura por Email.">7d2b4462d1dcdf10c34ea7aa17dde070</flow>
+        <generation_source/>
+        <name>Inbound Email</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 14:52:42</sys_created_on>
+        <sys_id>0a2b8462d1dcdf10c34ea7aa17dde08e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:52:42</sys_updated_on>
+        <trigger_definition display_value="Inbound Email">6f0180400b320300f4eb8bf637673ad4</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9WWW0/bMBTHv4qV525KSC/Qt2kb0l5WCdD2wCBy7JPWkmtnttPSIb77jp2kTS90MJDGXqr42DmX//kdN9f3kaQ5yGgcfZ5TIQnTigsntLJRLxLKgVFUXq1KwBNbe3OqOHXarKJxQaWFXlQYPb+CeSmpg7VRGw4mGidx3IsWVFZwubJfODpDF4rOvVvwgbMt5+EkbjkM/KOK45QbYCAWwG+bh2yzpWB5O7nYtxfaLKnht5UFkwleG3NO82TIi9FZnrP0LGZpH/LBEBLaH7FBEWNwNhMS46lofH3Ti0pqME3ni7jf2RK+juQ0TuIUXx6lyUkaxwX6o0n/ZEDPRsO0GKHDIwo/LoE7oHlXTLhzoDjwtdL7DTFA+UTJjWGGDUWfH9c+idPkZ0WlKFZkORNsRkImllhHjSMrXRlSSL18Hxp+Z8UvzKkf+/gGCkAlmE/SrmwWXow69owLiyys2sKDslowmJQ+do2Ao7mE+pFpWc3V11oQXHMoaCXdtwYFtGAjMw6lL9vX0WJ3OdPLizbquVBBo2ZTakblekWdMyKvHNjQzFaGLK+wrf6taHESPYQaMi9Lm0gTMquzxgNNaecCZMOyZUaU7gNzyGAT76G3Ga5J6NzeRPnlNGw8b5xOjoyTbkItNsI16XakfB7jwzhPYyT8MOMj6DDeFrqTjNutt1vIC1C+mgEpjdBGuBWZovbKI+3Qip2eYiiiF/4HLYYIletK8Zrx9oDdYXub7EeAfnMsL4QVdfSw/SSI/4DspdMlaqsZWCvUdB/eXGsJVD0b3vQIvBaDbu7BDPwxGiTeAJ28AtHIcf/0UaKLLtH7OjwhV7crUbf2F/D+feYJNxX02pTAEo0HA/P+qiZL4WZhhQuw7l2QjYT4/wB1n+vG+mm7bc3m25+FCyhR4gtgKCMJ+O9NQ5AkC2g8dyD6RwYC/4en4LJa8Fe91POzBEegfzpIk9SPAOQjFlP8nBly/CjKB50ROFT+4fzcATG6Vb7wqg9+iS4C36bOh1qrmUBZ+QZ9oZie47DiGZ95uPC34D/9P+/5v0X55jefa9QE6AsAAA==</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>email</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=7d2b4462d1dcdf10c34ea7aa17dde070^sys_idNOT IN8a2b8462d1dcdf10c34ea7aa17dde08c,822b8462d1dcdf10c34ea7aa17dde088,022b8462d1dcdf10c34ea7aa17dde08b"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Delete Attachment">bdc2a0170f973300dfd3694e68767e47</action_type>
+        <action_type_parent display_value="Delete Attachment">6672502a9353130079b5925cf67ffbc6</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>bdc2a0170f973300dfd3694e68767e47</compiled_snapshot>
+        <display_text/>
+        <flow display_value="[EV] Escola Virtual — Abertura por Email.">7d2b4462d1dcdf10c34ea7aa17dde070</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 14:52:42</sys_created_on>
+        <sys_id>8a2b8462d1dcdf10c34ea7aa17dde08c</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-05 17:40:20</sys_updated_on>
+        <ui_id>b73607ee-8d9d-4deb-95cd-fa73e14ed72c</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9VWUW/aMBD+K1GegQUSCPAyVUJIlbZVKlVfpiq6xDZYcpzMcWgZ4r/vnDiklJahtts6IR58tu/u++77knzfupy4UzckyQC8fuixSej7nkcY8UeTgI7G4SikwdjtuBJSiicVTTJFcL0GUZrAdssmjACMJt0wJn43iMmwO/EG/e6ABd7Io54Pfdar7+12eJPwIhewubUJMJKsuCCKSnf6/a7j5qCwlqbKnW6fbOlNTiMBMRV4cZYlZUqldi5nmONcHM3tRVaqhDrXDZ6n+EwpXBNbJOImiFumrX7HpQ+aSkKxKANR0I6bgiSgM7Vxp1qVGFAUyJUUm/2JFZe6xpvCQ8F/Ynp/YM4xigATU43LhBOs5j4KR5Yv3L5st5NVxhN6lWueyTqphlg0fGaiTOW3GpFhnDIohW4YpyzwkxEJPMBfPAw9LwlDNomZPw6BUb+9MTsaVVlgQzQ32A2aGipbrLL766bhOZcVSxa2yBIQ+xVorXhcalqY6Zb85jma6/CXZ+dMBa0OppDnXC6jXGVrXtVD2GlvKXDRYyK7xzYLvpQ9SAxHPRwO9OYYn1XhW1DcEPYV0+DlXUV49KM0rdaUWYxRxW9NLp4qEsVzfYE519SC2nUaF01OqW/otSqr07UmeohYGeNfklgBieg6AiMvbpBmuDx2zYKqNQrAueVKY9POAgWRiVd76cY05FSK6ZwN5uDyMTjroGoZyTq1NdDgvQw09g4N9IJx3miYY93bjt4u/AN2DnV/OJMiqqVnm66y/jM7/M4J8fCkeIatWJAWSFYVBMZbJhpj8BSW9Fj9Tfh1Yl/gJOSyEfoZvTYXL/bNOnPezuY0FGuDoilqLeCftoCNnOcB7393wZ6cQwfsB/VBVd4/qRxopUEQgKYRCBE9Erd3LOzG1q98iuNz89Pcpji3xf3nVNWjcyGE0+q8+PwSCCvrGN86FGSr6+DddB38FVU3jD//xdPs/inht/Q9efY/nuTHUv/dL8l478g1DAAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=8a2b8462d1dcdf10c34ea7aa17dde08c"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="[EV] Escola Virtual — Abertura por Email.">7d2b4462d1dcdf10c34ea7aa17dde070</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 14:52:42</sys_created_on>
+        <sys_id>822b8462d1dcdf10c34ea7aa17dde088</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-05 17:40:20</sys_updated_on>
+        <ui_id>f9fdaa69-7bd3-4bd5-9021-2f4060e03a1f</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VW28TOxD+Kys/cUSy2t2ENEmfDpdKINFKFPWFUMu7nm0MXnuxvWlDyX9nbG/a0LQ69AgJIRHlIo/n8n0z304+XBPByZxMcsiezfJJNcpHoyLLiuk4LyejMi/4iAGMyYAo1gB6OlZKoOEwICsmO2+8onVX4kfx0jBOYUWZA8VFA8ppPKIrF7aVbH3WR5yCWYkKkjNhXMdkclottZboVy2F5AYUmX/4OCAtM1jJgSHz6ztXbt0ClawEienee1TJcUT1s4x+CH6Aoa9y16YN94CyAYErTxOwXs2khQFpmOLMabMmc2c6NBhg/ETJ9Y3HUiiHCYn3vbLiK2afZt6vBqRWQby7OdK+b9GMTcKmnbROaBUtAVh/qWXXqONIwnccatZJt+04WjqL+aD1kD2IHlF9utSX77YFj4QK7PpLqSsmb07MOSPKzoH18wAJfsC0YW0r1AVtjV6JEIxYmvRC4iGtpb7EolZcqJRVHniKHWLpEdpfBvMZM8KzeItpMHgT2NMvna8befSIaSSNDrYyonX/YroV9OA2g62UOWSzBwefl7eDDuq1OzLuKDRMSGq1FJVwTDlYdFk24tfXr1WpUd7Jq+CQp7XRDWUc5WjtZnOOBAMkpLeNqDl1hilba9PMZ1X1rJhMJ8PZpCqG4yqfDqd1cTCczPJ8zA+KclqMMY1dauPoXrIjhuJ+oZW2lU6GEQP+/ieqSiuHPadexDFT4HfeGqGNcOtoK84vtflMlcaxRkvNhxEBKnvvyf3bpPua9D/XFjTYWodrMDR38NMK3iY4EiC5vUfS273VF6CrvkC/u/JftbvySRZev2eDRZx/2ALb+S/ZW2WRULR5hHtaD8b97XcbgxIwySerVRJlmuAjFvAGHniZ+ktaar5eKO+LWrXA3+xEvDk9OU6D+Yn3/edwoRbKgOsMupAHnrMFSZ7u5Erx2bkQiuGe8NxNXBqH2A3LVsC3I30gmW/MPXvmN5HvqT+anGdxuzX2wf847EdgP3w8+AWJvX2O4ckCB4pvP7EnO6wqCSwWSL59CymLg/jtE91l92oYEnr3eeIVQjabzcfvLKiRp1EKAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=822b8462d1dcdf10c34ea7aa17dde088"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="DTT Create Attachment without duplicate">eb3b024f33bda290249781ac4f5c7b00</action_type>
+        <action_type_parent display_value="DTT Create Attachment without duplicate">ed2b8a0f33bda290249781ac4f5c7b7d</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>eb3b024f33bda290249781ac4f5c7b00</compiled_snapshot>
+        <display_text/>
+        <flow display_value="[EV] Escola Virtual — Abertura por Email.">7d2b4462d1dcdf10c34ea7aa17dde070</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 14:52:42</sys_created_on>
+        <sys_id>022b8462d1dcdf10c34ea7aa17dde08b</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-05 17:40:20</sys_updated_on>
+        <ui_id>ca668e5f-b0ff-44d0-aa73-9dd6f4e805a7</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Wy2rbQBT9laJVCx4hafSyd4U2EGgbSNJsQhDzuGMPjCVFDyeu8b/3jmS7RY5dN8kiiywsPGfmPs7RPYxuV46WzsQJFOVeECpKuWTBGP+Ok9RnIlSRSLhHnZGTszngybpoKwFZw7gBRBfMtB28rDOYM20Qk7ouDVvePLElZtrICnJncns3ckpWYdIGKmeyGmw1yxIywzgYzHDVVDqfYvipve4Cu2Y/XG+afZqCLWXRbZGikrYjf+TAYwO5BCyqmKlh5MxZLllTVEtn0lQtAhUweZGb5e7ETOcNJnPs2cda/8LMqed59qQCZCeg390ts41aPSxmhRZwUTa6yHuk77LfLEw7z3/0JKzOoFhrmq3OiLQ15oPSNm3b2PSkrmbFw+W24JnOO36bTVMIZnYr1qAKvG2gtq+k1dcDbXrk2/C9gIE5VszmrCwRycqqWOiuCjY9d6cGF64yxQN2V+tp7jJhGbooJnPPEP/SwTes0pbud0yDwbbcz1zft3Bu33sKCR/zSJHIDyMSyiQkjHKfUKXiME0jiJVy1p202X1rSfUibeTIekXxQC0qXTafsYUFbJivRxsjAD82XIHcm6IKBA5MZodcy+wvR6xW5zkv2lx++GqHP/Nd3a97M7h9xHq9b5j/iHwNP51AeeCny47zx76PT/+W5IDDgneHvS2HKfBUIiAmobAO8wQQLtOQcB4A9WWSxkq+2GH06LhR/884NayaQrN31TxmquX4yyWvGHpikTE7RNrqU+By31AnRLyGkU5gtg287qgNL6YB4QO2oe+2eVu2CeM49n0ZkDBk+IilJJylQMZjRmms8BmnL7ZNkhwdrmhvio5cTGqsJGPxmCRcUhJyGRFM6JNAhV7sgUeZr9w+/ug19cw8r+G1E+QYeO3QpXVIrgPuC9/d97bc5wcCIo9HxONUkTDFSws/C4FEgnoSaEJBPt99d78BI6foqCENAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=022b8462d1dcdf10c34ea7aa17dde08b"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=7d2b4462d1dcdf10c34ea7aa17dde070"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=7d2b4462d1dcdf10c34ea7aa17dde070^sys_idNOT IN8e2b8462d1dcdf10c34ea7aa17dde081"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">75ddd52fc54cd71863f182ce4dc0c61b</block>
+        <comment>JSON Body</comment>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="[EV] Escola Virtual — Abertura por Email.">7d2b4462d1dcdf10c34ea7aa17dde070</flow>
+        <flow_variables_assigned>json_body</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 14:52:42</sys_created_on>
+        <sys_id>8e2b8462d1dcdf10c34ea7aa17dde081</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-05 17:47:39</sys_updated_on>
+        <ui_id>fc2cc2c5-2aae-441b-bb58-02f64488dbf2</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1WTXPbNhD9Kxie7I5IUbIsJcrJ/fA0nTqecZxcygxnCSwpuCDAAKAt1dF/70IkJbkTd3rpTTpIwGI/3nsL7Og5Mq1vWu/uzZVzstLR8o8vo0jqYKP1c6ShxmgZPTij88KITTSKHkG1wUZLIV2jYPP5YOErqYTFPlEDluI92mj5/I8jv2kwV1CgosDfPt5+oGApaL2YTIvZbD4VE8FFOUn5xQxhATBZCIHpQpDfcRjrUX0HaCjRm2hnrAg4pqMI1x61QCpWgnI4imrQAryxm73FIohbrQ6GldS+Y1jD2sm/KPEsTdPgWSKR4j3//TbvtRlkMZLjbeMlYdlZPBRq0MyottYfOgJBVSyhVf5I1dZRPmwC6gCjx1R+XJmnu6HgtdQ7gv2hMhzUfgfeW1m0Hl3oRCvvX0jT7X9/2QxUWFO1vIamkbrKG2se5a4CAa6TStEmKZV5ImTh6iTAA7uElITkmuw/78yfwcpA9YbSUHAo9knLry2+D81OhZhcvMHL+A2fp/GsTOfxW7jk8QRSXsynsJgDRNudrPnXNhDqBOqlyDs1ycFxKxt/RRAeiZi3LQ62QPhwK2jzb650uS2z8PQr9R+tY1mbpheClSLf0SIRqwptsuqPv33beUwX3fe7TPfxP1Kt14IDjtzTJXwl3AVu9pcapHotRWlNnYOg1+QcRWV6PGazhNGNkQIoAQNGvXNQYc0acM60rDGW3aGQFrlnZ3dYWWAC2U8g18DGdERlfXxNic87GNIN7igGHOMjt+VYJnSf/NlBrnNilGlGn/E6rl2Ma74CXWFcoUYLlCiuCTHBigmS5bjMMvfDDREtzJrdtQoduyJf/53UA83LhN0Y7YEZZooH9CawsPRrtenlR0ev57Z4GFA/d5iySLrc7jll0fIFx9Hg1emfY2hAcDrqR2hAfXa+d+UKobtYwbHve6a3O7AEqrWaheeUOArUlSw3Z3t05++i7Xb7JczT7oV0A/e/zsDTYD4N5tNgPg3m02D+3wazQC4dvZz78EzeD/+Jw8GGhprkx6YnY/8Mb+5g2/4N8ZLpD10LAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=7d2b4462d1dcdf10c34ea7aa17dde070^sys_idNOT IN5a2b8462d1dcdf10c34ea7aa17dde092,562b8462d1dcdf10c34ea7aa17dde093"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>7d2b4462d1dcdf10c34ea7aa17dde070</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Inbound Email_1.subject}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 14:52:42</sys_created_on>
+        <sys_id>5a2b8462d1dcdf10c34ea7aa17dde092</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:52:42</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>9cc52686-96c2-4c18-8f27-69114d72b824</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>7d2b4462d1dcdf10c34ea7aa17dde070</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>9cc52686-96c2-4c18-8f27-69114d72b824</source_ui_id>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 14:52:43</sys_created_on>
+        <sys_id>562b8462d1dcdf10c34ea7aa17dde093</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:52:43</sys_updated_on>
+        <transform_compositions>[{"id":"c98659e0c7c720105312134c95c26001","transformType":null,"transformDefinition":null,"order":0,"parameters":[{"id":null,"name":"regex","label":"Regex","order":0,"attributes":{},"value":"(?i)^(fw|enc):?\\s*","type":"string","defaultValue":"","typeLabel":null,"mandatory":false,"choices":[]},{"id":null,"name":"replace_string","label":"Replace String","order":1,"attributes":{},"value":"","type":"string","defaultValue":"","typeLabel":null,"mandatory":false,"choices":[]}]}]</transform_compositions>
+        <transform_definition_id display_value="replace_string">6f2599a0c7c720105312134c95c260fe</transform_definition_id>
+        <ui_id>dab4a100-ed93-4b95-84e2-ebdf474e9798</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=7d2b4462d1dcdf10c34ea7aa17dde070^sys_idNOT IN2fe1d82ad1101350c34ea7aa17dde05b,712b4462d1dcdf10c34ea7aa17dde07d"/>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=11cc911e-9151-44e0-86d6-6062468e8f97</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>false</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>is_forwarded_reply</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Forwarded Reply</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="[EV] Escola Virtual — Abertura por Email.">7d2b4462d1dcdf10c34ea7aa17dde070</model>
+        <model_id>7d2b4462d1dcdf10c34ea7aa17dde070</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_7d2b4462d1dcdf10c34ea7aa17dde070</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 15:22:18</sys_created_on>
+        <sys_id>2fe1d82ad1101350c34ea7aa17dde05b</sys_id>
+        <sys_mod_count>29</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-05 17:47:39</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=json,uiTypeLabel=JSON,uiUniqueId=0dd138e5-8c60-4f06-9a5c-1a0cb62a76aa</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>json_body</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="JSON">json</internal_type>
+        <label>JSON body</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="[EV] Escola Virtual — Abertura por Email.">7d2b4462d1dcdf10c34ea7aa17dde070</model>
+        <model_id>7d2b4462d1dcdf10c34ea7aa17dde070</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_7d2b4462d1dcdf10c34ea7aa17dde070</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 14:52:41</sys_created_on>
+        <sys_id>712b4462d1dcdf10c34ea7aa17dde07d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:55:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>json_body</element>
+        <help/>
+        <hint/>
+        <label>JSON body</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_variable_7d2b4462d1dcdf10c34ea7aa17dde070</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 14:52:42</sys_created_on>
+        <sys_id>022b4462d1dcdf10c34ea7aa17dde0bf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:52:42</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>is_forwarded_reply</element>
+        <help/>
+        <hint/>
+        <label>Forwarded Reply</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_variable_7d2b4462d1dcdf10c34ea7aa17dde070</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 15:22:18</sys_created_on>
+        <sys_id>a3e1d82ad1101350c34ea7aa17dde061</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-04 15:22:18</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_variable_7d2b4462d1dcdf10c34ea7aa17dde070"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>from_address</element>
+        <help/>
+        <hint/>
+        <label>From address</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_7d2b4462d1dcdf10c34ea7aa17dde070</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 14:52:42</sys_created_on>
+        <sys_id>062b8462d1dcdf10c34ea7aa17dde068</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:52:42</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>target_table_name</element>
+        <help/>
+        <hint/>
+        <label>Target Table</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_7d2b4462d1dcdf10c34ea7aa17dde070</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 14:52:42</sys_created_on>
+        <sys_id>0e2b8462d1dcdf10c34ea7aa17dde03e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:52:42</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>body_text</element>
+        <help/>
+        <hint/>
+        <label>Body Text</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_7d2b4462d1dcdf10c34ea7aa17dde070</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 14:52:42</sys_created_on>
+        <sys_id>4a2b8462d1dcdf10c34ea7aa17dde044</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:52:42</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>subject</element>
+        <help/>
+        <hint/>
+        <label>Subject</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_7d2b4462d1dcdf10c34ea7aa17dde070</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 14:52:42</sys_created_on>
+        <sys_id>862b8462d1dcdf10c34ea7aa17dde04a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:52:42</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>user</element>
+        <help/>
+        <hint/>
+        <label>User</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_7d2b4462d1dcdf10c34ea7aa17dde070</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 14:52:42</sys_created_on>
+        <sys_id>c22b8462d1dcdf10c34ea7aa17dde050</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:52:42</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>target_record</element>
+        <help/>
+        <hint/>
+        <label>Target Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_7d2b4462d1dcdf10c34ea7aa17dde070</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 14:52:42</sys_created_on>
+        <sys_id>c62b8462d1dcdf10c34ea7aa17dde062</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:52:42</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>inbound_email</element>
+        <help/>
+        <hint>O registro que representa o e-mail de entrada.</hint>
+        <label>Inbound Email</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_7d2b4462d1dcdf10c34ea7aa17dde070</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 14:52:42</sys_created_on>
+        <sys_id>ce2b8462d1dcdf10c34ea7aa17dde038</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:52:42</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_7d2b4462d1dcdf10c34ea7aa17dde070"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_7d2b4462d1dcdf10c34ea7aa17dde070"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=424803000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>28100</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>64ae46eac54453d463f182ce4dc0c683</copied_from>
+        <copied_from_name/>
+        <description/>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>copy_of_fb_escola_virtual__abertura_por_email</internal_name>
+        <label_cache>[{"name":"f9fdaa69-7bd3-4bd5-9021-2f4060e03a1f.record","label":"2 - Create Record➛Service Virtual School Record","reference":"x_fub_fundbrad_ev_atendimento_ev","reference_display":"Service Virtual School","type":"reference","base_type":"reference","usedInstances":{"b73607ee-8d9d-4deb-95cd-fa73e14ed72c":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Inbound Email_1.inbound_email.sys_id","label":"Trigger - Inbound Email➛Email Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sys_email","column_name":"sys_id","usedInstances":{"ca668e5f-b0ff-44d0-aa73-9dd6f4e805a7":["source_record_sys_id_"]}},{"name":"f9fdaa69-7bd3-4bd5-9021-2f4060e03a1f.record.sys_id","label":"2 - Create Record➛Service Virtual School Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_fub_fundbrad_ev_atendimento_ev","column_name":"sys_id","usedInstances":{"ca668e5f-b0ff-44d0-aa73-9dd6f4e805a7":["target_record_sys_id_"]}},{"name":"Inbound Email_1.inbound_email","label":"Trigger - Inbound Email➛Email Record","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference","usedInstances":{},"attributes":{}},{"name":"flow_variable.from","label":"Flow Variables➛From","type":"string","base_type":"string","usedInstances":{"f9fdaa69-7bd3-4bd5-9021-2f4060e03a1f":["u_email_solicitante","short_description"],"950e7d78-21c7-4e3e-ac60-fdcfffaf0d06":["variable_child2"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"1b145dfb-d82a-4f16-8059-775f5ce5f082"}},{"name":"flow_variable.body","label":"Flow Variables➛Body","type":"string","base_type":"string","usedInstances":{"80d25685-2d81-4bec-9f9c-76add971c857":["body-0"],"f9fdaa69-7bd3-4bd5-9021-2f4060e03a1f":["work_notes"],"950e7d78-21c7-4e3e-ac60-fdcfffaf0d06":["variable_child1"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"29ca298e-4c78-41a9-9585-0e26fe36cb7c"}},{"name":"f9fdaa69-7bd3-4bd5-9021-2f4060e03a1f.__action_status__.message","label":"2➛Action Status➛Message","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"70cdfd71-8ede-420d-a58c-6cf63f755969":["variable-0"]},"attributes":{}},{"name":"Inbound Email_1.from_address","label":"Trigger - Inbound Email➛From address","type":"string_full_utf8","base_type":"string_full_utf8","usedInstances":{"f9fdaa69-7bd3-4bd5-9021-2f4060e03a1f":["u_email_solicitante","short_description"],"852ec01a-185c-4326-9515-03ed8b4e972f":["condition"],"605c47d5-6c12-4057-b5b3-a3e9163bfd86":["condition"]},"attributes":{"test_input_hidden":"true"}},{"name":"Inbound Email_1.subject","label":"Trigger - Inbound Email➛Subject","type":"string_full_utf8","base_type":"string_full_utf8","usedInstances":{"f9fdaa69-7bd3-4bd5-9021-2f4060e03a1f":["description"]},"attributes":{"test_input_hidden":"true"}},{"name":"Inbound Email_1.inbound_email.recipients","label":"Trigger - Inbound Email➛Email Record➛Recipients","reference":"","reference_display":"Recipients","type":"string","base_type":"string","parent_table_name":"sys_email","column_name":"recipients","usedInstances":{"f9fdaa69-7bd3-4bd5-9021-2f4060e03a1f":["u_email_solicitante","short_description"]}},{"name":"flow_variable.is_forwarded_reply","label":"Flow Variables➛Forwarded Reply","reference":"","reference_display":"","type":"boolean","base_type":"boolean","column_name":"","choices":[],"usedInstances":{"2de27557-e39d-45ee-bd72-d40b13538479":["condition"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"11cc911e-9151-44e0-86d6-6062468e8f97"}}]</label_cache>
+        <master>true</master>
+        <name>[EV] Escola Virtual — Abertura por Email.</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="[EV] Escola Virtual — Abertura por Email.">7d2b4462d1dcdf10c34ea7aa17dde070</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 15:41:17</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b1469cead1501350c34ea7aa17dde0f7</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-05 17:47:42</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=b1469cead1501350c34ea7aa17dde0f7"/>
+    <sys_variable_value action="delete_multiple" query="document_key=b1469cead1501350c34ea7aa17dde0f7"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=b1469cead1501350c34ea7aa17dde0f7"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=b1469cead1501350c34ea7aa17dde0f7^sys_idNOT INbd469cead1501350c34ea7aa17dde0f8"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>b1469cead1501350c34ea7aa17dde0f7</id>
+        <name>Copy of [FB] Escola Virtual — Abertura por Email</name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 15:41:17</sys_created_on>
+        <sys_id>bd469cead1501350c34ea7aa17dde0f8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-04 15:41:17</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=bd469cead1501350c34ea7aa17dde0f8"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=b1469cead1501350c34ea7aa17dde0f7^sys_idNOT IN3146dcead1501350c34ea7aa17dde04f,7d46dcead1501350c34ea7aa17dde06c,b146dcead1501350c34ea7aa17dde045,bd46dcead1501350c34ea7aa17dde02c,bd46dcead1501350c34ea7aa17dde058,f946dcead1501350c34ea7aa17dde076,fd46dcead1501350c34ea7aa17dde062"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=string_full_utf8</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>subject</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">string_full_utf8</internal_type>
+        <label>Subject</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="[EV] Escola Virtual — Abertura por Email.">b1469cead1501350c34ea7aa17dde0f7</model>
+        <model_id>b1469cead1501350c34ea7aa17dde0f7</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_b1469cead1501350c34ea7aa17dde0f7</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 15:41:17</sys_created_on>
+        <sys_id>3146dcead1501350c34ea7aa17dde04f</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-05 17:47:41</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=3146dcead1501350c34ea7aa17dde04f"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=string_full_utf8</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>from_address</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">string_full_utf8</internal_type>
+        <label>From address</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="[EV] Escola Virtual — Abertura por Email.">b1469cead1501350c34ea7aa17dde0f7</model>
+        <model_id>b1469cead1501350c34ea7aa17dde0f7</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_b1469cead1501350c34ea7aa17dde0f7</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 15:41:17</sys_created_on>
+        <sys_id>7d46dcead1501350c34ea7aa17dde06c</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-05 17:47:41</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=7d46dcead1501350c34ea7aa17dde06c"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>target_table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Target Table</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="[EV] Escola Virtual — Abertura por Email.">b1469cead1501350c34ea7aa17dde0f7</model>
+        <model_id>b1469cead1501350c34ea7aa17dde0f7</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_b1469cead1501350c34ea7aa17dde0f7</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 15:41:17</sys_created_on>
+        <sys_id>b146dcead1501350c34ea7aa17dde045</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-05 17:47:41</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=b146dcead1501350c34ea7aa17dde045"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=string_full_utf8</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>body_text</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">string_full_utf8</internal_type>
+        <label>Body Text</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="[EV] Escola Virtual — Abertura por Email.">b1469cead1501350c34ea7aa17dde0f7</model>
+        <model_id>b1469cead1501350c34ea7aa17dde0f7</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_b1469cead1501350c34ea7aa17dde0f7</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 15:41:17</sys_created_on>
+        <sys_id>bd46dcead1501350c34ea7aa17dde02c</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-05 17:47:41</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=bd46dcead1501350c34ea7aa17dde02c"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>inbound_email</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Inbound Email</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="[EV] Escola Virtual — Abertura por Email.">b1469cead1501350c34ea7aa17dde0f7</model>
+        <model_id>b1469cead1501350c34ea7aa17dde0f7</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_b1469cead1501350c34ea7aa17dde0f7</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sys_email">sys_email</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual>type=received^sys_created_onONLast 3 months@javascript:gs.beginningOfLast3Months()@javascript:gs.endOfLast3Months()^EQ</reference_qual>
+        <reference_qual_condition table="sys_email">type=received^sys_created_onONLast 3 months@javascript:gs.beginningOfLast3Months()@javascript:gs.endOfLast3Months()^EQ<item display_value="received" endquery="false" field="type" goto="false" newquery="false" operator="=" or="false" value="received"/>
+            <item endquery="false" field="sys_created_on" goto="false" newquery="false" operator="ON" or="false" value="Last 3 months@javascript:gs.beginningOfLast3Months()@javascript:gs.endOfLast3Months()"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </reference_qual_condition>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 15:41:17</sys_created_on>
+        <sys_id>bd46dcead1501350c34ea7aa17dde058</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-05 17:47:41</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=bd46dcead1501350c34ea7aa17dde058"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>target_table_name</dependent>
+        <dependent_on_field>target_table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>target_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Target Record</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="[EV] Escola Virtual — Abertura por Email.">b1469cead1501350c34ea7aa17dde0f7</model>
+        <model_id>b1469cead1501350c34ea7aa17dde0f7</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_b1469cead1501350c34ea7aa17dde0f7</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 15:41:18</sys_created_on>
+        <sys_id>f946dcead1501350c34ea7aa17dde076</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-05 17:47:41</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=f946dcead1501350c34ea7aa17dde076"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>user</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>User</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="[EV] Escola Virtual — Abertura por Email.">b1469cead1501350c34ea7aa17dde0f7</model>
+        <model_id>b1469cead1501350c34ea7aa17dde0f7</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_b1469cead1501350c34ea7aa17dde0f7</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sys_user">sys_user</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 15:41:17</sys_created_on>
+        <sys_id>fd46dcead1501350c34ea7aa17dde062</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-05 17:47:41</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=fd46dcead1501350c34ea7aa17dde062"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=b1469cead1501350c34ea7aa17dde0f7"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=b1469cead1501350c34ea7aa17dde0f7"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=b1469cead1501350c34ea7aa17dde0f7^sys_idNOT IN8a46dcead1501350c34ea7aa17dde0bc"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="[EV] Escola Virtual — Abertura por Email.">b1469cead1501350c34ea7aa17dde0f7</flow>
+        <generation_source/>
+        <name>Inbound Email</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 15:41:18</sys_created_on>
+        <sys_id>8a46dcead1501350c34ea7aa17dde0bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-04 15:41:18</sys_updated_on>
+        <trigger_definition display_value="Inbound Email">6f0180400b320300f4eb8bf637673ad4</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9WWW0/bMBTHv4qV525KSC/Qt2kb0l5WCdD2wCBy7JPWkmtnttPSIb77jp2kTS90MJDGXqr42DmX//kdN9f3kaQ5yGgcfZ5TIQnTigsntLJRLxLKgVFUXq1KwBNbe3OqOHXarKJxQaWFXlQYPb+CeSmpg7VRGw4mGidx3IsWVFZwubJfODpDF4rOvVvwgbMt5+EkbjkM/KOK45QbYCAWwG+bh2yzpWB5O7nYtxfaLKnht5UFkwleG3NO82TIi9FZnrP0LGZpH/LBEBLaH7FBEWNwNhMS46lofH3Ti0pqME3ni7jf2RK+juQ0TuIUXx6lyUkaxwX6o0n/ZEDPRsO0GKHDIwo/LoE7oHlXTLhzoDjwtdL7DTFA+UTJjWGGDUWfH9c+idPkZ0WlKFZkORNsRkImllhHjSMrXRlSSL18Hxp+Z8UvzKkf+/gGCkAlmE/SrmwWXow69owLiyys2sKDslowmJQ+do2Ao7mE+pFpWc3V11oQXHMoaCXdtwYFtGAjMw6lL9vX0WJ3OdPLizbquVBBo2ZTakblekWdMyKvHNjQzFaGLK+wrf6taHESPYQaMi9Lm0gTMquzxgNNaecCZMOyZUaU7gNzyGAT76G3Ga5J6NzeRPnlNGw8b5xOjoyTbkItNsI16XakfB7jwzhPYyT8MOMj6DDeFrqTjNutt1vIC1C+mgEpjdBGuBWZovbKI+3Qip2eYiiiF/4HLYYIletK8Zrx9oDdYXub7EeAfnMsL4QVdfSw/SSI/4DspdMlaqsZWCvUdB/eXGsJVD0b3vQIvBaDbu7BDPwxGiTeAJ28AtHIcf/0UaKLLtH7OjwhV7crUbf2F/D+feYJNxX02pTAEo0HA/P+qiZL4WZhhQuw7l2QjYT4/wB1n+vG+mm7bc3m25+FCyhR4gtgKCMJ+O9NQ5AkC2g8dyD6RwYC/4en4LJa8Fe91POzBEegfzpIk9SPAOQjFlP8nBly/CjKB50ROFT+4fzcATG6Vb7wqg9+iS4C36bOh1qrmUBZ+QZ9oZie47DiGZ95uPC34D/9P+/5v0X55jefa9QE6AsAAA==</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>email</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=b1469cead1501350c34ea7aa17dde0f7^sys_idNOT INc246dcead1501350c34ea7aa17dde0b7,c646dcead1501350c34ea7aa17dde0b9,8e46dcead1501350c34ea7aa17dde0ba"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="[EV] Escola Virtual — Abertura por Email.">b1469cead1501350c34ea7aa17dde0f7</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 15:41:18</sys_created_on>
+        <sys_id>c246dcead1501350c34ea7aa17dde0b7</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-05 17:40:52</sys_updated_on>
+        <ui_id>f9fdaa69-7bd3-4bd5-9021-2f4060e03a1f</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VW2/bNhT+KwKfOswWJNl1bOdpTRtgxZYA9ZCXuiEo8ijmRpEaSTlxXf/3Hopy4sUJugADigIzZAs8N37fufnjlkhB5mSSQ/Z6lk/4KB+NiiwrpuO8nIzKvBAjBjAmA6JZDWjpWamAdocBWTPVBuEdrdoSv1qUlgkKa8o8aCFr0N7gEU2FdI1im6veYwF2LTkkV9L6lqlkwVfGKLTjK6mEBU3mHz8NSMMs3uTBkvn2kerf4lasBIWmfwTgz/Dwm+ZJ2W+HvslFVBgrAp5sQOAusAQEUjHlYEBqpgXzxm7I3NsWBRaYuNRqc2+xktpjQBJs75z8jNdOs2BXATLjEHX3R9qnLYqrt8yzBUbmvrW9KeYN8+hiTgRUrFX+7FAWDS4bL42OLh3N3tuottYXMSXkPsC+SihpHYKAJvAMyHsa1WJlbj/sUZ5L3aWkVyrDmbo/Me+tLFsf8GwJKAhNQWvWNFLf0MaateycEUud3ig8pJUyt3ipkzc6ZTwATzGtLD1H+dtOfMWsDCx+xzDovBsQt3Fnijn3wAWTSP9uA5LIrOdAYxqCC7ey8b/gBWvo4e4G+4EQkM2ebay8fGikbgbcwTC0FGomFXVGSS490x6WbZaNxHb7qy4NDknyrjPI08qamjKBTe3cbneNlDtISHjvUQnqLdOuMraezzh/XUymk+FswovhmOfT4bQqToaTWZ6PxUlRTosxhnErYz09CnbOsIfPjDaOm2QYMeD7m6i40R6rQMNAxEgdv+vGSmOl30RZcX1r7F9UGyx0lFRiGBHggBzN//9JeipJL1x+3+7R/fI7l6CEe6Jp95sPaqyOBxqb+NH265XJVa/sN2D+X23AfJJ1nx9oD0ZyP/waPPjHO1qIkWKUBcxHE9MJj3fogw+2mU3+dEYnsdkTHNSOQccMlWlQ0tKIzVIHW+x4B+L9gcf7xeVF2olfBdufTpd6qS1g3dGEPDOtS5L8fBArxQm8kZrhtgncbVw9p5gNx9Yg9kV+JlhIzBPb6juR76m/mFxg8bB7jsH/s9gvwH76cvBLEnP7Bt2TJRYUn1CxVwesuAIWL0i+fOlCFifxNwR6zO7dsAsYzOdJ6BCy2+0+fQU6uazy3QoAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=c246dcead1501350c34ea7aa17dde0b7"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="DTT Create Attachment without duplicate">eb3b024f33bda290249781ac4f5c7b00</action_type>
+        <action_type_parent display_value="DTT Create Attachment without duplicate">ed2b8a0f33bda290249781ac4f5c7b7d</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>eb3b024f33bda290249781ac4f5c7b00</compiled_snapshot>
+        <display_text/>
+        <flow display_value="[EV] Escola Virtual — Abertura por Email.">b1469cead1501350c34ea7aa17dde0f7</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 15:41:18</sys_created_on>
+        <sys_id>c646dcead1501350c34ea7aa17dde0b9</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-05 17:40:52</sys_updated_on>
+        <ui_id>ca668e5f-b0ff-44d0-aa73-9dd6f4e805a7</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1WXWvbMBT9K8NPG0TBtvyVvo1ug8E+YOv6Uoq5kq5agWJ7ttw1C/3vu4qdtiRtloz1pfQhJrq69+qc43uQz5aBUcFREGsuwjjRnAsF8Yz+zvIiApnoVOYi5MEkqGCOlNnVfSuxdCAsUvQKbL8KL7oS52AsxZTpGguL0we25KWxqsUqODo7nwQNtNTUYRscLTe29kVlQaCl1O8rWK9ORlgPg3WLZhV1rakuxvWndYN1sG6VBxRNArx2WCkkJBpsh5NgDpUCV7eL4Mi1PQVaBPW1sovbjEtTOWoW+Nzrzvym44owDH2mRiIncdi9XZajWENYvwMHhKSXrm/HVHlZG4ndIItCDb11x/djQ8LXxpm6GkoGvkN1bft59WWQI7htsH43FOk7AoGNZ+qxj0T098v617c1yg+mWokybtpagr1dgSPpRO88nmXQm5MNlYfIls5ocU4nlnNoGoqUTVtfmdUpBHo+vbC0mGpb/yJ0nbmopiA9wym9AZh+oPi7VfgUWuPpfqY2VOyP+1GZnz1+9BNUYC5mItUsjZKUJSpPGHARMa51lhRFipnWwc3Ez+ixha67E4reUPmz9zQH2UaBykFjXyJb07i3BOoKRy1uJqOdUOwa3FhtTWiLkuau9FYxqrznq+XyYyXqvlKv3nsLldHUDOvBUtOh4uZm23YHVB7myj3Ibbjy24rd6+HEN38nf4hP4xefPgOfagx1LjFjifQ+DSUyoYqECREjj1ReZFo9gU/5zlHm0d2oOmgv0G1de9el7gX9KiVaIGddleBn0XjFalpu23KPisPsuAeHtR1PViQ2L8kNaoeYj7+Y7xmYL8myLIpUzJIE6JEpxQQUyGYz4DzT9MyKJzBfnu8c3HRrQndcknqmFUA2Y7lQnCVCpYwaRizWSZiFGHKI9HSo33ll/mOfwxy7B/ENxz52gT4mzCEeTl48/Aw8HMUS01CkLBRcs6SgC5Q+dJGlkocKec5R/U8Pn/8BAkzIoTkOAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=c646dcead1501350c34ea7aa17dde0b9"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Delete Attachment">bdc2a0170f973300dfd3694e68767e47</action_type>
+        <action_type_parent display_value="Delete Attachment">6672502a9353130079b5925cf67ffbc6</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>bdc2a0170f973300dfd3694e68767e47</compiled_snapshot>
+        <display_text/>
+        <flow display_value="[EV] Escola Virtual — Abertura por Email.">b1469cead1501350c34ea7aa17dde0f7</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 15:41:18</sys_created_on>
+        <sys_id>8e46dcead1501350c34ea7aa17dde0ba</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-05 17:40:52</sys_updated_on>
+        <ui_id>b73607ee-8d9d-4deb-95cd-fa73e14ed72c</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+WWb2vbMBDGv4rx6yRzYidu8maUhkBha6EZfVOKOVtSIpBlT5bTZiHffWdbtvOnTVPoWMcofaGTTnruufvVfdjYnNgT2yfRAJy+77Cx77qOQxhxR2OPji78kU+9C7tjS4gpnlQ0ShTB9QpEXgQ2GzZmBGA07vohcbteSIbdsTPodwfMc0YOdVzos16Vt91iJuFZKmB9by7ASLTkgigq7cnDY8dOQeFbmip7sjnYOlesgJAKPDpPchVR664WfViEXqfFmiRRHlOpA14Hv5kLpmbHup7iDiYVqvodmz5rKglFOQxERjt2DJKATtTanmiVY0BRILdSrJsTSy51VW4Mzxn/hQ+7g+Ico1hfVOjgMuIEX7N3woGxC7ev2202BQ1zfCnSuWpcTHhEs8opQhnkQl/txqoDt6nmiaxSNISizk5EHsubyiC7uaDuEmWeG42I5wD+hEPfcSLfZ+OQuRc+MOq2GdOj9uYZVkHTwrDCgsofNl8mT3d1lTMuS2uNVyKJQDQrNqegouWMU1H0X+ZxiGc7NmiteJjror6NnfMfL3WzCr/cTypoeTCGNOVyEaQqWfFSB9oR9xYCFz0mkieUn/GF7EFUeNfDTkNvhvFpGb4HxQsjv+M1mLzt2Nk6uxKQZa2d2M/gZ14UVZlr3AjKTlRtKPIixVN9ia+sqCl/26kZHZ8a+6HTjnd1XYvoc8DyEH8lCRWQgK4CKKaXF7UnuDxmck7VCkfFuudKo2hrjqOTiPeT+rbkmtQfRvNBCQbQchmUe/t8lmnWTbVh8Bx8FJ4Xzj6er2D5N3A8pqph5WysXsFnz+t9evbc5llQjasRXd76iaB6i6dweHI4h+0wolEQLcuiGG+9qfHiMSzoMUN1+H3InKGqRuaykWXNeNuX06INUBm2Xi4OYJrXQQOSexokEzmPJOe/ZKmxeZ+jxuh/hpX+yamEduwIlqRpAEIEO4g4x3jUfy7eicfbQmo8pqUS61IIqyUl+/qaVANGiN85CvLwM4PfjC8zo9jQ4X0YHd7nZaPu0sv/29W7fwqfthkH36Hddnx2hh5/A3H/IqVlDQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=8e46dcead1501350c34ea7aa17dde0ba"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=b1469cead1501350c34ea7aa17dde0f7"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=b1469cead1501350c34ea7aa17dde0f7^sys_idNOT IN4a46dcead1501350c34ea7aa17dde0af"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">75ddd52fc54cd71863f182ce4dc0c61b</block>
+        <comment>JSON Body</comment>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="[EV] Escola Virtual — Abertura por Email.">b1469cead1501350c34ea7aa17dde0f7</flow>
+        <flow_variables_assigned>json_body</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 15:41:18</sys_created_on>
+        <sys_id>4a46dcead1501350c34ea7aa17dde0af</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-05 17:47:42</sys_updated_on>
+        <ui_id>fc2cc2c5-2aae-441b-bb58-02f64488dbf2</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1W32/bNhD+Vwg+JYMly45jd+5Tli5Yh6UBkqwvUyGcxZPMjCJVkkrsuv7fd7Qk2y2aYc+D/RCbxzve9333A9lw0/i68e7RXDknS83nf30acKmDjX5vuBR8zmej8WIymY7FSOSiGCX5xQRhBjCaCYHJTPAB11AheT45o7OFEWsyPYNqgo1+CulqBeuPB0u+lEpY7BLWYCneo+XzzXdX/xWAggUqcv394e4D6xD8AJRf172pO/1xFEgmY0WAMR5wXHnUAil/AcrhgFegBXhj13uLRRB3Wh0MS6l9S7CClZNfKNckSZLgWSBxyjv6+2PWSdOai3fg4cHbJveN3StlZI6uVUNgAY3y18e21uGu9pI47UI8LFQfbVRT6Q+tEHz/wFElGkcgsA5UA/aOSPGwNC/3PcobqXeqdJfK5KD2J/DeykXjA54Nb+TjNxK35+9ERoUVZcsqqGupy6y25lnuMhDgKi4VHeJCmRdCFtoyhjywi0l+iG/I/m5n/ghWBqq39AwFh2R/avm5wfehaRIhRhdv8DJ6k0+TaFIk0+hnuMyjEST5YjqG2RSAbwfcrd21AucOIlF1ss9NoNhK1omTtfqGkNzK2l8RqGcKoXphbwsSHPqNDv/mSiNimYWX36iN0DqWNklyIVghsh1RkrUs0cbL7vrr153HeNb+fZvqLv4XyvVacMCReerlV8Jd4GZ/rUCq154orKkyEDSTzlFUqodDNokZ9ZAUQA8wYFRNByVWrCYhTcNqY9k9Cmkx9+zsHksLTCC7BrkCNqQrSuujG3r4vIUhXe+OoscxPHKbD2VMHebPDnKdE6NUM/oMV1HlIlzlS9AlRiVqtEAPRRUhJlgRQbI5ztPU/XRLRBdmxe4bhY5dka//wdM9zcuY3RrtgRlmFk/oTWBh6dtq08mPjubpbvHUo960mFIuXWb3nFI+/4bjoPdq9c8wFCA4HdUjFKA6O9+75gqhbazg2NU91dsdWALVWM3CgMWOAnUpi/XZHt35W77dbj+FrdzOzGm9n9b7ab2f1vtpvf+v1rvAXDqapccwOO/7/+PDxZrWpcyPTS/G/h2m8GDb/gNH+0pWEQwAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=b1469cead1501350c34ea7aa17dde0f7^sys_idNOT INc246dcead1501350c34ea7aa17dde0bd,0e46dcead1501350c34ea7aa17dde0bd"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>b1469cead1501350c34ea7aa17dde0f7</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Inbound Email_1.subject}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 15:41:18</sys_created_on>
+        <sys_id>c246dcead1501350c34ea7aa17dde0bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-04 15:41:18</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>9cc52686-96c2-4c18-8f27-69114d72b824</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>b1469cead1501350c34ea7aa17dde0f7</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>9cc52686-96c2-4c18-8f27-69114d72b824</source_ui_id>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 15:41:18</sys_created_on>
+        <sys_id>0e46dcead1501350c34ea7aa17dde0bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-04 15:41:18</sys_updated_on>
+        <transform_compositions>[{"id":"c98659e0c7c720105312134c95c26001","transformType":null,"transformDefinition":null,"order":0,"parameters":[{"id":null,"name":"regex","label":"Regex","order":0,"attributes":{},"value":"(?i)^(fw|enc):?\\s*","type":"string","defaultValue":"","typeLabel":null,"mandatory":false,"choices":[]},{"id":null,"name":"replace_string","label":"Replace String","order":1,"attributes":{},"value":"","type":"string","defaultValue":"","typeLabel":null,"mandatory":false,"choices":[]}]}]</transform_compositions>
+        <transform_definition_id display_value="replace_string">6f2599a0c7c720105312134c95c260fe</transform_definition_id>
+        <ui_id>dab4a100-ed93-4b95-84e2-ebdf474e9798</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=b1469cead1501350c34ea7aa17dde0f7^sys_idNOT IN4246dcead1501350c34ea7aa17dde09e,8246dcead1501350c34ea7aa17dde0a6"/>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=11cc911e-9151-44e0-86d6-6062468e8f97</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>false</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>is_forwarded_reply</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Forwarded Reply</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="[EV] Escola Virtual — Abertura por Email.">b1469cead1501350c34ea7aa17dde0f7</model>
+        <model_id>b1469cead1501350c34ea7aa17dde0f7</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_variable_b1469cead1501350c34ea7aa17dde0f7</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 15:41:18</sys_created_on>
+        <sys_id>4246dcead1501350c34ea7aa17dde09e</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-05 17:47:41</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=json,uiTypeLabel=JSON,uiUniqueId=0dd138e5-8c60-4f06-9a5c-1a0cb62a76aa</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>json_body</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="JSON">json</internal_type>
+        <label>JSON body</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="[EV] Escola Virtual — Abertura por Email.">b1469cead1501350c34ea7aa17dde0f7</model>
+        <model_id>b1469cead1501350c34ea7aa17dde0f7</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_variable_b1469cead1501350c34ea7aa17dde0f7</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 15:41:18</sys_created_on>
+        <sys_id>8246dcead1501350c34ea7aa17dde0a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-04 15:41:18</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>json_body</element>
+        <help/>
+        <hint/>
+        <label>JSON body</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_variable_b1469cead1501350c34ea7aa17dde0f7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 15:41:18</sys_created_on>
+        <sys_id>0a46dcead1501350c34ea7aa17dde0a9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-04 15:41:18</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>is_forwarded_reply</element>
+        <help/>
+        <hint/>
+        <label>Forwarded Reply</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_variable_b1469cead1501350c34ea7aa17dde0f7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 15:41:18</sys_created_on>
+        <sys_id>ce46dcead1501350c34ea7aa17dde0a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-04 15:41:18</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_variable_b1469cead1501350c34ea7aa17dde0f7"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>body_text</element>
+        <help/>
+        <hint/>
+        <label>Body Text</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_b1469cead1501350c34ea7aa17dde0f7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 15:41:17</sys_created_on>
+        <sys_id>3146dcead1501350c34ea7aa17dde041</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-04 15:41:17</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>target_table_name</element>
+        <help/>
+        <hint/>
+        <label>Target Table</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_b1469cead1501350c34ea7aa17dde0f7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 15:41:17</sys_created_on>
+        <sys_id>3946dcead1501350c34ea7aa17dde04b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-04 15:41:17</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>user</element>
+        <help/>
+        <hint/>
+        <label>User</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_b1469cead1501350c34ea7aa17dde0f7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 15:41:17</sys_created_on>
+        <sys_id>7546dcead1501350c34ea7aa17dde069</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-04 15:41:17</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>subject</element>
+        <help/>
+        <hint/>
+        <label>Subject</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_b1469cead1501350c34ea7aa17dde0f7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 15:41:17</sys_created_on>
+        <sys_id>b546dcead1501350c34ea7aa17dde055</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-04 15:41:17</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>inbound_email</element>
+        <help/>
+        <hint>O registro que representa o e-mail de entrada.</hint>
+        <label>Inbound Email</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_b1469cead1501350c34ea7aa17dde0f7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 15:41:17</sys_created_on>
+        <sys_id>b546dcead1501350c34ea7aa17dde05f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-04 15:41:17</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>from_address</element>
+        <help/>
+        <hint/>
+        <label>From address</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_b1469cead1501350c34ea7aa17dde0f7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 15:41:18</sys_created_on>
+        <sys_id>f146dcead1501350c34ea7aa17dde073</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-04 15:41:18</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>target_record</element>
+        <help/>
+        <hint/>
+        <label>Target Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_b1469cead1501350c34ea7aa17dde0f7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 15:41:18</sys_created_on>
+        <sys_id>f146dcead1501350c34ea7aa17dde07d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-04 15:41:18</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_b1469cead1501350c34ea7aa17dde0f7"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_b1469cead1501350c34ea7aa17dde0f7"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>7d2b4462d1dcdf10c34ea7aa17dde070</sys_id>
+        <latest_snapshot>b1469cead1501350c34ea7aa17dde0f7</latest_snapshot>
+        <compiler_build>glide-zurich-07-01-2025__patch13-09-17-2026_10-06-2026_0908.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=7d2b4462d1dcdf10c34ea7aa17dde070^sys_idNOT IN4a46dcead1501350c34ea7aa17dde0fa"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.RunAlways</binding_strategy>
+        <plan/>
+        <plan_id>7d2b4462d1dcdf10c34ea7aa17dde070</plan_id>
+        <snapshot>b1469cead1501350c34ea7aa17dde0f7</snapshot>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-11-04 15:41:19</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4a46dcead1501350c34ea7aa17dde0fa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-11-04 15:41:19</sys_updated_on>
+        <trigger display_value="">ca46dcead1501350c34ea7aa17dde0f9</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=7d2b4462d1dcdf10c34ea7aa17dde070"/>
+</record_update>

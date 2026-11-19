@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>false</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_fub_fundbrad_ev_atendimento_ev</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_fub_fundbrad_ev_atendimento_ev">state=-5^substateCHANGESTOpending_requester^EQ<item display_value="Pending" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="-5"/>
+            <item display_value="Pending requester" endquery="false" field="substate" goto="false" newquery="false" operator="CHANGESTO" or="false" value="pending_requester"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>EV - Set service date</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	// Add your code here
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-27 17:57:07</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6b68ef7b79c89b18c34eb56e1a47c5b1</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>EV - Set service date</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_script_6b68ef7b79c89b18c34eb56e1a47c5b1</sys_update_name>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-28 19:27:25</sys_updated_on>
+        <template>service_dateSAMEASsys_updated_on^EQ</template>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=6b68ef7b79c89b18c34eb56e1a47c5b1"/>
+    <sys_translated_text action="INSERT_OR_UPDATE">
+        <documentkey>6b68ef7b79c89b18c34eb56e1a47c5b1</documentkey>
+        <fieldname>message</fieldname>
+        <language>pb</language>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-27 17:58:24</sys_created_on>
+        <sys_id>5cf8a3bf79c89b18c34eb56e1a47c52e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-27 17:58:24</sys_updated_on>
+        <tablename>sys_script</tablename>
+        <value/>
+    </sys_translated_text>
+</record_update>

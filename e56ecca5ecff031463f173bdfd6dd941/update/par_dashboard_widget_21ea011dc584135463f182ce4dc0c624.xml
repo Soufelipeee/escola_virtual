@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_widget">
+    <par_dashboard_widget action="INSERT_OR_UPDATE">
+        <canvas display_value="">d18e94a879841fd0c34eb56e1a47c581</canvas>
+        <component display_value="Single score">d24d53f60350de7a652caf3188a46ed2</component>
+        <component_props>{"scoreSize":"md","headingPosition":"top","sparklineStyle":"area","showScoreDate":false,"useRelativeScoreTime":true,"showScoreUpdateTime":true,"enableRealTimeUpdate":true,"showZero":true,"colorConfig":{"type":"default"},"dataSources":[{"isDatabaseView":false,"allowRealTime":true,"label":"Atendimento Escola Virtual","sourceType":"table","tableOrViewName":"x_fub_fundbrad_ev_atendimento_ev","filterQuery":"stateIN1,2,-5","preferredVisualizations":["d24d53f60350de7a652caf3188a46ed2"],"id":"tablex_fub_fundbrad_ev_atendimento_ev1792198425265","dataCategories":["trend","group","simple"]}],"showHeader":true,"showTotalAggregate":false,"showSubAggregate":false,"showFirstGroupAggregate":false,"showSecondGroupAggregate":false,"wrapTitle":false,"showHeaderSeparator":false,"headerTitle":"Pendentes (total em aberto)","showBorder":true,"bareBorder":false,"showDataPassthrough":false,"metrics":[{"dataSource":"tablex_fub_fundbrad_ev_atendimento_ev1792198425265","id":"tablex_fub_fundbrad_ev_atendimento_ev17921984252651792198425270","aggregateFunction":"COUNT","numberFormat":{"customFormat":false},"axisId":"primary"}],"groupBy":null,"sortBy":"value","sortByOrder":"desc","trendBy":null,"showChange":false,"showChangePercentage":false,"showTarget":false,"showForecast":false,"showForecastRange":false,"showTrend":false,"showConfidenceBand":false,"showGapPercentage":false,"showSparkline":false,"showMetricLabel":false,"showThreshold":false,"showComment":false,"followFilters":true,"showFilterIcon":true,"enableDrilldown":true,"showMaximumRange":false,"applyDateRange":false,"numberOfPeriods":3,"showAbsolutePeriod":false,"scoreType":null,"showChangeFrom":false,"period":"M","dateFormat":"default","hideMatrixAggregate":false,"newReporting":false,"filterConfigurations":[],"noDebounce":"","contextMenuActions":[],"userInfo":"@context.session.user","enableAddZerosAtApi":true,"emptyStateHeadingLevel":3,"emptyStateAlignment":"vertical-centered","emptyStateHeading":"No data available.","showAdditionalGroupBySelector":false,"cacheExpirationTime":0,"showLoadingIndicator":false,"useDataCache":false,"showFilterAsSeparateSeries":false,"showCacheTime":true,"hideDevSettings":false,"allowAdditionalGroupByPerMetric":false,"showDataTable":false,"configPropModifiers":{},"enableCustomEmptyState":false,"lineClamp":1,"allowChangeDateRange":false,"scoreIcon":"","showRefresh":true,"iconStyle":"background","colors":{},"useCurrentDateForEnd":false,"enableClickAndStay":false,"showDateRangeByDefault":false,"wrapElements":false,"additionalGroupByConfig":[],"emptyStateContent":"There are no scores available for the selected criteria. Contact your admin for more info.","emptyStateIllustration":"no-data","headingLevel":2,"componentId":"24vrq1ux","filterPerMetric":[],"configVersion":"23.0.0-ci-SNAPSHOT","description":""}</component_props>
+        <h>9</h>
+        <name/>
+        <stored_component/>
+        <sys_class_name>par_dashboard_widget</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-19 12:03:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>21ea011dc584135463f182ce4dc0c624</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>par_dashboard_widget_21ea011dc584135463f182ce4dc0c624</sys_update_name>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-21 13:41:03</sys_updated_on>
+        <visualization/>
+        <w>16</w>
+        <widget_props>{"filterPerMetric":[],"headerTitle":"Pendentes (total em aberto)","description":""}</widget_props>
+        <x>16</x>
+        <y>22</y>
+    </par_dashboard_widget>
+</record_update>

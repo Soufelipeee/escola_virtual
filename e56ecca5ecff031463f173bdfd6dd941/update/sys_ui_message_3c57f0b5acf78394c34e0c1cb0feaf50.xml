@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_message">
+    <sys_ui_message action="INSERT_OR_UPDATE">
+        <application/>
+        <code/>
+        <commented_message/>
+        <key>data_invalida_msg</key>
+        <language>pb</language>
+        <message>Por favor, insira uma data válida.</message>
+        <sys_class_name>sys_ui_message</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-08 13:38:51</sys_created_on>
+        <sys_id>3c57f0b5acf78394c34e0c1cb0feaf50</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>data_invalida_msg</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_ui_message_3c57f0b5acf78394c34e0c1cb0feaf50</sys_update_name>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-08 13:38:51</sys_updated_on>
+    </sys_ui_message>
+</record_update>

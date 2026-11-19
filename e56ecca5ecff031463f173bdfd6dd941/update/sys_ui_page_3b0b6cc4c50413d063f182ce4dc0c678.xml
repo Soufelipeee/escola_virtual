@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[var evResolverSaving = false;
+var evTemplates = [];
+var evResolverDialog;
+var evResolverRecordId;
+
+function evMostrarErro(message) {
+    var element = gel('ev_error');
+
+    element.textContent = message || '';
+    element.style.display = message ? 'block' : 'none';
+}
+
+function evLerResposta(answer) {
+    var response;
+
+    try {
+        response = JSON.parse(answer || '{}');
+    } catch (error) {
+        response = { error: 'Resposta inválida do servidor.' };
+    }
+
+    if (!response || response.success !== true) {
+        evMostrarErro(
+            (response && response.error) ||
+            'Não foi possível executar a ação.'
+        );
+        return null;
+    }
+
+    return response;
+}
+
+function evCarregarOpcoes() {
+    evResolverDialog = GlideDialogWindow.get();
+    evResolverRecordId = evResolverDialog.getPreference('sysparm_record_id');
+
+    var ga = new GlideAjax('x_fub_fundbrad_ev.EvResolverAjax');
+
+    ga.addParam('sysparm_name', 'opcoes');
+    ga.addParam('sysparm_record_id', evResolverRecordId);
+
+    ga.getXMLAnswer(function (answer) {
+        var response = evLerResposta(answer);
+        if (!response) return;
+
+        var select = gel('ev_resolution_code');
+        var options = response.resolutionCodes || [];
+
+        select.options.length = 0;
+        select.add(new Option('-- Selecione --', ''));
+
+        options.forEach(function (option) {
+            select.add(new Option(
+                option.displayValue || option.label,
+                option.value
+            ));
+        });
+
+        if (!options.length) {
+            evMostrarErro('Nenhum código de resolução disponível.');
+            return;
+        }
+
+        evCarregarTemplates();
+    });
+}
+
+function evCarregarTemplates() {
+    var ga = new GlideAjax('x_fub_fundbrad_ev.EvResolverAjax');
+
+    ga.addParam('sysparm_name', 'templates');
+    ga.addParam('sysparm_record_id', evResolverRecordId);
+
+    ga.getXMLAnswer(function (answer) {
+        var response = evLerResposta(answer);
+        if (!response) return;
+
+        evTemplates = response.templates || [];
+
+        var select = gel('ev_template');
+
+        select.options.length = 0;
+        select.add(new Option(
+            evTemplates.length
+                ? '-- Selecione --'
+                : 'Nenhum template disponível',
+            ''
+        ));
+
+        evTemplates.forEach(function (template) {
+            select.add(new Option(
+                template.displayValue,
+                template.value
+            ));
+        });
+
+        select.disabled = !evTemplates.length;
+
+        if (evTemplates.length === 1) {
+            select.value = evTemplates[0].value;
+            evAplicarTemplate();
+        }
+
+        gel('ev_confirm').disabled = false;
+    });
+}
+
+function evAplicarTemplate() {
+    if (evResolverSaving) return;
+
+    var id = gel('ev_template').value;
+    var text = '';
+
+    for (var i = 0; i < evTemplates.length; i++) {
+        if (evTemplates[i].value === id) {
+            text = evTemplates[i].text || '';
+            break;
+        }
+    }
+
+    gel('ev_close_notes').value = text;
+    evMostrarErro('');
+}
+
+function evConfirmar() {
+    if (evResolverSaving) return false;
+
+    evMostrarErro('');
+
+    var code = gel('ev_resolution_code').value;
+    var notes = gel('ev_close_notes').value.trim();
+
+    if (!code || notes.length < 20) {
+        evMostrarErro(
+            'Selecione o código e informe pelo menos 20 caracteres nas anotações.'
+        );
+        return false;
+    }
+
+    evResolverSaving = true;
+    gel('ev_confirm').disabled = true;
+    gel('ev_resolution_code').disabled = true;
+    gel('ev_template').disabled = true;
+    gel('ev_close_notes').disabled = true;
+
+    var ga = new GlideAjax('x_fub_fundbrad_ev.EvResolverAjax');
+
+    ga.addParam('sysparm_name', 'resolver');
+    ga.addParam('sysparm_record_id', evResolverRecordId);
+    ga.addParam('sysparm_resolution_code', code);
+    ga.addParam('sysparm_template', gel('ev_template').value);
+    ga.addParam('sysparm_close_notes', notes);
+
+    ga.getXMLAnswer(function (answer) {
+        if (!evLerResposta(answer)) {
+            evResolverSaving = false;
+            gel('ev_confirm').disabled = false;
+            gel('ev_resolution_code').disabled = false;
+            gel('ev_template').disabled = !evTemplates.length;
+            gel('ev_close_notes').disabled = false;
+            return;
+        }
+
+        evResolverDialog.destroy();
+        window.top.location.reload();
+    });
+
+    return false;
+}
+
+function evCancelar() {
+    if (evResolverSaving) return false;
+
+    evResolverDialog.destroy();
+    return false;
+}
+
+addLoadEvent(evCarregarOpcoes);]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_fub_fundbrad_ev_ev_resolver_modal.do</endpoint>
+        <html><![CDATA[<j:ui xmlns:j="jelly:core" xmlns:g="glide">
+    <div style="padding:20px;">
+
+        <div id="ev_error"
+             role="alert"
+             class="alert alert-danger"
+             style="display:none;">
+        </div>
+
+        <div class="form-group">
+            <label for="ev_resolution_code">
+                Código de resolução *
+            </label>
+
+            <select id="ev_resolution_code"
+                    class="form-control"
+                    required="required">
+                <option value="">Carregando...</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="ev_template">Template de resposta</label>
+
+            <select id="ev_template"
+                    class="form-control"
+                    disabled="disabled"
+                    onchange="evAplicarTemplate();">
+                <option value="">Carregando...</option>
+            </select>
+
+            <p style="font-size:12px;color:#666;margin-top:5px;">
+                Selecionar um template substitui as anotações.
+            </p>
+        </div>
+
+        <div class="form-group">
+            <label for="ev_close_notes">
+                Anotações de resolução *
+            </label>
+
+            <textarea id="ev_close_notes"
+                      class="form-control"
+                      rows="5"
+                      maxlength="4000"
+                      required="required"
+                      style="width:100%;resize:vertical;"></textarea>
+
+            <p style="font-size:12px;color:#666;">
+                Mínimo de 20 caracteres.
+            </p>
+        </div>
+
+        <div style="text-align:right;margin-top:20px;">
+            <button type="button"
+                    class="btn btn-default"
+                    onclick="return evCancelar();">
+                Cancelar
+            </button>
+
+            <button id="ev_confirm"
+                    type="button"
+                    class="btn btn-primary"
+                    style="margin-left:8px;"
+                    disabled="disabled"
+                    onclick="return evConfirmar();">
+                Confirmar resolução
+            </button>
+        </div>
+    </div>
+</j:ui>]]></html>
+        <name>ev_resolver_modal</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-15 12:32:13</sys_created_on>
+        <sys_id>3b0b6cc4c50413d063f182ce4dc0c678</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>ev_resolver_modal</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_ui_page_3b0b6cc4c50413d063f182ce4dc0c678</sys_update_name>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-11-03 16:10:26</sys_updated_on>
+    </sys_ui_page>
+</record_update>

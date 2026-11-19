@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="hasLabels=true" audit="true" db_object_id="76ff44edecff031463f173bdfd6dd962" extends="task" label="Atendimento Escola Virtual" max_length="40" name="x_fub_fundbrad_ev_atendimento_ev" text_index="true" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Requester email" mandatory="true" max_length="100" name="u_email_solicitante" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Protocol origin" max_length="40" name="u_protocolo_origem" type="string"/>
+        <element attributes="encode_utf8=false" label="Item de catálogo" max_length="32" name="catalog_item" read_only="true" reference="sc_cat_item_producer" type="reference"/>
+        <element active="false" attributes="edge_encryption_enabled=true" label="Motive" max_length="255" name="u_motivo" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Service date" max_length="40" name="service_date" read_only="true" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="escola_virtual" label="Origin" mandatory="true" max_length="40" name="u_origem" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Virtual school" sequence="0" value="escola_virtual"/>
+                <element inactive_on_update="false" label="Escola virtual" language="pb" sequence="0" value="escola_virtual"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Phone number" mandatory="true" max_length="40" name="u_telefone_solicitante" type="string"/>
+        <element attributes="encode_utf8=false" label="Consumer" max_length="32" name="u_consumer" reference="csm_consumer" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Resolved at" max_length="40" name="resolved_at" read_only="true" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" dependent="state" dependent_on_field="state" label="Substate" max_length="40" name="substate" type="string" use_dependent_field="true">
+            <choice>
+                <element dependent_value="6" inactive_on_update="false" label="Successfully completed" sequence="6" value="completed_successfully"/>
+                <element dependent_value="6" inactive_on_update="false" label="Incomplete" sequence="5" value="incomplete"/>
+                <element dependent_value="-5" inactive_on_update="false" label="Aguardando fornecedor" language="pb" sequence="2" value="pending_supplier"/>
+                <element dependent_value="-5" inactive_on_update="false" label="Pending requester" sequence="3" value="pending_requester"/>
+                <element dependent_value="-5" inactive_on_update="false" label="Aguardando solicitante" language="pb" sequence="3" value="pending_requester"/>
+                <element dependent_value="-5" inactive_on_update="false" label="Pending internal action" sequence="1" value="pending_internal_action"/>
+                <element dependent_value="6" inactive_on_update="false" label="Duplicate" sequence="4" value="duplicate"/>
+                <element dependent_value="-5" inactive_on_update="false" label="Pending supplier" sequence="2" value="pending_supplier"/>
+                <element dependent_value="-5" inactive_on_update="false" label="Aguardando ação interna" language="pb" sequence="1" value="pending_internal_action"/>
+                <element dependent_value="6" inactive_on_update="false" label="Incompleto" language="pb" sequence="5" value="incomplete"/>
+                <element dependent_value="6" inactive_on_update="false" label="Concluído com sucesso" language="pb" sequence="6" value="completed_successfully"/>
+                <element dependent_value="6" inactive_on_update="false" label="Duplicado" language="pb" sequence="4" value="duplicate"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Requester name" mandatory="true" max_length="150" name="u_nome_solicitante" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Request category" mandatory="true" max_length="40" name="u_categoria_solicitacao" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Acesso" language="pb" sequence="0" value="access"/>
+                <element inactive_on_update="false" label="Matrículas" language="pb" sequence="12" value="enrollment"/>
+                <element inactive_on_update="false" label="Accessibility" sequence="1" value="accessibility"/>
+                <element inactive_on_update="false" label="Avaliação" language="pb" sequence="3" value="assessment"/>
+                <element inactive_on_update="false" label="Configurações" language="pb" sequence="8" value="settings"/>
+                <element inactive_on_update="false" label="Institucional" language="pb" sequence="11" value="institutional"/>
+                <element inactive_on_update="false" label="Desenvolver" language="pb" sequence="7" value="develop"/>
+                <element inactive_on_update="false" label="Access" sequence="0" value="access"/>
+                <element inactive_on_update="false" label="Other topics" sequence="13" value="other_topics"/>
+                <element inactive_on_update="false" label="To develop" sequence="7" value="develop"/>
+                <element inactive_on_update="false" label="Parcerias" language="pb" sequence="14" value="partnerships"/>
+                <element inactive_on_update="false" label="Suporte" language="pb" sequence="9" value="support"/>
+                <element inactive="true" inactive_on_update="true" label="Conteúdos" language="pb" sequence="6" value="content"/>
+                <element inactive_on_update="false" label="Aprender" language="pb" sequence="6" value="learn"/>
+                <element inactive_on_update="false" label="Trilhas" language="pb" sequence="15" value="trails"/>
+                <element inactive_on_update="false" label="Registration" sequence="4" value="registration"/>
+                <element inactive_on_update="false" label="Penalties" sequence="10" value="penalties"/>
+                <element inactive_on_update="false" label="Settings" sequence="8" value="settings"/>
+                <element inactive_on_update="false" label="Assessment" sequence="3" value="assessment"/>
+                <element inactive_on_update="false" label="Learn" sequence="6" value="learn"/>
+                <element inactive_on_update="false" label="Cadastro" language="pb" sequence="4" value="registration"/>
+                <element inactive="true" inactive_on_update="true" label="Learning paths" sequence="10" value="learning_paths"/>
+                <element inactive_on_update="false" label="Enrollment" sequence="12" value="enrollment"/>
+                <element inactive_on_update="false" label="Certificado" language="pb" sequence="5" value="certificate"/>
+                <element inactive_on_update="false" label="App" sequence="2" value="app"/>
+                <element inactive_on_update="false" label="Certificado" sequence="5" value="certificate"/>
+                <element inactive_on_update="false" label="Support" sequence="9" value="support"/>
+                <element inactive_on_update="false" label="Aplicativo" language="pb" sequence="2" value="app"/>
+                <element inactive_on_update="false" label="Partnerships" sequence="14" value="partnerships"/>
+                <element inactive_on_update="false" label="Outros assuntos" language="pb" sequence="13" value="other_topics"/>
+                <element inactive="true" inactive_on_update="true" label="Content" sequence="6" value="content"/>
+                <element inactive_on_update="false" label="Institucional" sequence="11" value="institutional"/>
+                <element inactive_on_update="false" label="Penalidades" language="pb" sequence="10" value="penalties"/>
+                <element inactive="true" inactive_on_update="true" label="Trilhas" language="pb" sequence="10" value="learning_paths"/>
+                <element inactive_on_update="false" label="Trails" sequence="15" value="trails"/>
+                <element inactive_on_update="false" label="Acessibilidade" language="pb" sequence="1" value="accessibility"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Date of birth" mandatory="true" max_length="40" name="u_data_nascimento_solicitante" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" calculation="(function calculatedFieldValue(current) {&#13;&#10;&#9;var cpf = String(current.u_cpf_solicitante).replace(/\D/g, '');&#13;&#10;&#13;&#10;&#9;// Verifica se o CPF possui exatamente 11 dígitos&#13;&#10;&#9;if (cpf.length === 11) {&#13;&#10;&#9;&#9;return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');&#13;&#10;&#9;}&#13;&#10;&#9;return '';&#13;&#10;&#13;&#10;})(current);" label="CPF" mandatory="true" max_length="11" name="u_cpf_solicitante" type="string"/>
+        <element attributes="encode_utf8=false" label="Resolved by" max_length="32" name="resolved_by" read_only="true" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Resolution code" max_length="40" name="resolution_code" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Duplicado" language="pb" sequence="3" value="30"/>
+                <element inactive_on_update="false" label="Duplicate" sequence="3" value="30"/>
+                <element inactive_on_update="false" label="Cancelado por falta de retorno" language="pb" sequence="0" value="10"/>
+                <element inactive_on_update="false" label="Encerrado com sucesso" language="pb" sequence="2" value="20"/>
+                <element inactive_on_update="false" label="Successfully terminated" sequence="2" value="20"/>
+                <element inactive_on_update="false" label="Cancelled due to lack of response" sequence="1" value="10"/>
+            </choice>
+        </element>
+        <element label="Notes to comments" max_length="40" name="notes_to_comments" type="boolean"/>
+    </element>
+</database>

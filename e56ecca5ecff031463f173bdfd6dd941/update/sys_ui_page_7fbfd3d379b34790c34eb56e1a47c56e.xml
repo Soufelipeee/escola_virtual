@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[
+function evMostrarErro(message) {
+    var error = gel('ev_error');
+
+    error.textContent = message;
+    error.style.display = message ? 'block' : 'none';
+}
+
+function evConfirmar() {
+    var message = gel('ev_message').value.trim();
+    var error = gel('ev_error');
+
+    if (message.length < 20) {
+        evMostrarErro(
+            'Informe pelo menos 20 caracteres.');
+        return false;
+    }
+
+    var dialog = GlideModal.get();;
+    var ga = new GlideAjax('EvSolicitarInformacoesAjax');
+
+    ga.addParam('sysparm_name', 'solicitar');
+    ga.addParam('sysparm_record_id',
+        dialog.getPreference('sysparm_record_id'));
+    ga.addParam('sysparm_message', message);
+
+    evMostrarErro('');
+
+    ga.getXMLAnswer(function(answer) {
+        var result;
+
+        try {
+            result = JSON.parse(answer || '{}');
+        } catch (e) {
+            evMostrarErro('Erro ao processar solicitação.');
+            return;
+        }
+
+        if (!result.success) {
+            evMostrarErro(
+                result.error || 'Não foi possível salvar.');
+            return;
+        }
+
+        dialog.destroy();
+        window.location.reload();
+    });
+
+    return false;
+}
+
+ga.getXMLAnswer(function (answer) {
+    var result;
+
+    try {
+        result = JSON.parse(answer || '{}');
+    } catch (e) {
+        evMostrarErro('Resposta inválida: ' + answer);
+        return;
+    }
+
+    if (!result.success) {
+        evMostrarErro(
+            result.error || 'Resposta do servidor: ' + answer
+        );
+        return;
+    }
+
+    dialog.destroy();
+    window.location.reload();
+});
+
+function evCancelar() {
+    GlideModal.get().destroy();
+    return false;
+}
+]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_fub_fundbrad_ev_ev_solicitar_informacoes_modal.do</endpoint>
+        <html><![CDATA[
+<j:ui xmlns:j="jelly:core" xmlns:g="glide">
+    <div style="padding:20px;">
+
+        <div id="ev_error"
+             role="alert"
+             style="background-color:#f8d7da;
+                    color:#721c24;
+                    border:1px solid #f5c6cb;
+                    padding:10px;
+                    margin-bottom:15px;
+                    border-radius:4px;
+                    display:none;">
+            A mensagem deve conter pelo menos 20 caracteres.
+        </div>
+
+        <label for="ev_message"
+               style="display:block;margin-bottom:8px;">
+            Mensagem ao aluno
+            <span style="color:red;">*</span>
+        </label>
+
+        <textarea id="ev_message"
+                  class="form-control"
+                  rows="6"
+                  maxlength="4000"
+                  required="required"
+                  style="width:100%;resize:vertical;"></textarea>
+
+        <p style="font-size:12px;
+                  color:#666;
+                  margin-top:6px;">
+            Informe pelo menos 20 caracteres.
+        </p>
+
+        <div style="margin-top:20px;text-align:right;">
+
+            <button type="button"
+                    class="btn btn-default"
+                    onclick="return evCancelar();">
+                Cancelar
+            </button>
+
+            <button type="button"
+                    class="btn btn-primary"
+                    style="margin-left:8px;"
+                    onclick="return evConfirmar();">
+                Confirmar
+            </button>
+
+        </div>
+    </div>
+</j:ui>
+]]></html>
+        <name>ev_solicitar_informacoes_modal</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-13 17:53:36</sys_created_on>
+        <sys_id>7fbfd3d379b34790c34eb56e1a47c56e</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>ev_solicitar_informacoes_modal</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_ui_page_7fbfd3d379b34790c34eb56e1a47c56e</sys_update_name>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-14 13:43:34</sys_updated_on>
+    </sys_ui_page>
+</record_update>

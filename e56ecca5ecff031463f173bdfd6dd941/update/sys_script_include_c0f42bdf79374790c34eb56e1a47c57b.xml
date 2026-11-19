@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_fub_fundbrad_ev.EvSolicitarInformacoesAjax</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>EvSolicitarInformacoesAjax</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var EvSolicitarInformacoesAjax = Class.create();
+
+EvSolicitarInformacoesAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+        solicitar: function() {
+            var recordId = this.getParameter(
+                'sysparm_record_id'
+            );
+            var message = String(
+                this.getParameter('sysparm_message') || ''
+            ).trim();
+
+            if (message.length < 20) {
+                return this._error(
+                    'A mensagem deve ter pelo menos 20 caracteres.'
+                );
+            }
+
+            var record = new GlideRecordSecure(
+                'x_fub_fundbrad_ev_atendimento_ev'
+            );
+
+            if (!record.get(recordId) || !record.canWrite()) {
+                return this._error(
+                    'Registro inexistente ou sem permissão.'
+                );
+            }
+
+            if (
+                record.getValue('u_origem') !== 'escola_virtual' ||
+                record.getValue('state') !== '2' ||
+                record.getValue('assigned_to') !== gs.getUserID()
+            ) {
+                return this._error(
+                    'O atendimento não está disponível para esta ação.'
+                );
+            }
+
+            if (!gs.hasRole('x_fub_fundbrad_ev.agent')) {
+                return this._error('Usuário não autorizado.');
+            }
+
+            record.setValue('comments', message);
+            record.setValue('state', '-5');
+            record.setValue('substate', 'pending_requester');
+
+            gs.info(
+                'EV BEFORE UPDATE: state=' +
+                record.getValue('state') +
+                ' | substate=' +
+                record.getValue('substate')
+            );
+
+            var updatedId = record.update();
+
+            if (!updatedId) {
+                gs.error('EV: Falha ao atualizar atendimento ' + recordId);
+
+                return this._error(
+                    'Não foi possível atualizar o atendimento.'
+                );
+            }
+
+            var verification = new GlideRecordSecure(
+                'x_fub_fundbrad_ev_atendimento_ev'
+            );
+
+            if (!verification.get(recordId)) {
+                return this._error('Não foi possível verificar o atendimento.');
+            }
+
+            gs.info(
+                'EV: Estado após update: ' +
+                verification.getValue('state') +
+                ' | Substate: ' +
+                verification.getValue('substate')
+            );
+
+            gs.eventQueue(
+                'x_fub_fundbrad_ev.atendimento.informacao',
+                record,
+                record.getValue('u_email_solicitante'),
+                message
+            );
+
+            return JSON.stringify({ success: true });
+        },
+
+        _error: function(message) {
+            return JSON.stringify({
+                success: false,
+                error: message
+            });
+        },
+
+        type: 'EvSolicitarInformacoesAjax'
+    });
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-13 18:11:04</sys_created_on>
+        <sys_id>c0f42bdf79374790c34eb56e1a47c57b</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>EvSolicitarInformacoesAjax</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_script_include_c0f42bdf79374790c34eb56e1a47c57b</sys_update_name>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-18 00:56:37</sys_updated_on>
+    </sys_script_include>
+</record_update>

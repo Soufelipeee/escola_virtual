@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysrule_assignment">
+    <sysrule_assignment action="DELETE">
+        <active>false</active>
+        <condition table="x_fub_fundacao_b_0_atendimento_pp">state=1^u_item_de_catalogo=93e1624e3b20d6106dea0437f4e45a3b^EQ<item display_value="Requested" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="1"/>
+            <item display_table="sc_cat_item_producer" display_value="Corporate Policies Request" endquery="false" field="u_item_de_catalogo" goto="false" newquery="false" operator="=" or="false" value="93e1624e3b20d6106dea0437f4e45a3b"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <description/>
+        <group display_value="Atendimento Projetos e Processos" name="Atendimento Projetos e Processos">fa15371a3b2cda106dea0437f4e45a5c</group>
+        <match_conditions>ALL</match_conditions>
+        <name>Set Atendimento Projetos e Process group</name>
+        <order>100</order>
+        <script>/**&#13;
+* Example:&#13;
+* The following script requires personalizing the instance to add the Malware category and the Security assignment group.&#13;
+* if (current.category == "Hardware")&#13;
+*    current.assignment_group.setDisplayValue("Hardware"); &#13;
+* else if (current.category == "Software")&#13;
+*    current.assignment_group.setDisplayValue("Software");&#13;
+* else if (current.category == "Malware")&#13;
+*    current.assignment_group.setDisplayValue("Security");	&#13;
+*&#13;
+* Another Example:&#13;
+* Release Planning Example, which assigns the last person assigned to a release to the current release.&#13;
+* current.release.product.service.assigned_to;&#13;
+*/</script>
+        <sys_class_name>sysrule_assignment</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-21 14:02:42</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0579773979c89f54c34eb56e1a47c595</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Set Atendimento Projetos e Process group</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sysrule_assignment_0579773979c89f54c34eb56e1a47c595</sys_update_name>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-21 14:02:42</sys_updated_on>
+        <table>x_fub_fundacao_b_0_atendimento_pp</table>
+        <user/>
+    </sysrule_assignment>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</application>
+        <file_path/>
+        <instance_id>831a14741b984a5032182f8dee4bcbf0</instance_id>
+        <instance_name>fundbraddev</instance_name>
+        <name>sysrule_assignment_0579773979c89f54c34eb56e1a47c595</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysrule_assignment"><sysrule_assignment action="INSERT_OR_UPDATE"><active>false</active><condition table="x_fub_fundacao_b_0_atendimento_pp">state=1^u_item_de_catalogo=93e1624e3b20d6106dea0437f4e45a3b^EQ<item display_value="Requested" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="1"/><item display_table="sc_cat_item_producer" display_value="Corporate Policies Request" endquery="false" field="u_item_de_catalogo" goto="false" newquery="false" operator="=" or="false" value="93e1624e3b20d6106dea0437f4e45a3b"/><item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/></condition><description/><group display_value="Atendimento Projetos e Processos" name="Atendimento Projetos e Processos">fa15371a3b2cda106dea0437f4e45a5c</group><match_conditions>ALL</match_conditions><name>Set Atendimento Projetos e Process group</name><order>100</order><script>/**&#13;
+* Example:&#13;
+* The following script requires personalizing the instance to add the Malware category and the Security assignment group.&#13;
+* if (current.category == "Hardware")&#13;
+*    current.assignment_group.setDisplayValue("Hardware"); &#13;
+* else if (current.category == "Software")&#13;
+*    current.assignment_group.setDisplayValue("Software");&#13;
+* else if (current.category == "Malware")&#13;
+*    current.assignment_group.setDisplayValue("Security");	&#13;
+*&#13;
+* Another Example:&#13;
+* Release Planning Example, which assigns the last person assigned to a release to the current release.&#13;
+* current.release.product.service.assigned_to;&#13;
+*/</script><sys_class_name>sysrule_assignment</sys_class_name><sys_created_by>felipe.valenca</sys_created_by><sys_created_on>2026-10-21 14:02:42</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>0579773979c89f54c34eb56e1a47c595</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Set Atendimento Projetos e Process group</sys_name><sys_overrides/><sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package><sys_policy/><sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope><sys_update_name>sysrule_assignment_0579773979c89f54c34eb56e1a47c595</sys_update_name><sys_updated_by>felipe.valenca</sys_updated_by><sys_updated_on>2026-10-21 14:02:42</sys_updated_on><table>x_fub_fundacao_b_0_atendimento_pp</table><user/></sysrule_assignment></record_update>]]></payload>
+        <payload_hash>-884754247</payload_hash>
+        <record_name>Set Atendimento Projetos e Process group</record_name>
+        <reverted_from/>
+        <source>3c5ed7f979809f54c34eb56e1a47c52e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-21 14:02:42</sys_created_on>
+        <sys_id>4d79773979c89f54c34eb56e1a47c598</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a15ec579940000001</sys_recorded_at>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-21 14:02:42</sys_updated_on>
+        <type>Assignment Rule</type>
+        <update_guid>4d797739c9c89f542e753245fe5b0397</update_guid>
+        <update_guid_history>4d797739c9c89f542e753245fe5b0397:-884754247</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-21 14:04:10</sys_created_on>
+        <sys_db_object display_value="" name="sysrule_assignment">sysrule_assignment</sys_db_object>
+        <sys_id>0072b5bc8f5c446c8002291a75266991</sys_id>
+        <sys_metadata>0579773979c89f54c34eb56e1a47c595</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Set Atendimento Projetos e Process group</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_parent display_value="PP Service">ed6778213be0da106dea0437f4e45a39</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_scope_delete display_value="">3911fbb3a8454a90b9d9310b67c884c9</sys_scope_delete>
+        <sys_update_name>sysrule_assignment_0579773979c89f54c34eb56e1a47c595</sys_update_name>
+        <sys_update_version display_value="sysrule_assignment_0579773979c89f54c34eb56e1a47c595">4d79773979c89f54c34eb56e1a47c598</sys_update_version>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-21 14:04:10</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

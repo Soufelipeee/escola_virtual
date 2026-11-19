@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_applicability">
+    <sys_ux_applicability action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <api_name>x_fub_fundbrad_ev.Audience for app atendimento-escola-virtual</api_name>
+        <description/>
+        <name>Audience for app atendimento-escola-virtual</name>
+        <role_names/>
+        <roles>e16ecca5ecff031463f173bdfd6dd9af,efff08edecff031463f173bdfd6dd91b,e3ff08edecff031463f173bdfd6dd939,ad6ecca5ecff031463f173bdfd6dd9c5</roles>
+        <sys_class_name>sys_ux_applicability</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-17 00:53:40</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>408e90a879841fd0c34eb56e1a47c55e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Audience for app atendimento-escola-virtual</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_ux_applicability_408e90a879841fd0c34eb56e1a47c55e</sys_update_name>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-17 00:53:40</sys_updated_on>
+    </sys_ux_applicability>
+</record_update>

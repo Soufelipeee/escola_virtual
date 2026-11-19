@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_related sys_domain="global" table="x_fub_fundbrad_ev_atendimento_ev" version="2" view="">
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Service Virtual School - Default view" name="x_fub_fundbrad_ev_atendimento_ev" related_list="NULL" sys_domain="global" view="Default view">0a715a1179441354c34eb56e1a47c5f7</list_id>
+            <order_by/>
+            <position>0</position>
+            <related_list>task_sla.task</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-10-19 17:11:25</sys_created_on>
+            <sys_id>0e715a1179441354c34eb56e1a47c5f8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-10-19 17:11:25</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Service Virtual School - Default view" name="x_fub_fundbrad_ev_atendimento_ev" related_list="NULL" sys_domain="global" view="Default view">0a715a1179441354c34eb56e1a47c5f7</list_id>
+            <order_by/>
+            <position>1</position>
+            <related_list>REL:32eb4a9179c01354c34eb56e1a47c5d8</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-10-19 17:11:25</sys_created_on>
+            <sys_id>86715a1179441354c34eb56e1a47c5f9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-10-19 17:11:25</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Service Virtual School - Default view" name="x_fub_fundbrad_ev_atendimento_ev" related_list="NULL" sys_domain="global" view="Default view">0a715a1179441354c34eb56e1a47c5f7</list_id>
+            <order_by/>
+            <position>2</position>
+            <related_list>REL:e97096d979041354c34eb56e1a47c557</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-10-19 17:11:25</sys_created_on>
+            <sys_id>0e715a1179441354c34eb56e1a47c5f9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-10-19 17:11:25</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list action="INSERT_OR_UPDATE">
+            <calculated_name>Service Virtual School - Default view</calculated_name>
+            <filter/>
+            <name>x_fub_fundbrad_ev_atendimento_ev</name>
+            <order_by/>
+            <position/>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list</sys_class_name>
+            <sys_created_by>felipe.valenca</sys_created_by>
+            <sys_created_on>2026-10-19 17:11:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0a715a1179441354c34eb56e1a47c5f7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Service Virtual School - Default view</sys_name>
+            <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+            <sys_update_name>sys_ui_related_x_fub_fundbrad_ev_atendimento_ev_null</sys_update_name>
+            <sys_updated_by>felipe.valenca</sys_updated_by>
+            <sys_updated_on>2026-10-19 17:11:25</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_related_list>
+    </sys_ui_related>
+</record_update>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_dictionary_override">
+    <sys_dictionary_override action="DELETE">
+        <attributes/>
+        <attributes_override>false</attributes_override>
+        <base_table>task</base_table>
+        <calculation/>
+        <calculation_override>false</calculation_override>
+        <default_value/>
+        <default_value_override>false</default_value_override>
+        <dependent/>
+        <dependent_override>false</dependent_override>
+        <display_override>false</display_override>
+        <element>state</element>
+        <mandatory>false</mandatory>
+        <mandatory_override>false</mandatory_override>
+        <name>x_fub_fundbrad_ev_atendimento_ev</name>
+        <read_only>false</read_only>
+        <read_only_override>false</read_only_override>
+        <reference_qual/>
+        <reference_qual_override>false</reference_qual_override>
+        <sys_class_name>sys_dictionary_override</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-15 14:04:19</sys_created_on>
+        <sys_id>873089c0c54c13d063f182ce4dc0c6ea</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>state</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_dictionary_override_873089c0c54c13d063f182ce4dc0c6ea</sys_update_name>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-15 15:15:00</sys_updated_on>
+    </sys_dictionary_override>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</application>
+        <file_path/>
+        <instance_id>831a14741b984a5032182f8dee4bcbf0</instance_id>
+        <instance_name>fundbraddev</instance_name>
+        <name>sys_dictionary_override_873089c0c54c13d063f182ce4dc0c6ea</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_dictionary_override"><sys_dictionary_override action="INSERT_OR_UPDATE"><attributes/><attributes_override>false</attributes_override><base_table>task</base_table><calculation/><calculation_override>false</calculation_override><default_value/><default_value_override>false</default_value_override><dependent/><dependent_override>false</dependent_override><display_override>false</display_override><element>state</element><mandatory>false</mandatory><mandatory_override>false</mandatory_override><name>x_fub_fundbrad_ev_atendimento_ev</name><read_only>false</read_only><read_only_override>false</read_only_override><reference_qual/><reference_qual_override>false</reference_qual_override><sys_class_name>sys_dictionary_override</sys_class_name><sys_created_by>stephanie.flavio</sys_created_by><sys_created_on>2026-10-15 14:04:19</sys_created_on><sys_id>873089c0c54c13d063f182ce4dc0c6ea</sys_id><sys_mod_count>1</sys_mod_count><sys_name>state</sys_name><sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package><sys_policy/><sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope><sys_update_name>sys_dictionary_override_873089c0c54c13d063f182ce4dc0c6ea</sys_update_name><sys_updated_by>stephanie.flavio</sys_updated_by><sys_updated_on>2026-10-15 15:15:00</sys_updated_on></sys_dictionary_override></record_update>]]></payload>
+        <payload_hash>-1519027362</payload_hash>
+        <record_name>state</record_name>
+        <reverted_from/>
+        <source>0aebad31ac3bc394c34e0c1cb0feaf6f</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-15 15:15:00</sys_created_on>
+        <sys_id>3170910cc50053d063f182ce4dc0c6e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a1402184e00000001</sys_recorded_at>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-15 15:15:00</sys_updated_on>
+        <type>Dictionary Entry Override</type>
+        <update_guid>b170910c860053d0d73a579170695ee3</update_guid>
+        <update_guid_history>b170910c860053d0d73a579170695ee3:-1519027362,52408dc0b64c13d0257e66a6a39da122:1009110354</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-15 15:16:59</sys_created_on>
+        <sys_db_object display_value="" name="sys_dictionary_override">sys_dictionary_override</sys_db_object>
+        <sys_id>12c4a164d1a0449981c239db25608de1</sys_id>
+        <sys_metadata>873089c0c54c13d063f182ce4dc0c6ea</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>state</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_parent display_value="Requester email">047c24e9ecf7431463f173bdfd6dd98b</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_scope_delete display_value="">3911fbb3a8454a90b9d9310b67c884c9</sys_scope_delete>
+        <sys_update_name>sys_dictionary_override_873089c0c54c13d063f182ce4dc0c6ea</sys_update_name>
+        <sys_update_version display_value="sys_dictionary_override_873089c0c54c13d063f182ce4dc0c6ea">3170910cc50053d063f182ce4dc0c6e4</sys_update_version>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-15 15:16:59</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

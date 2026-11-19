@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_fub_fundbrad_ev.EvResolverAjax</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>EvResolverAjax</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var EvResolverAjax = Class.create();
+
+EvResolverAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    TABLE: 'x_fub_fundbrad_ev_atendimento_ev',
+    TEMPLATES: 'x_fub_fundbrad_ev_templates',
+    STATE_RESOLVED: '6',
+
+    opcoes: function() {
+        if (!this._getRecord()) {
+            return this._error('Atendimento indisponível para resolução.');
+        }
+
+        return JSON.stringify({
+            success: true,
+            resolutionCodes: this._getChoices()
+        });
+    },
+
+    resolver: function () {
+        var record = this._getRecord();
+
+        if (!record) {
+            return this._error('Você não pode resolver este atendimento.');
+        }
+
+        var code = this._param('sysparm_resolution_code');
+        var notes = this._param('sysparm_close_notes');
+        var templateId = this._param('sysparm_template');
+        var categoria = record.getValue('u_categoria_solicitacao');
+
+        if (!code || notes.length < 20) {
+            return this._error(
+                'Selecione o código de resolução e informe pelo menos 20 caracteres nas anotações.'
+            );
+        }
+
+        if (!this._isValidChoice(code)) {
+            return this._error('Código de resolução inválido.');
+        }
+
+        if (templateId) {
+            if (!/^[a-f0-9]{32}$/i.test(templateId)) {
+                return this._error('Template inválido.');
+            }
+
+            if (gs.nil(categoria)) {
+                return this._error(
+                    'O atendimento não possui categoria para validar o template.'
+                );
+            }
+
+            var template = new GlideRecordSecure(this.TEMPLATES);
+
+            template.addQuery('sys_id', '=', templateId);
+            template.addQuery('u_categoria_solicitacao', '=', categoria);
+            template.query();
+
+            if (!template.next()) {
+                return this._error(
+                    'Template indisponível ou incompatível com a categoria e o código de resolução.'
+                );
+            }
+        }
+
+        // Continue aqui com var controlled e o restante do método existente.
+
+        var controlled = ['state', 'substate', 'resolution_code'];
+        var writable = ['close_notes', 'notes_to_comments'];
+        var i;
+
+        for (i = 0; i < controlled.length; i++) {
+            if (!record.isValidField(controlled[i])) {
+                return this._error('Campo inexistente: ' + controlled[i]);
+            }
+        }
+
+        for (i = 0; i < writable.length; i++) {
+            if (!record.isValidField(writable[i]) ||
+                !record.getElement(writable[i]).canWrite()) {
+                return this._error('Sem permissão para atualizar: ' + writable[i]);
+            }
+        }
+
+        record.setValue('substate', '');
+        record.setValue('resolution_code', code);
+        record.setValue('close_notes', notes);
+        record.setValue('notes_to_comments', true);
+        record.setValue('state', this.STATE_RESOLVED);
+
+        if (!record.update()) {
+            return this._error('Não foi possível resolver o atendimento.');
+        }
+
+        gs.eventQueue(
+            'x_fub_fundbrad_ev.atendimento.resolvido',
+            record,
+            record.getValue('u_email_solicitante'),
+            ''
+        );
+
+        var saved = new GlideRecord(this.TABLE);
+
+        if (!saved.get(record.getUniqueValue()) ||
+            saved.getValue('state') !== this.STATE_RESOLVED ||
+            !gs.nil(saved.getValue('substate')) ||
+            saved.getValue('resolution_code') !== code) {
+            return this._error(
+                'O resultado da gravação divergiu do solicitado. ' +
+                'Verifique as regras do atendimento antes de repetir a ação.'
+            );
+        }
+
+        return JSON.stringify({ success: true });
+    },
+
+    templates: function () {
+        var record = this._getRecord();
+
+        if (!record) {
+            return this._error('Atendimento indisponível para resolução.');
+        }
+
+        var categoria = record.getValue('u_categoria_solicitacao');
+        var number = String(record.getValue('number') || '');
+        var templates = [];
+
+        if (gs.nil(categoria)) {
+            return JSON.stringify({ success: true, templates: templates });
+        }
+
+        var template = new GlideRecordSecure(this.TEMPLATES);
+
+        template.addQuery('u_categoria_solicitacao', '=', categoria);
+        template.orderBy('u_name');
+        template.query();
+
+        while (template.next()) {
+            if (!template.getElement('u_name').canRead() ||
+                !template.getElement('u_template').canRead() ||
+                !template.getElement('u_categoria_solicitacao').canRead()) {
+                continue;
+            }
+
+            var text = String(template.getValue('u_template') || '');
+
+            text = text.replace(/\{\$number\}/g, function () {
+                return number;
+            });
+
+            templates.push({
+                value: template.getUniqueValue(),
+                displayValue: template.getValue('u_name'),
+                text: text
+            });
+        }
+
+        return JSON.stringify({ success: true, templates: templates });
+    },
+
+    _getRecord: function() {
+        var id = this._param('sysparm_record_id');
+        var secure = new GlideRecordSecure(this.TABLE);
+
+        if (!secure.get(id) || !secure.canRead() || !secure.canWrite()) {
+            return null;
+        }
+
+        var record = new GlideRecord(this.TABLE);
+
+        if (!record.get(id) ||
+            record.getRecordClassName() !== this.TABLE ||
+            !record.canRead() ||
+            !record.canWrite()) {
+            return null;
+        }
+
+        return record;
+    },
+
+    _getChoices: function() {
+        var choices = [];
+        var choice = new GlideRecord('sys_choice');
+
+        choice.addQuery('name', this.TABLE);
+        choice.addQuery('element', 'resolution_code');
+        choice.addQuery('inactive', false);
+        choice.addQuery('language', gs.getSession().getLanguage());
+        choice.addQuery('value', '!=', '');
+        choice.orderBy('sequence');
+        choice.query();
+
+        while (choice.next()) {
+            var label = choice.getValue('label');
+
+            choices.push({
+                value: choice.getValue('value'),
+                label: label,
+                displayValue: label
+            });
+        }
+
+        return choices;
+    },
+
+    _isValidChoice: function(value) {
+        var choices = this._getChoices();
+
+        for (var i = 0; i < choices.length; i++) {
+            if (choices[i].value === value) return true;
+        }
+
+        return false;
+    },
+
+    _param: function(name) {
+        return String(this.getParameter(name) || '').trim();
+    },
+
+    _error: function(message) {
+        return JSON.stringify({ success: false, error: message });
+    },
+
+    isPublic: function() {
+        return false;
+    },
+
+    type: 'EvResolverAjax'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-15 12:33:24</sys_created_on>
+        <sys_id>865bec08c50413d063f182ce4dc0c628</sys_id>
+        <sys_mod_count>31</sys_mod_count>
+        <sys_name>EvResolverAjax</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_script_include_865bec08c50413d063f182ce4dc0c628</sys_update_name>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-11-03 16:09:16</sys_updated_on>
+    </sys_script_include>
+</record_update>

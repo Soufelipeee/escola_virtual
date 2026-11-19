@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <controller_preset/>
+        <includes>f5c5990fa5f45210f877eb87b7808132</includes>
+        <macroponent display_value="CSM default record page">6eba209a798c1794c34eb56e1a47c548</macroponent>
+        <name>update edit template tab header</name>
+        <preset/>
+        <required_translations>[]</required_translations>
+        <script><![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+function handler({api, event, helpers, imports}) {
+    const {
+        updateTabHeader
+    } = imports["sn_cwf_wrkspc.updateEditTemplateTabHeader"](api);
+
+    updateTabHeader();
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-22 12:16:28</sys_created_on>
+        <sys_id>b2ba209a798c1794c34eb56e1a47c54f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>update edit template tab header</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_ux_client_script_b2ba209a798c1794c34eb56e1a47c54f</sys_update_name>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-22 12:16:28</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</application>
+        <file_path/>
+        <instance_id>831a14741b984a5032182f8dee4bcbf0</instance_id>
+        <instance_name>fundbraddev</instance_name>
+        <name>sys_ux_client_script_b2ba209a798c1794c34eb56e1a47c54f</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;controller_preset/&gt;&lt;includes&gt;f5c5990fa5f45210f877eb87b7808132&lt;/includes&gt;&lt;macroponent display_value="CSM default record page"&gt;6eba209a798c1794c34eb56e1a47c548&lt;/macroponent&gt;&lt;name&gt;update edit template tab header&lt;/name&gt;&lt;preset/&gt;&lt;required_translations&gt;[]&lt;/required_translations&gt;&lt;script&gt;&lt;![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+function handler({api, event, helpers, imports}) {
+    const {
+        updateTabHeader
+    } = imports["sn_cwf_wrkspc.updateEditTemplateTabHeader"](api);
+
+    updateTabHeader();
+}]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;felipe.valenca&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-10-22 12:16:28&lt;/sys_created_on&gt;&lt;sys_id&gt;b2ba209a798c1794c34eb56e1a47c54f&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;update edit template tab header&lt;/sys_name&gt;&lt;sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev"&gt;e56ecca5ecff031463f173bdfd6dd941&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Escola Virtual"&gt;e56ecca5ecff031463f173bdfd6dd941&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_b2ba209a798c1794c34eb56e1a47c54f&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;felipe.valenca&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-10-22 12:16:28&lt;/sys_updated_on&gt;&lt;target&gt;macroponent&lt;/target&gt;&lt;type&gt;default&lt;/type&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>915979672</payload_hash>
+        <record_name>update edit template tab header</record_name>
+        <reverted_from/>
+        <source>3c5ed7f979809f54c34eb56e1a47c52e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-22 12:16:28</sys_created_on>
+        <sys_id>beba209a798c1794c34eb56e1a47c552</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a1638a92a60000001</sys_recorded_at>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-22 12:16:28</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>beba209ade8c1794d69324ff053e4151</update_guid>
+        <update_guid_history>beba209ade8c1794d69324ff053e4151:915979672</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-22 12:53:49</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>b2c946d18cb34b069ac413bb7544dac4</sys_id>
+        <sys_metadata>b2ba209a798c1794c34eb56e1a47c54f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>update edit template tab header</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_scope_delete display_value="">3911fbb3a8454a90b9d9310b67c884c9</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_b2ba209a798c1794c34eb56e1a47c54f</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_b2ba209a798c1794c34eb56e1a47c54f">beba209a798c1794c34eb56e1a47c552</sys_update_version>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-22 12:53:49</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

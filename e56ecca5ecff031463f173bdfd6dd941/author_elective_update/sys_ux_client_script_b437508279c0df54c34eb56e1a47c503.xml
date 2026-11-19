@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Dashboards">fc37dc4279c0df54c34eb56e1a47c55a</macroponent>
+        <name>Redirect to dashboard list</name>
+        <preset/>
+        <required_translations>[]</required_translations>
+        <script><![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+function handler({api}) {
+    api.emit('SCREEN_STATUS_CHANGED', {status: 'closed'});
+    api.emit('NAV_ITEM_SELECTED', {
+        route: 'dashboard-library',
+        title: 'Dashboard Library',
+    });
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-21 16:12:39</sys_created_on>
+        <sys_id>b437508279c0df54c34eb56e1a47c503</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Redirect to dashboard list</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_ux_client_script_b437508279c0df54c34eb56e1a47c503</sys_update_name>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-21 16:12:39</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</application>
+        <file_path/>
+        <instance_id>831a14741b984a5032182f8dee4bcbf0</instance_id>
+        <instance_name>fundbraddev</instance_name>
+        <name>sys_ux_client_script_b437508279c0df54c34eb56e1a47c503</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;controller_preset/&gt;&lt;includes/&gt;&lt;macroponent display_value="Dashboards"&gt;fc37dc4279c0df54c34eb56e1a47c55a&lt;/macroponent&gt;&lt;name&gt;Redirect to dashboard list&lt;/name&gt;&lt;preset/&gt;&lt;required_translations&gt;[]&lt;/required_translations&gt;&lt;script&gt;&lt;![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+function handler({api}) {
+    api.emit('SCREEN_STATUS_CHANGED', {status: 'closed'});
+    api.emit('NAV_ITEM_SELECTED', {
+        route: 'dashboard-library',
+        title: 'Dashboard Library',
+    });
+}]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;felipe.valenca&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-10-21 16:12:39&lt;/sys_created_on&gt;&lt;sys_id&gt;b437508279c0df54c34eb56e1a47c503&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Redirect to dashboard list&lt;/sys_name&gt;&lt;sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev"&gt;e56ecca5ecff031463f173bdfd6dd941&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Escola Virtual"&gt;e56ecca5ecff031463f173bdfd6dd941&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_b437508279c0df54c34eb56e1a47c503&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;felipe.valenca&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-10-21 16:12:39&lt;/sys_updated_on&gt;&lt;target&gt;macroponent&lt;/target&gt;&lt;type&gt;default&lt;/type&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1364848550</payload_hash>
+        <record_name>Redirect to dashboard list</record_name>
+        <reverted_from/>
+        <source>3c5ed7f979809f54c34eb56e1a47c52e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-21 16:12:39</sys_created_on>
+        <sys_id>b837508279c0df54c34eb56e1a47c506</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a15f3c745e0000001</sys_recorded_at>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-21 16:12:39</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>7c37508207c0df54471305b4b984ff05</update_guid>
+        <update_guid_history>7c37508207c0df54471305b4b984ff05:-1364848550</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-21 16:20:50</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>b8bd7cc0655748b2bb873db9de758221</sys_id>
+        <sys_metadata>b437508279c0df54c34eb56e1a47c503</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Redirect to dashboard list</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_scope_delete display_value="">3911fbb3a8454a90b9d9310b67c884c9</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_b437508279c0df54c34eb56e1a47c503</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_b437508279c0df54c34eb56e1a47c503">b837508279c0df54c34eb56e1a47c506</sys_update_version>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-21 16:20:50</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

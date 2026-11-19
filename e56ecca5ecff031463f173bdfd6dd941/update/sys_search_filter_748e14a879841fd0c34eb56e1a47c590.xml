@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_search_filter">
+    <sys_search_filter action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <ais_search_source display_value="Atendimento Escola Virtual">788e14a879841fd0c34eb56e1a47c56e</ais_search_source>
+        <label>Atendimento Escola Virtual</label>
+        <name>Atendimento Escola Virtual</name>
+        <order>100</order>
+        <search_context_config display_value="Escola Virtual AI Search Configuration">a77e10a8cf841fd044a6f9ea0d073e0a</search_context_config>
+        <sys_class_name>sys_search_filter</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-17 00:53:43</sys_created_on>
+        <sys_id>748e14a879841fd0c34eb56e1a47c590</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Atendimento Escola Virtual</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_search_filter_748e14a879841fd0c34eb56e1a47c590</sys_update_name>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-17 00:53:43</sys_updated_on>
+    </sys_search_filter>
+</record_update>

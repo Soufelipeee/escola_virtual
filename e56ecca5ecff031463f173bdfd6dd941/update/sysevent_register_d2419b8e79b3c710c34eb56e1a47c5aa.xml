@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_register">
+    <sysevent_register action="INSERT_OR_UPDATE">
+        <caller_access/>
+        <derived_priority>100</derived_priority>
+        <description/>
+        <event_name>x_fub_fundbrad_ev.atendimento.informacao</event_name>
+        <fired_by/>
+        <priority>100</priority>
+        <queue/>
+        <suffix>atendimento.informacao</suffix>
+        <sys_class_name>sysevent_register</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-09 19:30:37</sys_created_on>
+        <sys_id>d2419b8e79b3c710c34eb56e1a47c5aa</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>x_fub_fundbrad_ev.atendimento.informacao</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sysevent_register_d2419b8e79b3c710c34eb56e1a47c5aa</sys_update_name>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-14 13:55:00</sys_updated_on>
+        <table>x_fub_fundbrad_ev_atendimento_ev</table>
+    </sysevent_register>
+</record_update>

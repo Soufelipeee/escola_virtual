@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name/>
+        <active>true</active>
+        <client>true</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+    var api = 'x_fub_fundbrad_ev.EvPendenteAjax';
+    var recordId = g_form.getUniqueValue();
+
+    function parseResponse(answer) {
+        var response;
+
+        try {
+            response = JSON.parse(answer || '{}');
+        } catch (error) {
+            response = { error: 'Resposta inválida do servidor.' };
+        }
+
+        if (!response || response.success !== true) {
+            g_form.addErrorMessage(
+                (response && response.error) || 'Não foi possível executar a ação.'
+            );
+            return null;
+        }
+
+        return response;
+    }
+
+    var ga = new GlideAjax(api);
+    ga.addParam('sysparm_name', 'opcoes');
+    ga.addParam('sysparm_record_id', recordId);
+
+    ga.getXMLAnswer(function(answer) {
+        var response = parseResponse(answer);
+        if (!response) return;
+
+        g_modal.showFields({
+            title: 'Pendente',
+            instruction: 'Selecione o motivo da pendência.',
+            fields: [{
+                type: 'choice',
+                name: 'reason',
+                label: 'Motivo da pendência',
+                mandatory: true,
+                choices: [{ value: '', displayValue: '-- Selecione --' }]
+                    .concat(response.choices || [])
+            }],
+            size: 'lg'
+        }).then(function(result) {
+            if (!result) return;
+
+            var reason = '';
+
+            (result.updatedFields || []).forEach(function(field) {
+                if (field.name === 'reason') {
+                    reason = String(field.value || '').trim();
+                }
+            });
+
+            if (!reason) {
+                g_form.addErrorMessage('Selecione o motivo da pendência.');
+                return;
+            }
+
+            var request = new GlideAjax(api);
+            request.addParam('sysparm_name', 'pendenciar');
+            request.addParam('sysparm_record_id', recordId);
+            request.addParam('sysparm_reason', reason);
+
+            request.getXMLAnswer(function(answer) {
+                if (!parseResponse(answer)) return;
+
+                g_form.addInfoMessage('Atendimento alterado para Pendente.');
+                g_form.reload();
+            });
+        }, function() {
+            // Modal cancelado.
+        });
+    });
+}]]></client_script_v2>
+        <comments/>
+        <condition>current.getValue('u_origem') === 'escola_virtual' &amp;&amp; current.getValue('state') === '2' &amp;&amp; current.getValue('assigned_to') === gs.getUserID() &amp;&amp; gs.hasRole('x_fub_fundbrad_ev.agent') || gs.hasRole('admin') </condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>true</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <format_for_configurable_workspace>true</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>true</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>Pendente</name>
+        <onclick>pendenciarAtendimento()</onclick>
+        <order>250</order>
+        <script><![CDATA[function pendenciarAtendimento() {
+    var dialog = new GlideModal('x_fub_fundbrad_ev_ev_pendente_modal');
+
+    dialog.setTitle('Pendente');
+    dialog.setPreference('sysparm_record_id', g_form.getUniqueValue());
+    dialog.setWidth(600);
+    dialog.render();
+
+    return false;
+}]]></script>
+        <show_insert>false</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-28 17:42:03</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>fe6dac9c795c9358c34eb56e1a47c5e2</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Pendente</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_ui_action_fe6dac9c795c9358c34eb56e1a47c5e2</sys_update_name>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-30 12:12:08</sys_updated_on>
+        <table>x_fub_fundbrad_ev_atendimento_ev</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

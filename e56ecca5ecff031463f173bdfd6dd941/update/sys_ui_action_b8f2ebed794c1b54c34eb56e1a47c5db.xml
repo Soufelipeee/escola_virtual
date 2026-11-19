@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>ev_resolver</action_name>
+        <active>false</active>
+        <client>true</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+	var tableName = g_form.getTableName();
+
+	// 1. Busca os templates cadastrados para a tabela atual via GlideAjax
+	var ga = new GlideAjax('x_fub_fundbrad_ev.EVUtils');
+	ga.addParam('sysparm_name', 'getTemplatesForTable');
+	ga.addParam('sysparm_table', tableName);
+
+	ga.getXMLAnswer(function (answer) {
+		var templates = [];
+		try {
+			templates = JSON.parse(answer || '[]');
+		} catch (e) {
+			templates = [];
+		}
+
+		if (templates.length === 0) {
+			g_form.addErrorMessage('Nenhum modelo de resposta ativo foi encontrado para esta tabela.');
+			return;
+		}
+
+		// 2. Mapeia os templates para o formato de opções suportado pelo g_modal.showFields (Choice / Select)
+		// Nota: A API de choices no g_modal espera objetos com 'label' e 'value'
+		var choiceOptions = templates.map(function (t) {
+			return {
+				label: t.name,
+				value: t.sys_id
+			};
+		});
+
+		// Guardamos os corpos dos textos em um mapa global para recuperar depois da escolha
+		window._templateBodies = {};
+		templates.forEach(function (t) {
+			window._templateBodies[t.sys_id] = t.body;
+		});
+
+		// 3. Abre o modal com um campo de seleção
+		g_modal.showFields({
+			title: 'Selecionar Modelo de Resposta',
+			instruction: 'Escolha um dos modelos disponíveis abaixo:',
+			fields: [{
+				type: 'choice', // Campo do tipo seleção/dropdown
+				name: 'selected_template',
+				label: 'Modelos',
+				mandatory: true,
+				choices: choiceOptions
+			}],
+			size: 'md'
+		}).then(function (result) {
+			if (!result || !result.updatedFields) {
+				return;
+			}
+
+			var field = result.updatedFields.find(function (item) {
+				return item.name === 'selected_template';
+			});
+
+			var selectedId = field ? field.value : '';
+			if (!selectedId || !window._templateBodies[selectedId]) {
+				return;
+			}
+
+			var templateText = window._templateBodies[selectedId];
+
+			// 4. Substituição de variáveis dinâmicas do registro atual
+			templateText = templateText.replace(/\${number}/g, g_form.getValue('number') || '');
+			templateText = templateText.replace(/\${u_nome_solicitante}/g, g_form.getValue('u_nome_solicitante') || '');
+			templateText = templateText.replace(/\${u_motivo}/g, g_form.getValue('u_motivo') || '');
+
+			// 5. Insere o texto processado nos Comentários Adicionais
+			var comentarioAtual = String(g_form.getValue('comments') || '').trim();
+			var novoComentario = comentarioAtual ? comentarioAtual + '\n\n' + templateText : templateText;
+
+			g_form.setValue('comments', novoComentario);
+			g_form.addInfoMessage('Modelo de resposta aplicado com sucesso!');
+		});
+	});
+}]]></client_script_v2>
+        <comments/>
+        <condition/>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>true</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <format_for_configurable_workspace>true</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>true</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>workspace</name>
+        <onclick>resolverAtendimento()</onclick>
+        <order>300</order>
+        <script><![CDATA[
+function resolverAtendimento() {
+    var dialog = new GlideModal('x_fub_fundbrad_ev_ev_resolver_modal');
+
+    dialog.setTitle('Resolver Atendimento');
+    dialog.setPreference(
+        'sysparm_record_id',
+        g_form.getUniqueValue()
+    );
+
+    dialog.setWidth(600);
+    dialog.render();
+
+    return false;
+}
+]]></script>
+        <show_insert>false</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-20 17:45:53</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b8f2ebed794c1b54c34eb56e1a47c5db</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>workspace</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_ui_action_b8f2ebed794c1b54c34eb56e1a47c5db</sys_update_name>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-20 18:41:35</sys_updated_on>
+        <table>x_fub_fundbrad_ev_atendimento_ev</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

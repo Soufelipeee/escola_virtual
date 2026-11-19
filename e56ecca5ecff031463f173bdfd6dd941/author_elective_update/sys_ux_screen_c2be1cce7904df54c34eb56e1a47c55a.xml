@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_screen">
+    <sys_ux_screen action="DELETE">
+        <active>false</active>
+        <app_config display_value="Escola Virtual App Config">af7e10a88e841fd0cc51ee0eb314ad12</app_config>
+        <description/>
+        <disable_auto_reflow>false</disable_auto_reflow>
+        <disable_interoperable>false</disable_interoperable>
+        <event_mappings>[]</event_mappings>
+        <macroponent display_value="teste 2">7b5b50c27904df54c34eb56e1a47c59a</macroponent>
+        <macroponent_config>{
+    "bare": {
+        "type": "JSON_LITERAL",
+        "value": true
+    },
+    "headerLevel": {
+        "type": "JSON_LITERAL",
+        "value": "1"
+    },
+    "headingOnlyVisibleToScreenReaders": {
+        "type": "JSON_LITERAL",
+        "value": false
+    },
+    "interceptNotifications": {
+        "type": "JSON_LITERAL",
+        "value": false
+    },
+    "label": {
+        "type": "TRANSLATION_LITERAL",
+        "value": {
+            "code": null,
+            "comment": "",
+            "message": ""
+        }
+    },
+    "propagateNotifications": {
+        "type": "JSON_LITERAL",
+        "value": false
+    },
+    "scrollable": {
+        "type": "JSON_LITERAL",
+        "value": "y"
+    }
+}</macroponent_config>
+        <name>SRP Record copy</name>
+        <order>90</order>
+        <parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent>
+        <required_translations>[ ]</required_translations>
+        <rollback_screen/>
+        <screen_condition/>
+        <screen_type display_value="Record">af7e10a816841fd04ddfa45e5c4a6807</screen_type>
+        <sys_class_name>sys_ux_screen</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-21 16:45:31</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c2be1cce7904df54c34eb56e1a47c55a</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>SRP Record copy</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_ux_screen_c2be1cce7904df54c34eb56e1a47c55a</sys_update_name>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-21 20:28:53</sys_updated_on>
+    </sys_ux_screen>
+    <sys_translated_text action="DELETE" query="documentkey=c2be1cce7904df54c34eb56e1a47c55a"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</application>
+        <file_path/>
+        <instance_id>831a14741b984a5032182f8dee4bcbf0</instance_id>
+        <instance_name>fundbraddev</instance_name>
+        <name>sys_ux_screen_c2be1cce7904df54c34eb56e1a47c55a</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_screen"><sys_ux_screen action="INSERT_OR_UPDATE"><active>false</active><app_config display_value="Escola Virtual App Config">af7e10a88e841fd0cc51ee0eb314ad12</app_config><description/><disable_auto_reflow>false</disable_auto_reflow><disable_interoperable>false</disable_interoperable><event_mappings>[]</event_mappings><macroponent display_value="teste 2">7b5b50c27904df54c34eb56e1a47c59a</macroponent><macroponent_config>{
+    "bare": {
+        "type": "JSON_LITERAL",
+        "value": true
+    },
+    "headerLevel": {
+        "type": "JSON_LITERAL",
+        "value": "1"
+    },
+    "headingOnlyVisibleToScreenReaders": {
+        "type": "JSON_LITERAL",
+        "value": false
+    },
+    "interceptNotifications": {
+        "type": "JSON_LITERAL",
+        "value": false
+    },
+    "label": {
+        "type": "TRANSLATION_LITERAL",
+        "value": {
+            "code": null,
+            "comment": "",
+            "message": ""
+        }
+    },
+    "propagateNotifications": {
+        "type": "JSON_LITERAL",
+        "value": false
+    },
+    "scrollable": {
+        "type": "JSON_LITERAL",
+        "value": "y"
+    }
+}</macroponent_config><name>SRP Record copy</name><order>90</order><parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent><required_translations>[ ]</required_translations><rollback_screen/><screen_condition/><screen_type display_value="Record">af7e10a816841fd04ddfa45e5c4a6807</screen_type><sys_class_name>sys_ux_screen</sys_class_name><sys_created_by>felipe.valenca</sys_created_by><sys_created_on>2026-10-21 16:45:31</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>c2be1cce7904df54c34eb56e1a47c55a</sys_id><sys_mod_count>7</sys_mod_count><sys_name>SRP Record copy</sys_name><sys_overrides/><sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package><sys_policy/><sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope><sys_update_name>sys_ux_screen_c2be1cce7904df54c34eb56e1a47c55a</sys_update_name><sys_updated_by>felipe.valenca</sys_updated_by><sys_updated_on>2026-10-21 20:28:53</sys_updated_on></sys_ux_screen><sys_translated_text action="delete_multiple" query="documentkey=c2be1cce7904df54c34eb56e1a47c55a"/></record_update>]]></payload>
+        <payload_hash>236469003</payload_hash>
+        <record_name>SRP Record copy</record_name>
+        <reverted_from/>
+        <source>3c5ed7f979809f54c34eb56e1a47c52e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-21 20:28:53</sys_created_on>
+        <sys_id>46d1d94a79001394c34eb56e1a47c5ae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a160270a070000001</sys_recorded_at>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-21 20:28:53</sys_updated_on>
+        <type>UX Screen</type>
+        <update_guid>8ad1d94a24001394989e9c210f9c72ad</update_guid>
+        <update_guid_history>8ad1d94a24001394989e9c210f9c72ad:236469003,2df064c61c44df54cd550f0128c4c911:-800269484,e6902c468b44df542bb28559938692ee:38717974,0c606846df44df54f84066edffe48c71:588884761,b74f5c42b244df5491bca901b445232f:1922280844,0b2f94422744df542f6cc2dc912ea5df:1932630040,86be1cceac04df54785f342072b725f3:-947957616</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-21 20:33:45</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_screen">sys_ux_screen</sys_db_object>
+        <sys_id>0ef5aa943c0b4640855572ad11f38900</sys_id>
+        <sys_metadata>c2be1cce7904df54c34eb56e1a47c55a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>SRP Record copy</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_scope_delete display_value="">3911fbb3a8454a90b9d9310b67c884c9</sys_scope_delete>
+        <sys_update_name>sys_ux_screen_c2be1cce7904df54c34eb56e1a47c55a</sys_update_name>
+        <sys_update_version display_value="sys_ux_screen_c2be1cce7904df54c34eb56e1a47c55a">46d1d94a79001394c34eb56e1a47c5ae</sys_update_version>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-21 20:33:45</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

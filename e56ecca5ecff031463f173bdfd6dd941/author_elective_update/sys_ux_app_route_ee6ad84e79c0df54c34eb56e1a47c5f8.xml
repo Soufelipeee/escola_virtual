@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route">
+    <sys_ux_app_route action="DELETE">
+        <app_config display_value="CSM/FSM Configurable Workspace App Config">f224e5a3530210102c30ddeeff7b128d</app_config>
+        <description/>
+        <extension_point/>
+        <fields>table,sysId</fields>
+        <icon/>
+        <interoperable>false</interoperable>
+        <name>Confirm Publish Modal</name>
+        <optional_parameters/>
+        <order>0</order>
+        <parent_macroponent display_value="Record page 3 column layout">426a984e79c0df54c34eb56e1a47c582</parent_macroponent>
+        <parent_macroponent_composition_element_id>modalContainerViewport</parent_macroponent_composition_element_id>
+        <route_type>kb_confirm_publish_modal</route_type>
+        <screen_type display_value="Confirm Publish Modal">34f747b377820110dc25a5ed5b5a99d8</screen_type>
+        <sys_class_name>sys_ux_app_route</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-21 16:26:43</sys_created_on>
+        <sys_id>ee6ad84e79c0df54c34eb56e1a47c5f8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Confirm Publish Modal</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_ux_app_route_ee6ad84e79c0df54c34eb56e1a47c5f8</sys_update_name>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-21 16:26:43</sys_updated_on>
+    </sys_ux_app_route>
+    <sys_translated_text action="DELETE" query="documentkey=ee6ad84e79c0df54c34eb56e1a47c5f8"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</application>
+        <file_path/>
+        <instance_id>831a14741b984a5032182f8dee4bcbf0</instance_id>
+        <instance_name>fundbraddev</instance_name>
+        <name>sys_ux_app_route_ee6ad84e79c0df54c34eb56e1a47c5f8</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route"><sys_ux_app_route action="INSERT_OR_UPDATE"><app_config display_value="CSM/FSM Configurable Workspace App Config">f224e5a3530210102c30ddeeff7b128d</app_config><description/><extension_point/><fields>table,sysId</fields><icon/><interoperable>false</interoperable><name>Confirm Publish Modal</name><optional_parameters/><order>0</order><parent_macroponent display_value="Record page 3 column layout">426a984e79c0df54c34eb56e1a47c582</parent_macroponent><parent_macroponent_composition_element_id>modalContainerViewport</parent_macroponent_composition_element_id><route_type>kb_confirm_publish_modal</route_type><screen_type display_value="Confirm Publish Modal">34f747b377820110dc25a5ed5b5a99d8</screen_type><sys_class_name>sys_ux_app_route</sys_class_name><sys_created_by>felipe.valenca</sys_created_by><sys_created_on>2026-10-21 16:26:43</sys_created_on><sys_id>ee6ad84e79c0df54c34eb56e1a47c5f8</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Confirm Publish Modal</sys_name><sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package><sys_policy/><sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope><sys_update_name>sys_ux_app_route_ee6ad84e79c0df54c34eb56e1a47c5f8</sys_update_name><sys_updated_by>felipe.valenca</sys_updated_by><sys_updated_on>2026-10-21 16:26:43</sys_updated_on></sys_ux_app_route><sys_translated_text action="delete_multiple" query="documentkey=ee6ad84e79c0df54c34eb56e1a47c5f8"/></record_update>]]></payload>
+        <payload_hash>1141370252</payload_hash>
+        <record_name>Confirm Publish Modal</record_name>
+        <reverted_from/>
+        <source>3c5ed7f979809f54c34eb56e1a47c52e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-21 16:26:43</sys_created_on>
+        <sys_id>626ad84e79c0df54c34eb56e1a47c5fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a15f4952300000001</sys_recorded_at>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-21 16:26:43</sys_updated_on>
+        <type>UX App Route</type>
+        <update_guid>666ad84ebfc0df54bed05a4046a43cfc</update_guid>
+        <update_guid_history>666ad84ebfc0df54bed05a4046a43cfc:1141370252</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-21 16:28:30</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_app_route">sys_ux_app_route</sys_db_object>
+        <sys_id>0ee0807ed662496f8200d995d5d20389</sys_id>
+        <sys_metadata>ee6ad84e79c0df54c34eb56e1a47c5f8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Confirm Publish Modal</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_scope_delete display_value="">3911fbb3a8454a90b9d9310b67c884c9</sys_scope_delete>
+        <sys_update_name>sys_ux_app_route_ee6ad84e79c0df54c34eb56e1a47c5f8</sys_update_name>
+        <sys_update_version display_value="sys_ux_app_route_ee6ad84e79c0df54c34eb56e1a47c5f8">626ad84e79c0df54c34eb56e1a47c5fd</sys_update_version>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-21 16:28:30</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

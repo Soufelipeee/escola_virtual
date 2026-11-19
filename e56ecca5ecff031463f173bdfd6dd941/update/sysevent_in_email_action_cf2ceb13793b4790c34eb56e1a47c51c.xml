@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_in_email_action">
+    <sysevent_in_email_action action="INSERT_OR_UPDATE">
+        <action>record_action</action>
+        <active>false</active>
+        <assignment_operator/>
+        <condition_script>current.isValidRecord() &amp;&amp; current.getRecordClassName() == 'x_fub_fundbrad_ev_atendimento_ev' &amp;&amp; current.getValue('u_origem') == 'escola_virtual'</condition_script>
+        <description/>
+        <event_name>email.read</event_name>
+        <filter_condition/>
+        <from/>
+        <name>EV – Resposta do aluno</name>
+        <order>100</order>
+        <reply_email/>
+        <required_roles/>
+        <script><![CDATA[(function runAction(current, event, email, logger) {
+
+    var STATE_PENDING = '-5';
+    var STATE_IN_PROGRESS = '2';
+    var TABLE = 'x_fub_fundbrad_ev_atendimento_ev';
+
+    if (!current.isValidRecord() ||
+        current.getRecordClassName() !== TABLE ||
+        current.getValue('u_origem') !== 'escola_virtual' ||
+        current.getValue('state') !== STATE_PENDING) {
+        return;
+    }
+
+    var headers = String(email.headers || '');
+    var fromMatch = headers.match(/^From:\s*(.+)$/im);
+
+    var sender = String(
+        email.origemail ||
+        email.from ||
+        (fromMatch ? fromMatch[1] : '')
+    ).trim().toLowerCase();
+
+    var requester = String(
+        current.getValue('u_email_solicitante') || ''
+    ).trim().toLowerCase();
+
+    // Utiliza email.body_text direto(com fallback para o body limpo caso venha vazio)
+    var rawBody = String(email.body_text || email.body || '').trim();
+
+    // ==========================================
+    // TRATAMENTO DO CORPO DO E-MAIL(Limpeza HTML e Histórico)
+    // ==========================================
+
+    // 1. Corta o texto antes da linha do cabeçalho de resposta do Outlook / e-mail
+    var userResponse = rawBody.split(/De:\s*IT Service Desk|From:|-----Original Message-----/i)[0].trim();
+
+    // 2. Remove eventuais tags HTML remanescentes, blocos de estilo e normaliza espaços
+    var cleanText = userResponse
+        .replace(/<head[\s\S]*?<\/head>/gi, '')   // Remove a tag <head>
+        .replace(/<style[\s\S]*?<\/style>/gi, '') // Remove CSS
+        .replace(/&lt;script&gt;/gi, '')// Remove scripts
+        .replace(/<br\s*\/?>/gi, '\n')             // Converte tags <br> em quebras de linha reais
+        .replace(/<\/p>/gi, '\n\n')                 // Converte fim de parágrafos em quebra dupla
+        .replace(/<[^>]+>/g, '')                   // Remove demais tags HTML sem trocar por espaço
+        .replace(/&nbsp;/gi, ' ')                  // Converte espaços HTML
+        .replace(/&lt;/gi, '<')
+        .replace(/&gt;/gi, '>')
+        .replace(/[ \t]+/g, ' ')                   // Normaliza apenas espaços horizontais(MANTÉM \n)
+        .replace(/\n\s*\n\s*\n+/g, '\n\n')         // Limita múltiplos saltos de linha no máximo a 2
+        .trim();
+
+    current.comments = 'Resposta do aluno:\n\n' + cleanText;
+    current.setValue('state', STATE_IN_PROGRESS);
+    current.setValue('substate', '');
+
+    var updatedSysId = current.update();
+
+    if (!updatedSysId) {
+        logger.log('EV: Falha ao atualizar atendimento.');
+    } else {
+        logger.log('EV: Atendimento atualizado com sucesso.');
+
+        gs.info('EV: Anexo de assinatura/rodapé removido via GlideRecord: 0');
+        // ==========================================   
+        // REMOÇÃO DE ANEXOS INDESEJADOS DO HEADER/FOOTER
+        // ==========================================
+        gs.info('EV: Anexo de assinatura/rodapé removido via GlideRecord: 1');
+
+        gs.eventQueue(
+            'ev.email.cleanup_images',
+            current,
+            '',
+            ''
+        );
+
+    }
+
+})(current, event, email, logger);
+
+
+]]></script>
+        <stop_processing>true</stop_processing>
+        <sys_class_name>sysevent_in_email_action</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-13 18:42:44</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>cf2ceb13793b4790c34eb56e1a47c51c</sys_id>
+        <sys_mod_count>30</sys_mod_count>
+        <sys_name>EV – Resposta do aluno</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sysevent_in_email_action_cf2ceb13793b4790c34eb56e1a47c51c</sys_update_name>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-22 17:41:14</sys_updated_on>
+        <table>x_fub_fundbrad_ev_atendimento_ev</table>
+        <template/>
+        <type>reply</type>
+    </sysevent_in_email_action>
+</record_update>

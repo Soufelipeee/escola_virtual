@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_fub_fundbrad_ev.EvPendenteAjax</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>EvPendenteAjax</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var EvPendenteAjax = Class.create();
+
+EvPendenteAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    TABLE: 'x_fub_fundbrad_ev_atendimento_ev',
+
+    opcoes: function () {
+        if (!this._getRecord()) {
+            return this._error('Atendimento indisponível para esta ação.');
+        }
+
+        return JSON.stringify({
+            success: true,
+            choices: this._getChoices()
+        });
+    },
+
+    pendenciar: function () {
+        var record = this._getRecord();
+
+        if (!record) {
+            return this._error('Você não pode colocar este atendimento em pendência.');
+        }
+
+        var reason = String(this.getParameter('sysparm_reason') || '').trim();
+        var choices = this._getChoices();
+        var validReason = false;
+
+        for (var i = 0; i < choices.length; i++) {
+            if (choices[i].value === reason) {
+                validReason = true;
+                break;
+            }
+        }
+
+        if (!validReason) {
+            return this._error('Selecione um motivo de pendência válido.');
+        }
+
+        record.setValue('state', '-5');
+        record.setValue('substate', reason);
+
+        if (!record.update()) {
+            return this._error('Não foi possível salvar a pendência.');
+        }
+
+        var saved = new GlideRecord(this.TABLE);
+
+        if (!saved.get(record.getUniqueValue()) ||
+            saved.getValue('state') !== '-5' ||
+            saved.getValue('substate') !== reason) {
+            return this._error(
+                'O resultado da gravação divergiu do solicitado. ' +
+                'Verifique as regras do atendimento antes de tentar novamente.'
+            );
+        }
+
+        return JSON.stringify({ success: true });
+    },
+
+    _getRecord: function () {
+        var id = String(this.getParameter('sysparm_record_id') || '').trim();
+
+        if (!/^[a-f0-9]{32}$/i.test(id) ||
+            !gs.hasRole('x_fub_fundbrad_ev.agent')) {
+            return null;
+        }
+
+        var secure = new GlideRecordSecure(this.TABLE);
+
+        if (!secure.get(id) || !secure.canRead() || !secure.canWrite()) {
+            return null;
+        }
+
+        // Gravação controlada dos campos protegidos pela action.
+        var record = new GlideRecord(this.TABLE);
+
+        if (!record.get(id) ||
+            record.getRecordClassName() !== this.TABLE ||
+            !record.canRead() ||
+            !record.canWrite() ||
+            record.getValue('u_origem') !== 'escola_virtual' ||
+            record.getValue('state') !== '2' ||
+            record.getValue('assigned_to') !== gs.getUserID()) {
+            return null;
+        }
+
+        return record;
+    },
+
+    _getChoices: function () {
+        return [
+            {
+                value: 'pending_internal_action',
+                displayValue: 'Pendente — ação interna'
+            },
+            {
+                value: 'pending_supplier',
+                displayValue: 'Pendente — aguardando fornecedor'
+            }
+        ];
+    },
+
+    _error: function (message) {
+        return JSON.stringify({ success: false, error: message });
+    },
+
+    isPublic: function () {
+        return false;
+    },
+
+    type: 'EvPendenteAjax'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-28 17:43:31</sys_created_on>
+        <sys_id>bfeee414799c9358c34eb56e1a47c529</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>EvPendenteAjax</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_script_include_bfeee414799c9358c34eb56e1a47c529</sys_update_name>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-28 20:16:53</sys_updated_on>
+    </sys_script_include>
+</record_update>

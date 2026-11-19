@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="user_criteria">
+    <user_criteria action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <advanced>true</advanced>
+        <company/>
+        <department/>
+        <group/>
+        <location/>
+        <match_all>false</match_all>
+        <name>Escola virtual - integration</name>
+        <role/>
+        <script><![CDATA[checkCondition();
+
+function checkCondition() {
+	var roleGR = new GlideRecord('sys_user_has_role');
+	roleGR.addQuery('user', user_id);
+	roleGR.addQuery('role.name', 'x_fub_fundbrad_ev.integration');
+	roleGR.query();
+	if (roleGR.next()) {
+		return true;
+	} else {
+		return false;
+	}
+}]]></script>
+        <script_result_type/>
+        <short_description/>
+        <sys_class_name>user_criteria</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-09 19:23:45</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>bf9f8702c5b7c71063f182ce4dc0c61e</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Escola virtual - integration</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>user_criteria_bf9f8702c5b7c71063f182ce4dc0c61e</sys_update_name>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-13 12:09:27</sys_updated_on>
+        <u_departamento_fb/>
+        <user/>
+    </user_criteria>
+    <sys_translated_text action="delete_multiple" query="documentkey=bf9f8702c5b7c71063f182ce4dc0c61e"/>
+    <sys_translated_text action="INSERT_OR_UPDATE">
+        <documentkey>bf9f8702c5b7c71063f182ce4dc0c61e</documentkey>
+        <fieldname>short_description</fieldname>
+        <language>pb</language>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-09 19:23:45</sys_created_on>
+        <sys_id>fedf0382c5b7c71063f182ce4dc0c607</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-09 19:23:45</sys_updated_on>
+        <tablename>user_criteria</tablename>
+        <value/>
+    </sys_translated_text>
+</record_update>

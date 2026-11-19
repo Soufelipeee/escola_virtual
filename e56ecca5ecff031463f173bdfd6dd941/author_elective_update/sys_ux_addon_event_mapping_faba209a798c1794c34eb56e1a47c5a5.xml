@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_addon_event_mapping">
+    <sys_ux_addon_event_mapping action="DELETE">
+        <active>true</active>
+        <controller/>
+        <description>CSM</description>
+        <name>Open create collab chat</name>
+        <parent_macroponent display_value="CSM default record page">6eba209a798c1794c34eb56e1a47c548</parent_macroponent>
+        <source_component/>
+        <source_da display_value="Open create collab chat modal">040b41b5c31130100f24c87af040dd66</source_da>
+        <source_element_id>ui_action_bar</source_element_id>
+        <sys_class_name>sys_ux_addon_event_mapping</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-22 12:16:28</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>faba209a798c1794c34eb56e1a47c5a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Open create collab chat</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_ux_addon_event_mapping_faba209a798c1794c34eb56e1a47c5a5</sys_update_name>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-22 12:16:28</sys_updated_on>
+        <target_event display_value="RECORD#OPEN_COLLAB_CHAT">a91838b3b7900110ffe5ef54ce11a98c</target_event>
+        <target_payload_mapping>{
+    "container": {
+        "fields": {
+            "binding": {
+                "address": [
+                    "fields"
+                ]
+            },
+            "type": "EVENT_PAYLOAD_BINDING"
+        }
+    },
+    "type": "MAP_CONTAINER"
+}</target_payload_mapping>
+    </sys_ux_addon_event_mapping>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</application>
+        <file_path/>
+        <instance_id>831a14741b984a5032182f8dee4bcbf0</instance_id>
+        <instance_name>fundbraddev</instance_name>
+        <name>sys_ux_addon_event_mapping_faba209a798c1794c34eb56e1a47c5a5</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_addon_event_mapping"><sys_ux_addon_event_mapping action="INSERT_OR_UPDATE"><active>true</active><controller/><description>CSM</description><name>Open create collab chat</name><parent_macroponent display_value="CSM default record page">6eba209a798c1794c34eb56e1a47c548</parent_macroponent><source_component/><source_da display_value="Open create collab chat modal">040b41b5c31130100f24c87af040dd66</source_da><source_element_id>ui_action_bar</source_element_id><sys_class_name>sys_ux_addon_event_mapping</sys_class_name><sys_created_by>felipe.valenca</sys_created_by><sys_created_on>2026-10-22 12:16:28</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>faba209a798c1794c34eb56e1a47c5a5</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Open create collab chat</sys_name><sys_overrides/><sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package><sys_policy/><sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope><sys_update_name>sys_ux_addon_event_mapping_faba209a798c1794c34eb56e1a47c5a5</sys_update_name><sys_updated_by>felipe.valenca</sys_updated_by><sys_updated_on>2026-10-22 12:16:28</sys_updated_on><target_event display_value="RECORD#OPEN_COLLAB_CHAT">a91838b3b7900110ffe5ef54ce11a98c</target_event><target_payload_mapping>{
+    "container": {
+        "fields": {
+            "binding": {
+                "address": [
+                    "fields"
+                ]
+            },
+            "type": "EVENT_PAYLOAD_BINDING"
+        }
+    },
+    "type": "MAP_CONTAINER"
+}</target_payload_mapping></sys_ux_addon_event_mapping></record_update>]]></payload>
+        <payload_hash>536271421</payload_hash>
+        <record_name>Open create collab chat</record_name>
+        <reverted_from/>
+        <source>3c5ed7f979809f54c34eb56e1a47c52e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-22 12:16:28</sys_created_on>
+        <sys_id>baba209a798c1794c34eb56e1a47c5a8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a1638a937a0000001</sys_recorded_at>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-22 12:16:28</sys_updated_on>
+        <type>UX Add-on Event Mapping</type>
+        <update_guid>beba209a978c1794150629969d46c1a7</update_guid>
+        <update_guid_history>beba209a978c1794150629969d46c1a7:536271421</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-22 12:53:49</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_addon_event_mapping">sys_ux_addon_event_mapping</sys_db_object>
+        <sys_id>00acf623c9c5452a800289ec36d31d64</sys_id>
+        <sys_metadata>faba209a798c1794c34eb56e1a47c5a5</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Open create collab chat</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_scope_delete display_value="">3911fbb3a8454a90b9d9310b67c884c9</sys_scope_delete>
+        <sys_update_name>sys_ux_addon_event_mapping_faba209a798c1794c34eb56e1a47c5a5</sys_update_name>
+        <sys_update_version display_value="sys_ux_addon_event_mapping_faba209a798c1794c34eb56e1a47c5a5">baba209a798c1794c34eb56e1a47c5a8</sys_update_version>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-22 12:53:49</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

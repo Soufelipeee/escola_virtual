@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_template">
+    <sys_template action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <global>false</global>
+        <group/>
+        <groups/>
+        <link_element/>
+        <name>TEMPLATE108</name>
+        <next/>
+        <next_child/>
+        <roles/>
+        <short_description/>
+        <show_on_template_bar>true</show_on_template_bar>
+        <stand_alone>false</stand_alone>
+        <sys_class_name>sys_template</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-20 18:43:54</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ad2073a579045b54c34eb56e1a47c5af</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>TEMPLATE108</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_template_ad2073a579045b54c34eb56e1a47c5af</sys_update_name>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-20 18:43:54</sys_updated_on>
+        <table>x_fub_fundbrad_ev_atendimento_ev</table>
+        <template>assignment_group=876fe5f1ac7bc394c34e0c1cb0feaff9^contact_type=self-service^description=Não consigo emitir o certificado do curso^number=EV0001340^opened_at=19/10/2026 16:45:30^priority=4^short_description=Fale conosco - Web - Maria da silva^state=1^u_categoria_solicitacao=accessibility^u_consumer=f0fef154790c5bd0c34eb56e1a47c56b^u_cpf_solicitante=093.730.624-09^u_data_nascimento_solicitante=2026-10-13^u_email_solicitante=maria.silva@email.com^u_nome_solicitante=Maria da silva^u_origem=escola_virtual^u_protocolo_origem=CHAT-00020^u_telefone_solicitante=1697045555^EQ</template>
+        <user display_value="Felipe Valenca">e0abd10487ce6250138384c60cbb35d1</user>
+        <view/>
+    </sys_template>
+</record_update>

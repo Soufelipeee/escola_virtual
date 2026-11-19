@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>ev_solicitacao_informacoes_mensagem</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[
+(function runMailScript(
+    current,
+    template,
+    email,
+    email_action,
+    event
+) {
+    function escapeHtml(value) {
+        return String(value || '')
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
+    }
+
+    var message = event && event.parm2
+        ? String(event.parm2)
+        : '';
+
+    if (!message) {
+        gs.error(
+            'EV: mensagem ausente no evento de solicitação ' +
+            'de informações para ' + current.getUniqueValue()
+        );
+        return;
+    }
+
+    template.print(
+        escapeHtml(message).replace(/\r\n|\r|\n/g, '<br/>')
+    );
+})(current, template, email, email_action, event);
+]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>stephanie.flavio</sys_created_by>
+        <sys_created_on>2026-10-13 14:36:41</sys_created_on>
+        <sys_id>ce14725379770790c34eb56e1a47c524</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ev_solicitacao_informacoes_mensagem</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_script_email_ce14725379770790c34eb56e1a47c524</sys_update_name>
+        <sys_updated_by>stephanie.flavio</sys_updated_by>
+        <sys_updated_on>2026-10-13 14:36:41</sys_updated_on>
+    </sys_script_email>
+</record_update>

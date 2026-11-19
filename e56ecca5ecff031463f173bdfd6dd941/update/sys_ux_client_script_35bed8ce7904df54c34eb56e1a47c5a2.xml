@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="SRP Record copy">edbed8ce7904df54c34eb56e1a47c526</macroponent>
+        <name>activity_stream/availableTags</name>
+        <preset/>
+        <required_translations>[]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {TransformApiHelpers} params.helpers
+ */
+function evaluateProperty({
+    api,
+    helpers
+}) {
+    var props = JSON.parse(api.context.app.activityStreamProps);
+    props.tags = props.tags.map(tag => ({
+        ...tag,
+        id : tag.label,
+        tables: tag.tables.map(table => ({
+            id: table,
+            label: table
+        }))
+    }));
+    return props.tags;
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>felipe.valenca</sys_created_by>
+        <sys_created_on>2026-10-21 16:45:29</sys_created_on>
+        <sys_id>35bed8ce7904df54c34eb56e1a47c5a2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>activity_stream/availableTags</sys_name>
+        <sys_package display_value="Escola Virtual" source="x_fub_fundbrad_ev">e56ecca5ecff031463f173bdfd6dd941</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Escola Virtual">e56ecca5ecff031463f173bdfd6dd941</sys_scope>
+        <sys_update_name>sys_ux_client_script_35bed8ce7904df54c34eb56e1a47c5a2</sys_update_name>
+        <sys_updated_by>felipe.valenca</sys_updated_by>
+        <sys_updated_on>2026-10-21 16:45:29</sys_updated_on>
+        <target>macroponent</target>
+        <type>transform</type>
+    </sys_ux_client_script>
+</record_update>
